@@ -53,11 +53,11 @@ RUN chown -R ralph:nodejs /app
 USER ralph
 
 # Expose ports
-EXPOSE 30003
+EXPOSE ${PORT:-30003}
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD node -e "require('http').get('http://localhost:30003/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
+# Health check using the same PORT the app binds to
+HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
+    CMD node -e "const port = process.env.PORT || process.env.DASHBOARD_PORT || 30003; require('http').get('http://localhost:' + port + '/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
 
 # Start the application
 CMD ["npm", "start"]
