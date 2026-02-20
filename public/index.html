@@ -32,7 +32,13 @@
                     <i class="fas fa-lightbulb"></i> Sky Opportunities
                 </a>
                 <a href="#" class="nav-link" data-section="social">
-                    <i class="fas fa-hashtag"></i> Social Buzz
+                    <i class="fas fa-hashtag"></i> Social &amp; Culture
+                </a>
+                <a href="#" class="nav-link" data-section="calendar">
+                    <i class="fas fa-calendar-alt"></i> Calendar
+                </a>
+                <a href="#" class="nav-link" data-section="skyperformance">
+                    <i class="fas fa-trophy"></i> Sky Performance
                 </a>
             </div>
             <div class="nav-actions">
@@ -245,14 +251,63 @@
             </div>
         </section>
 
-        <!-- ==================== SOCIAL BUZZ SECTION ==================== -->
+        <!-- ==================== SOCIAL & CULTURE SECTION ==================== -->
         <section id="section-social" class="section">
             <div class="social-header">
-                <h1>Entertainment Social Buzz</h1>
-                <p>What's trending across social media in entertainment right now.</p>
+                <h1>Social &amp; Culture</h1>
+                <p>TikTok trending UK, Ramdam trends, social buzz — what audiences are talking about right now.</p>
             </div>
 
-            <!-- Social Platform Tabs -->
+            <!-- TikTok UK Hashtags -->
+            <div class="card" style="margin-bottom:24px;">
+                <div class="card-header" style="background:#ff0050;border-bottom:none;">
+                    <div class="card-header-left">
+                        <i class="fab fa-tiktok" style="color:#fff"></i>
+                        <h2 style="color:#fff">TikTok Trending Hashtags UK</h2>
+                    </div>
+                    <span class="card-header-badge">Past Week</span>
+                </div>
+                <div class="card-body" id="tiktokUKWidget"><!-- JS --></div>
+            </div>
+
+            <!-- TikTok UK News & Ents -->
+            <div class="card" style="margin-bottom:24px;">
+                <div class="card-header" style="background:#25f4ee;border-bottom:none;">
+                    <div class="card-header-left">
+                        <i class="fab fa-tiktok" style="color:#1a1a2e"></i>
+                        <h2 style="color:#1a1a2e">TikTok UK — News &amp; Entertainment</h2>
+                    </div>
+                    <span class="card-header-badge" style="background:rgba(0,0,0,0.15);color:#1a1a2e">Past Week</span>
+                </div>
+                <div class="card-body" id="tiktokNewsWidget"><!-- JS --></div>
+            </div>
+
+            <!-- Ramdam Trends Row -->
+            <div class="grid-2" style="margin-bottom:24px;">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fab fa-tiktok"></i>
+                            <h2>Ramdam TikTok Trends</h2>
+                        </div>
+                        <span class="card-header-badge" style="background:var(--bg-tertiary);color:var(--text-muted)">Past Month</span>
+                    </div>
+                    <div class="card-body" id="ramdamTikTokWidget"><!-- JS --></div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fab fa-instagram"></i>
+                            <h2>Ramdam Instagram Trends</h2>
+                        </div>
+                        <span class="card-header-badge" style="background:var(--bg-tertiary);color:var(--text-muted)">Past Month</span>
+                    </div>
+                    <div class="card-body" id="ramdamInstagramWidget"><!-- JS --></div>
+                </div>
+            </div>
+
+            <!-- General Social Buzz -->
+            <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;color:var(--text-primary);">Entertainment Social Buzz</h2>
             <div class="social-tabs">
                 <button class="social-tab active" data-social="all">
                     <i class="fas fa-globe"></i> All
@@ -267,10 +322,72 @@
                     <i class="fab fa-instagram"></i> Instagram
                 </button>
             </div>
+            <div class="social-grid" id="socialGrid"><!-- JS --></div>
+        </section>
 
-            <!-- Social Trending List -->
-            <div class="social-grid" id="socialGrid">
-                <!-- Populated by JS -->
+        <!-- ==================== CALENDAR & RELEASES SECTION ==================== -->
+        <section id="section-calendar" class="section">
+            <div class="social-header">
+                <h1>Calendar &amp; Upcoming Releases</h1>
+                <p>Upcoming movie releases, cultural moments, and marketing calendar opportunities.</p>
+            </div>
+
+            <!-- Upcoming UK Movie Releases -->
+            <div class="card" style="margin-bottom:24px;">
+                <div class="card-header card-header-sky">
+                    <div class="card-header-left">
+                        <i class="fas fa-clapperboard" style="color:#fff"></i>
+                        <h2 style="color:#fff">Upcoming UK Cinema Releases</h2>
+                    </div>
+                    <span class="card-header-badge">Next Month</span>
+                </div>
+                <div class="card-body" id="upcomingReleasesWidget"><!-- JS --></div>
+            </div>
+
+            <!-- Calendar Row -->
+            <div class="grid-2">
+                <!-- Reddit Seasonal Calendar -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fab fa-reddit" style="color:#ff4500"></i>
+                            <h2>Reddit Seasonal Calendar UK</h2>
+                        </div>
+                        <span class="card-header-badge" style="background:var(--bg-tertiary);color:var(--text-muted)">Next Month</span>
+                    </div>
+                    <div class="card-body" id="redditCalendarWidget"><!-- JS --></div>
+                </div>
+
+                <!-- TikTok Marketing Calendar -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fab fa-tiktok" style="color:#ff0050"></i>
+                            <h2>TikTok Marketing Calendar</h2>
+                        </div>
+                        <span class="card-header-badge" style="background:var(--bg-tertiary);color:var(--text-muted)">Upcoming</span>
+                    </div>
+                    <div class="card-body" id="tiktokCalendarWidget"><!-- JS --></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SKY PERFORMANCE SECTION ==================== -->
+        <section id="section-skyperformance" class="section">
+            <div class="social-header">
+                <h1>Sky Social Performance</h1>
+                <p>Top performing Sky posts across platforms this week. Data via YouScan.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header card-header-gradient">
+                    <div class="card-header-left">
+                        <i class="fas fa-chart-line" style="color:#fff"></i>
+                        <h2 style="color:#fff">Top Performing Sky Posts</h2>
+                    </div>
+                    <span class="card-header-badge">Past Week</span>
+                </div>
+                <div class="card-body" id="skyPostsWidget"><!-- JS --></div>
             </div>
         </section>
     </main>
