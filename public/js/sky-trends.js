@@ -663,7 +663,7 @@ const API_SOURCES = [
         colour: '#1a1a2e',
         method: 'api',
         envKey: 'FLIXPATROL_API_KEY',
-        cost: '$9.99/mo (Start)',
+        cost: '$49/mo (Premium)',
         docs: 'flixpatrol.com/about/api/',
         feeds: ['Netflix TV UK', 'Netflix Film UK', 'Amazon Prime UK'],
         frequency: 'Daily',
@@ -822,7 +822,7 @@ function renderAdminStatusBar() {
         <div class="admin-status-chip">
             <div class="admin-status-dot manual"></div>
             <div class="admin-status-info">
-                <div class="admin-status-name">~$15-50/mo</div>
+                <div class="admin-status-name">~$55-90/mo</div>
                 <div class="admin-status-detail">Estimated API cost</div>
             </div>
         </div>
