@@ -46,6 +46,9 @@
                 <button class="btn-refresh" id="refreshBtn" title="Refresh data">
                     <i class="fas fa-sync-alt"></i>
                 </button>
+                <a href="#" class="nav-link nav-link-admin" data-section="admin" title="API Settings">
+                    <i class="fas fa-cog"></i>
+                </a>
             </div>
         </div>
     </nav>
@@ -388,6 +391,47 @@
                     <span class="card-header-badge">Past Week</span>
                 </div>
                 <div class="card-body" id="skyPostsWidget"><!-- JS --></div>
+            </div>
+        </section>
+
+        <!-- ==================== ADMIN / API SETTINGS SECTION ==================== -->
+        <section id="section-admin" class="section">
+            <div class="social-header">
+                <h1>API &amp; Data Sources</h1>
+                <p>Configure API connections, upload manual reports, and manage sync schedules.</p>
+            </div>
+
+            <!-- Connection Status Overview -->
+            <div class="admin-status-bar" id="adminStatusBar">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- API Connections Grid -->
+            <h2 class="admin-section-title"><i class="fas fa-plug"></i> API Connections</h2>
+            <div class="admin-grid" id="adminApiGrid">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- Manual Uploads -->
+            <h2 class="admin-section-title"><i class="fas fa-upload"></i> Manual Data Uploads</h2>
+            <div class="admin-grid" id="adminUploadGrid">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- Sync Schedule -->
+            <h2 class="admin-section-title"><i class="fas fa-clock"></i> Sync Schedule</h2>
+            <div class="card">
+                <div class="card-body" id="adminSchedule">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Environment Variables -->
+            <h2 class="admin-section-title"><i class="fas fa-key"></i> Environment Variables Required</h2>
+            <div class="card">
+                <div class="card-body" id="adminEnvVars">
+                    <!-- Populated by JS -->
+                </div>
             </div>
         </section>
     </main>

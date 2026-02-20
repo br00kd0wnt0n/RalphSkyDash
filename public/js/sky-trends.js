@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderSocialSection();
     renderCalendarSection();
     renderSkyPerformance();
+    renderAdminPanel();
     initFilters();
 });
 
@@ -649,4 +650,417 @@ function renderSkyPerformance() {
             }).join('')}
         </div>
     `;
+}
+
+/* ─────────── Admin Panel ─────────── */
+
+const API_SOURCES = [
+    {
+        id: 'flixpatrol',
+        name: 'FlixPatrol',
+        type: 'Streaming Charts (Netflix, Amazon, Disney+)',
+        icon: 'F',
+        colour: '#1a1a2e',
+        method: 'api',
+        envKey: 'FLIXPATROL_API_KEY',
+        cost: '$9.99/mo (Start)',
+        docs: 'flixpatrol.com/about/api/',
+        feeds: ['Netflix TV UK', 'Netflix Film UK', 'Amazon Prime UK'],
+        frequency: 'Daily',
+        status: 'not-configured'
+    },
+    {
+        id: 'tmdb',
+        name: 'TMDB',
+        type: 'Upcoming UK Releases & Metadata',
+        icon: 'T',
+        colour: '#01b4e4',
+        method: 'api',
+        envKey: 'TMDB_API_KEY',
+        cost: 'Free (non-commercial)',
+        docs: 'developer.themoviedb.org',
+        feeds: ['Upcoming UK Cinema Releases', 'Trending Movies/TV'],
+        frequency: 'Daily',
+        status: 'not-configured'
+    },
+    {
+        id: 'wikimedia',
+        name: 'Wikimedia Pageviews',
+        type: 'WikiViews — Entertainment Page Popularity',
+        icon: 'W',
+        colour: '#636e72',
+        method: 'api',
+        envKey: null,
+        cost: 'Free (no key needed)',
+        docs: 'doc.wikimedia.org',
+        feeds: ['WikiViews Top Entertainment Pages'],
+        frequency: 'Daily',
+        status: 'connected'
+    },
+    {
+        id: 'apify-tiktok',
+        name: 'Apify TikTok Trends',
+        type: 'TikTok Creative Center (UK, by industry)',
+        icon: 'A',
+        colour: '#ff0050',
+        method: 'api',
+        envKey: 'APIFY_TOKEN',
+        cost: '~$5-39/mo (Clockworks actor)',
+        docs: 'apify.com/clockworks/tiktok-trends-scraper',
+        feeds: ['TikTok UK Hashtags', 'TikTok UK News & Ents'],
+        frequency: 'Weekly',
+        status: 'not-configured'
+    },
+    {
+        id: 'claude',
+        name: 'Claude AI (Anthropic)',
+        type: 'AI Enrichment — Opportunities & Briefings',
+        icon: 'C',
+        colour: '#6b5ce7',
+        method: 'api',
+        envKey: 'ANTHROPIC_API_KEY',
+        cost: 'Usage-based',
+        docs: 'docs.anthropic.com',
+        feeds: ['AI Briefing', 'Sky Opportunities', 'Suggested Posts'],
+        frequency: 'On demand',
+        status: 'not-configured'
+    }
+];
+
+const UPLOAD_SOURCES = [
+    {
+        id: 'youscan',
+        name: 'YouScan Reports',
+        type: 'Sky Social Post Performance',
+        icon: 'Y',
+        colour: '#0072c9',
+        format: 'CSV or JSON',
+        feeds: ['Top Performing Sky Posts'],
+        lastUpload: null
+    },
+    {
+        id: 'ramdam-tiktok',
+        name: 'Ramdam TikTok Trends',
+        type: 'Monthly TikTok Trend Intelligence',
+        icon: 'R',
+        colour: '#ff0050',
+        format: 'CSV or JSON',
+        feeds: ['Ramdam TikTok Trends'],
+        lastUpload: null
+    },
+    {
+        id: 'ramdam-instagram',
+        name: 'Ramdam Instagram Trends',
+        type: 'Monthly Instagram Trend Intelligence',
+        icon: 'R',
+        colour: '#e6683c',
+        format: 'CSV or JSON',
+        feeds: ['Ramdam Instagram Trends'],
+        lastUpload: null
+    },
+    {
+        id: 'tiktok-calendar',
+        name: 'TikTok Marketing Calendar',
+        type: 'Annual Calendar (from PDF)',
+        icon: 'T',
+        colour: '#25f4ee',
+        format: 'JSON (extracted from PDF)',
+        feeds: ['TikTok Marketing Calendar'],
+        lastUpload: null
+    },
+    {
+        id: 'reddit-calendar',
+        name: 'Reddit Seasonal Calendar',
+        type: 'UK Cultural Moments',
+        icon: 'R',
+        colour: '#ff4500',
+        format: 'JSON (curated)',
+        feeds: ['Reddit Seasonal Calendar UK'],
+        lastUpload: null
+    }
+];
+
+function renderAdminPanel() {
+    renderAdminStatusBar();
+    renderAdminApiGrid();
+    renderAdminUploadGrid();
+    renderAdminSchedule();
+    renderAdminEnvVars();
+}
+
+function renderAdminStatusBar() {
+    const container = document.getElementById('adminStatusBar');
+    if (!container) return;
+
+    const apiConnected = API_SOURCES.filter(s => s.status === 'connected').length;
+    const apiTotal = API_SOURCES.length;
+    const uploadsTotal = UPLOAD_SOURCES.length;
+    const uploadsReceived = UPLOAD_SOURCES.filter(s => s.lastUpload).length;
+
+    container.innerHTML = `
+        <div class="admin-status-chip">
+            <div class="admin-status-dot ${apiConnected === apiTotal ? 'connected' : apiConnected > 0 ? 'manual' : 'disconnected'}"></div>
+            <div class="admin-status-info">
+                <div class="admin-status-name">${apiConnected}/${apiTotal} APIs Connected</div>
+                <div class="admin-status-detail">Automated data feeds</div>
+            </div>
+        </div>
+        <div class="admin-status-chip">
+            <div class="admin-status-dot ${uploadsReceived === uploadsTotal ? 'connected' : uploadsReceived > 0 ? 'manual' : 'disconnected'}"></div>
+            <div class="admin-status-info">
+                <div class="admin-status-name">${uploadsReceived}/${uploadsTotal} Uploads Received</div>
+                <div class="admin-status-detail">Manual data sources</div>
+            </div>
+        </div>
+        <div class="admin-status-chip">
+            <div class="admin-status-dot connected"></div>
+            <div class="admin-status-info">
+                <div class="admin-status-name">${API_SOURCES.reduce((a, s) => a + s.feeds.length, 0) + UPLOAD_SOURCES.reduce((a, s) => a + s.feeds.length, 0)} Data Feeds</div>
+                <div class="admin-status-detail">Total widget sources</div>
+            </div>
+        </div>
+        <div class="admin-status-chip">
+            <div class="admin-status-dot manual"></div>
+            <div class="admin-status-info">
+                <div class="admin-status-name">~$15-50/mo</div>
+                <div class="admin-status-detail">Estimated API cost</div>
+            </div>
+        </div>
+    `;
+}
+
+function renderAdminApiGrid() {
+    const container = document.getElementById('adminApiGrid');
+    if (!container) return;
+
+    container.innerHTML = API_SOURCES.map(source => {
+        const statusClass = source.status === 'connected' ? 'connected' : 'not-configured';
+        const statusLabel = source.status === 'connected' ? 'Connected' : 'Not Configured';
+
+        return `
+            <div class="admin-card" data-source="${source.id}">
+                <div class="admin-card-header">
+                    <div class="admin-card-header-left">
+                        <div class="admin-card-icon" style="background:${source.colour}">${source.icon}</div>
+                        <div>
+                            <div class="admin-card-name">${source.name}</div>
+                            <div class="admin-card-type">${source.type}</div>
+                        </div>
+                    </div>
+                    <span class="admin-card-status ${statusClass}">${statusLabel}</span>
+                </div>
+                <div class="admin-card-body">
+                    ${source.envKey ? `
+                        <div class="admin-field">
+                            <label class="admin-field-label">API Key</label>
+                            <div class="admin-field-row">
+                                <input type="password" class="admin-field-input" placeholder="${source.envKey}" id="input-${source.id}">
+                                <button class="admin-btn admin-btn-primary admin-btn-sm" onclick="testConnection('${source.id}')">
+                                    <i class="fas fa-plug"></i> Test
+                                </button>
+                            </div>
+                            <div class="admin-field-hint">${source.cost} &middot; <a href="https://${source.docs}" target="_blank" style="color:var(--sky-blue);">${source.docs}</a></div>
+                        </div>
+                    ` : `
+                        <div class="admin-field">
+                            <div style="padding:8px 12px;background:var(--success-light);border-radius:var(--radius-sm);font-size:0.82rem;color:var(--success);font-weight:500;">
+                                <i class="fas fa-check-circle" style="margin-right:6px;"></i> No API key required — open access
+                            </div>
+                            <div class="admin-field-hint" style="margin-top:6px;">${source.cost} &middot; <a href="https://${source.docs}" target="_blank" style="color:var(--sky-blue);">${source.docs}</a></div>
+                        </div>
+                    `}
+                    <div class="admin-field">
+                        <label class="admin-field-label">Feeds Powered</label>
+                        <div style="display:flex;flex-wrap:wrap;gap:4px;">
+                            ${source.feeds.map(f => `<span class="social-tag">${f}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="admin-field-meta">
+                        <span><i class="fas fa-clock"></i> Sync: ${source.frequency}</span>
+                        <button class="admin-btn admin-btn-secondary admin-btn-sm" onclick="syncNow('${source.id}')">
+                            <i class="fas fa-sync-alt"></i> Sync Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function renderAdminUploadGrid() {
+    const container = document.getElementById('adminUploadGrid');
+    if (!container) return;
+
+    container.innerHTML = UPLOAD_SOURCES.map(source => {
+        const statusClass = source.lastUpload ? 'connected' : 'manual-upload';
+        const statusLabel = source.lastUpload ? 'Data Loaded' : 'Awaiting Upload';
+
+        return `
+            <div class="admin-card" data-source="${source.id}">
+                <div class="admin-card-header">
+                    <div class="admin-card-header-left">
+                        <div class="admin-card-icon" style="background:${source.colour}">${source.icon}</div>
+                        <div>
+                            <div class="admin-card-name">${source.name}</div>
+                            <div class="admin-card-type">${source.type}</div>
+                        </div>
+                    </div>
+                    <span class="admin-card-status ${statusClass}">${statusLabel}</span>
+                </div>
+                <div class="admin-card-body">
+                    <div class="admin-upload-zone" onclick="triggerUpload('${source.id}')">
+                        <i class="fas fa-cloud-arrow-up"></i>
+                        <div class="admin-upload-zone-text">Drop ${source.format} file here or click to browse</div>
+                        <div class="admin-upload-zone-hint">Accepted: ${source.format}</div>
+                    </div>
+                    <input type="file" id="upload-${source.id}" style="display:none" accept=".csv,.json" onchange="handleUpload('${source.id}', this)">
+                    <div class="admin-field" style="margin-top:12px;">
+                        <label class="admin-field-label">Feeds Powered</label>
+                        <div style="display:flex;flex-wrap:wrap;gap:4px;">
+                            ${source.feeds.map(f => `<span class="social-tag">${f}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="admin-field-meta">
+                        <span><i class="fas fa-clock"></i> ${source.lastUpload ? 'Last upload: ' + source.lastUpload : 'No data uploaded yet'}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function renderAdminSchedule() {
+    const container = document.getElementById('adminSchedule');
+    if (!container) return;
+
+    const allSources = [
+        ...API_SOURCES.map(s => ({ name: s.name, feeds: s.feeds, frequency: s.frequency, method: 'api' })),
+        ...UPLOAD_SOURCES.map(s => ({ name: s.name, feeds: s.feeds, frequency: 'Manual', method: 'upload' }))
+    ];
+
+    container.innerHTML = `
+        <table class="admin-schedule-table">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Feeds</th>
+                    <th>Frequency</th>
+                    <th>Method</th>
+                    <th>Next Sync</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${allSources.map(s => `
+                    <tr>
+                        <td style="font-weight:600;">${s.name}</td>
+                        <td>${s.feeds.join(', ')}</td>
+                        <td>
+                            ${s.method === 'api'
+                                ? `<span class="admin-schedule-freq"><i class="fas fa-bolt"></i> ${s.frequency}</span>`
+                                : `<span class="admin-schedule-manual"><i class="fas fa-upload"></i> Manual</span>`
+                            }
+                        </td>
+                        <td style="font-size:0.78rem;color:var(--text-muted);">${s.method === 'api' ? 'Automated' : 'File Upload'}</td>
+                        <td style="font-size:0.78rem;color:var(--text-muted);">${s.method === 'api' ? 'When configured' : '—'}</td>
+                    </tr>
+                `).join('')}
+            </tbody>
+        </table>
+    `;
+}
+
+function renderAdminEnvVars() {
+    const container = document.getElementById('adminEnvVars');
+    if (!container) return;
+
+    const envVars = [
+        { key: 'FLIXPATROL_API_KEY', desc: 'FlixPatrol streaming charts API key', required: true },
+        { key: 'TMDB_API_KEY', desc: 'The Movie Database API key (free registration)', required: true },
+        { key: 'APIFY_TOKEN', desc: 'Apify platform token for TikTok scraping', required: true },
+        { key: 'ANTHROPIC_API_KEY', desc: 'Claude AI API key for enrichment & briefings', required: true },
+        { key: 'DATABASE_URL', desc: 'PostgreSQL connection string', required: true },
+        { key: 'REDIS_URL', desc: 'Redis cache connection (optional)', required: false },
+        { key: 'PORT', desc: 'Server port (default: 30003)', required: false }
+    ];
+
+    container.innerHTML = envVars.map(v => `
+        <div class="admin-env-row">
+            <div class="admin-env-key">${v.key}</div>
+            <div class="admin-env-desc">${v.desc}</div>
+            <span class="admin-env-required ${v.required ? 'required' : 'optional'}">${v.required ? 'Required' : 'Optional'}</span>
+        </div>
+    `).join('');
+}
+
+/* Admin Actions (prototype — shows feedback, doesn't persist) */
+function testConnection(sourceId) {
+    const btn = event.target.closest('.admin-btn');
+    const originalHtml = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Testing...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+        const input = document.getElementById(`input-${sourceId}`);
+        if (input && input.value.trim()) {
+            btn.innerHTML = '<i class="fas fa-check"></i> Connected';
+            btn.className = 'admin-btn admin-btn-success admin-btn-sm';
+            const card = btn.closest('.admin-card');
+            const statusEl = card.querySelector('.admin-card-status');
+            statusEl.textContent = 'Connected';
+            statusEl.className = 'admin-card-status connected';
+        } else {
+            btn.innerHTML = '<i class="fas fa-times"></i> No Key';
+            btn.style.background = 'var(--danger)';
+            setTimeout(() => {
+                btn.innerHTML = originalHtml;
+                btn.style.background = '';
+                btn.className = 'admin-btn admin-btn-primary admin-btn-sm';
+                btn.disabled = false;
+            }, 1500);
+        }
+    }, 1200);
+}
+
+function syncNow(sourceId) {
+    const btn = event.target.closest('.admin-btn');
+    const originalHtml = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Syncing...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-check"></i> Done';
+        btn.className = 'admin-btn admin-btn-success admin-btn-sm';
+        setTimeout(() => {
+            btn.innerHTML = originalHtml;
+            btn.className = 'admin-btn admin-btn-secondary admin-btn-sm';
+            btn.disabled = false;
+        }, 2000);
+    }, 2000);
+}
+
+function triggerUpload(sourceId) {
+    document.getElementById(`upload-${sourceId}`).click();
+}
+
+function handleUpload(sourceId, input) {
+    if (!input.files.length) return;
+    const file = input.files[0];
+    const card = input.closest('.admin-card');
+    const statusEl = card.querySelector('.admin-card-status');
+    const zone = card.querySelector('.admin-upload-zone');
+    const meta = card.querySelector('.admin-field-meta span');
+
+    zone.innerHTML = `
+        <i class="fas fa-check-circle" style="color:var(--success);"></i>
+        <div class="admin-upload-zone-text" style="color:var(--success);font-weight:600;">${file.name} uploaded</div>
+        <div class="admin-upload-zone-hint">${(file.size / 1024).toFixed(1)} KB</div>
+    `;
+    zone.style.borderColor = 'var(--success)';
+    zone.style.background = 'var(--success-light)';
+
+    statusEl.textContent = 'Data Loaded';
+    statusEl.className = 'admin-card-status connected';
+
+    const now = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    meta.innerHTML = `<i class="fas fa-clock"></i> Last upload: ${now}`;
 }
