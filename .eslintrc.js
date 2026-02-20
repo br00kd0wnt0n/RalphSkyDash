@@ -8,7 +8,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
-    '@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended'
   ],
   rules: {
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
@@ -23,5 +23,6 @@ module.exports = {
   env: {
     node: true,
     es2022: true
-  }
+  },
+  ignorePatterns: ['dist/', 'node_modules/', 'test-*.ts', 'debug-*.ts', 'trend-scraper-unified.ts']
 };
