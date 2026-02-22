@@ -57,4 +57,23 @@ export const testConnection = async (): Promise<boolean> => {
   }
 };
 
+export const waitForConnection = async (maxRetries = 10, initialDelayMs = 1000): Promise<boolean> => {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      await sequelize.authenticate();
+      logger.info(`Database connection established successfully (attempt ${attempt}/${maxRetries})`);
+      return true;
+    } catch (error) {
+      const delay = initialDelayMs * Math.min(attempt, 5);
+      if (attempt < maxRetries) {
+        logger.warn(`Database connection attempt ${attempt}/${maxRetries} failed. Retrying in ${delay}ms...`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+      } else {
+        logger.error('Unable to connect to database after all retries:', error);
+      }
+    }
+  }
+  return false;
+};
+
 export { sequelize, logger };
