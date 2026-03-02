@@ -710,6 +710,7 @@ body {
 
 .dot-netflix { background: var(--netflix); }
 .dot-disney { background: var(--disney); }
+.dot-wiki { background: #636e72; }
 .dot-amazon { background: var(--amazon); }
 .dot-apple { background: var(--apple); }
 .dot-sky { background: var(--sky-platform); }

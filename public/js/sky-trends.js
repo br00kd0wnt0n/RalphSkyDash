@@ -212,8 +212,8 @@ function renderStreamingCharts(platformFilter, typeFilter) {
         }
     }
 
-    if (platformFilter === 'all' || platformFilter === 'disney') {
-        // WikiViews as a proxy data source — now split into Film, TV, People
+    if (platformFilter === 'all' || platformFilter === 'wiki') {
+        // WikiViews — split into Film, TV, People
         if (typeFilter === 'all' || typeFilter === 'films') {
             lists.push({ title: 'WikiViews', subtitle: 'Most Viewed Film Pages', colour: '#636e72', icon: 'W', data: filterBySearch(MOCK_DATA.wikiViewsFilm, search), isWiki: true });
         }
