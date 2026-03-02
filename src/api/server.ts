@@ -585,8 +585,12 @@ app.use('*', (_req, res) => {
 
 async function startServer() {
   try {
-    await scraper.initialize();
-    
+    try {
+      await scraper.initialize();
+    } catch (scraperError) {
+      logger.warn('⚠️ Scraper initialization failed (dashboard will still work):', scraperError);
+    }
+
     app.listen(PORT, '0.0.0.0', () => {
       logger.info(`🚀 Ralph Loves Trends API server running on port ${PORT}`);
       logger.info(`📊 Dashboard available at http://0.0.0.0:${PORT}`);

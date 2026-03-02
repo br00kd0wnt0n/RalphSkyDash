@@ -3,7 +3,7 @@
 import dotenv from 'dotenv';
 import { TrendScraper } from './scrapers/TrendScraper';
 import { startServer } from './api/server';
-import { testConnection, logger } from './config/database';
+import { testConnection, waitForConnection, logger } from './config/database';
 import { runMigrations } from './database/migrate';
 import { seedDatabase } from './database/seed';
 
@@ -170,29 +170,31 @@ async function main() {
 
   try {
     logger.info('🚀 Ralph Loves Trends - Initializing...');
-    
-    const connected = await testConnection();
+
+    const isProduction = process.env.NODE_ENV === 'production';
+    const connected = isProduction
+      ? await waitForConnection(5, 2000)
+      : await testConnection();
+
     if (!connected) {
-      logger.error('❌ Database connection failed. Please check your configuration.');
-      logger.info('💡 Tip: Run "npm run docker:up" to start PostgreSQL');
-      process.exit(1);
+      logger.warn('⚠️ Database not available. Dashboard will run in demo mode with mock data.');
     }
 
-    if (options.migrate) {
+    if (connected && options.migrate) {
       logger.info('📦 Running database migrations...');
       await runMigrations();
     }
 
-    if (options.seed) {
+    if (connected && options.seed) {
       logger.info('🌱 Seeding database...');
       await seedDatabase();
     }
 
-    if (options.scrape) {
+    if (connected && options.scrape) {
       await runScraper();
     }
 
-    if (options.schedule) {
+    if (connected && options.schedule) {
       await runScheduledScraper();
     }
 
