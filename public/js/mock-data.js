@@ -162,7 +162,7 @@ const MOCK_DATA = {
     // ─── Reddit Seasonal Calendar UK (Next Month) ───
     redditCalendar: [
         { date: '1 Mar', event: 'St David\'s Day', category: 'Cultural', relevance: 'Welsh content opportunities', icon: '🏴' },
-        { date: '2 Mar', event: 'Oscars Ceremony', category: 'Awards', relevance: 'Winner tie-ins to Sky catalogue', icon: '🏆' },
+        { date: '15 Mar', event: 'Oscars Ceremony', category: 'Awards', relevance: 'Winner tie-ins to Sky catalogue', icon: '🏆' },
         { date: '6 Mar', event: 'World Book Day', category: 'Cultural', relevance: 'Book-to-screen adaptations on Sky', icon: '📚' },
         { date: '8 Mar', event: 'International Women\'s Day', category: 'Cultural', relevance: 'Female-led Sky originals spotlight', icon: '✊' },
         { date: '14–16 Mar', event: 'Six Nations Super Saturday', category: 'Sport', relevance: 'Rugby crossover content', icon: '🏉' },
@@ -179,7 +179,7 @@ const MOCK_DATA = {
         { date: '14 Mar', event: 'Pi Day', category: 'Fun', tiktokTrend: '#PiDay #MathInMovies', potentialReach: '120M+' },
         { date: '17 Mar', event: 'St Patrick\'s Day', category: 'Cultural', tiktokTrend: '#StPatricksDay #IrishActors', potentialReach: '800M+' },
         { date: '20 Mar', event: 'First Day of Spring', category: 'Seasonal', tiktokTrend: '#SpringVibes #NewSeason', potentialReach: '350M+' },
-        { date: '24 Mar', event: 'Oscar Watch Parties', category: 'Entertainment', tiktokTrend: '#OscarWatchParty', potentialReach: '450M+' },
+        { date: '15 Mar', event: 'Oscar Watch Parties', category: 'Entertainment', tiktokTrend: '#OscarWatchParty', potentialReach: '450M+' },
         { date: '31 Mar', event: 'Transgender Day of Visibility', category: 'Awareness', tiktokTrend: '#TransVisibility', potentialReach: '200M+' },
         { date: '1 Apr', event: 'April Fool\'s Day', category: 'Fun', tiktokTrend: '#AprilFools #FakeTrailers', potentialReach: '900M+' },
         { date: '14 Apr', event: 'Easter Content Season', category: 'Holiday', tiktokTrend: '#EasterMovies #FamilyFilmNight', potentialReach: '600M+' }
@@ -362,7 +362,7 @@ const MOCK_DATA = {
             talent: 'Various nominees',
             strategicRecommendation: 'Oscars night content play — curate Sky Cinema collection of nominated films / drive tune-in around ceremony',
             relevanceScore: 'low',
-            timing: 'Oscars night 2 March'
+            timing: 'Oscars night 15 March'
         },
         {
             id: 8,
@@ -408,7 +408,7 @@ const MOCK_DATA = {
         insights: [
             { title: 'The Murphy Moment', text: 'Three Murphy trends at once — Peaky Blinders movie, 28 Days Later sequel and Oppenheimer re-watches. The biggest single-talent opportunity we\'ve seen this quarter.' },
             { title: 'Fans Are Doing the Work', text: 'Day of the Jackal and Sweetpea are trending on TikTok without any paid push — fans are campaigning for new series off their own back. Worth amplifying.' },
-            { title: 'Oscars Are Coming', text: 'Ceremony on 2 March. A two-week window to spotlight nominated films on Sky Cinema and make the most of the awards conversation.' }
+            { title: 'Oscars Are Coming', text: 'Ceremony on 15 March. A two-week window to spotlight nominated films on Sky Cinema and make the most of the awards conversation.' }
         ]
     },
 
