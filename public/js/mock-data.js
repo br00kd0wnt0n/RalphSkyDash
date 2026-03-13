@@ -1,5 +1,5 @@
 /* ============================================================
-   SKY TRENDS ANALYSER — Mock Data for Pitch Prototype
+   CULTURE ENGINE — Mock Data for Pitch Prototype
    Realistic UK streaming, social & calendar data
    ============================================================ */
 

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Culture Engine</title>
+    <link rel="stylesheet" href="css/sky-trends.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .admin-login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: var(--bg-primary);
+        }
+        .admin-login-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 48px 40px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .admin-login-card h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .admin-login-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+        .admin-login-card input {
+            display: block;
+            width: 100%;
+            padding: 10px 14px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            box-sizing: border-box;
+        }
+        .admin-login-card button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: var(--radius-md);
+            background: var(--sky-blue);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        .admin-login-card button:hover { opacity: 0.9; }
+        .admin-login-error {
+            color: var(--danger);
+            font-size: 0.8rem;
+            margin-top: 8px;
+            display: none;
+        }
+        .admin-content { display: none; }
+        .admin-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            margin-bottom: 24px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+        }
+        .admin-back:hover { color: var(--text-primary); }
+    </style>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div class="admin-login" id="adminLogin">
+        <div class="admin-login-card">
+            <img src="surveylogo.png" alt="Ralph" style="height:40px;margin-bottom:16px;">
+            <h1>Culture Engine Admin</h1>
+            <p>Enter credentials to access settings.</p>
+            <form id="loginForm">
+                <input type="text" id="adminUser" placeholder="Username" autocomplete="username" required>
+                <input type="password" id="adminPass" placeholder="Password" autocomplete="current-password" required>
+                <button type="submit">Sign In</button>
+                <div class="admin-login-error" id="loginError">Invalid username or password.</div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Content (hidden until auth) -->
+    <div class="admin-content" id="adminContent">
+        <div style="max-width:1200px;margin:0 auto;padding:32px 24px;">
+            <a href="/" class="admin-back"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+            <div class="social-header" style="margin-bottom:24px;">
+                <h1>API & Data Sources</h1>
+                <p>Configure API connections, upload manual reports, and manage sync schedules.</p>
+            </div>
+
+            <!-- Connection Status Overview -->
+            <div class="admin-status-bar" id="adminStatusBar"></div>
+
+            <!-- API Connections Grid -->
+            <h2 class="admin-section-title"><i class="fas fa-plug"></i> API Connections</h2>
+            <div class="admin-grid" id="adminApiGrid"></div>
+
+            <!-- Manual Uploads -->
+            <h2 class="admin-section-title"><i class="fas fa-upload"></i> Manual Data Uploads</h2>
+            <div class="admin-grid" id="adminUploadGrid"></div>
+
+            <!-- Sync Schedule -->
+            <h2 class="admin-section-title"><i class="fas fa-clock"></i> Sync Schedule</h2>
+            <div class="card">
+                <div class="card-body" id="adminSchedule"></div>
+            </div>
+
+            <!-- Environment Variables -->
+            <h2 class="admin-section-title"><i class="fas fa-key"></i> Environment Variables Required</h2>
+            <div class="card">
+                <div class="card-body" id="adminEnvVars"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/mock-data.js"></script>
+    <script>
+        // Simple client-side auth gate
+        const ADMIN_USER = 'ralph';
+        const ADMIN_PASS = 'skyculture2026';
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const user = document.getElementById('adminUser').value;
+            const pass = document.getElementById('adminPass').value;
+
+            if (user === ADMIN_USER && pass === ADMIN_PASS) {
+                document.getElementById('adminLogin').style.display = 'none';
+                document.getElementById('adminContent').style.display = 'block';
+                sessionStorage.setItem('adminAuth', 'true');
+                renderAdminPanel();
+            } else {
+                document.getElementById('loginError').style.display = 'block';
+            }
+        });
+
+        // Restore session
+        if (sessionStorage.getItem('adminAuth') === 'true') {
+            document.getElementById('adminLogin').style.display = 'none';
+            document.getElementById('adminContent').style.display = 'block';
+            window.addEventListener('DOMContentLoaded', renderAdminPanel);
+        }
+
+        function renderAdminPanel() {
+            // API Connections
+            const apis = MOCK_DATA.apiConnections || [
+                { id: 'apify', name: 'Apify', type: 'TikTok Hashtags, Instagram, Pinterest', status: 'connected', docs: 'docs.apify.com', feeds: ['TikTok Trending Hashtags UK', 'TikTok News & Ents'] },
+                { id: 'trends24', name: 'Trends24', type: 'X/Twitter Trending via Web Scraping', status: 'connected', docs: 'trends24.in', feeds: ['X Trending UK'] },
+                { id: 'wikimedia', name: 'Wikimedia Pageviews', type: 'WikiViews — Entertainment Page Popularity', status: 'planned', docs: 'doc.wikimedia.org', feeds: ['WikiViews Top Entertainment Pages'] },
+                { id: 'anthropic', name: 'Claude AI (Anthropic)', type: 'AI Enrichment — Sentiment, Growth, Opportunities', status: 'connected', docs: 'docs.anthropic.com', feeds: ['AI Weekly Briefing', 'Opportunity Scoring'] }
+            ];
+            const grid = document.getElementById('adminApiGrid');
+            if (grid) {
+                grid.innerHTML = apis.map(api => `
+                    <div class="card" style="margin-bottom:12px;">
+                        <div class="card-body" style="padding:16px;">
+                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                                <strong>${api.name}</strong>
+                                <span style="font-size:0.75rem;padding:3px 8px;border-radius:12px;background:${api.status === 'connected' ? 'var(--success)' : api.status === 'planned' ? 'var(--warning)' : 'var(--danger)'};color:#fff;">${api.status}</span>
+                            </div>
+                            <div style="font-size:0.8rem;color:var(--text-muted);">${api.type}</div>
+                            <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">Feeds: ${api.feeds.join(', ')}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+    </script>
+</body>
+</html>
