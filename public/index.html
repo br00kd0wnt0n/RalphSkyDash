@@ -42,6 +42,13 @@
                 </a>
             </div>
             <div class="nav-actions">
+                <div class="dataset-toggle" title="Switch dataset">
+                    <i class="fas fa-database"></i>
+                    <select id="datasetToggle">
+                        <option value="new" selected>This week (13–19 Apr)</option>
+                        <option value="prev">Previous (17–23 Feb)</option>
+                    </select>
+                </div>
                 <span class="nav-date" id="currentDate"></span>
                 <button class="btn-refresh" id="refreshBtn" title="Refresh data">
                     <i class="fas fa-sync-alt"></i>
@@ -435,7 +442,9 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="js/mock-data-prev.js"></script>
     <script src="js/mock-data.js"></script>
     <script src="js/sky-trends.js"></script>
+    <script src="js/data-toggle.js"></script>
 </body>
 </html>

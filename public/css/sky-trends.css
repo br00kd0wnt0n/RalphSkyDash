@@ -218,6 +218,39 @@ body {
     to { transform: rotate(360deg); }
 }
 
+.dataset-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-sm);
+    padding: 0 10px;
+    height: 34px;
+}
+
+.dataset-toggle > i {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.78rem;
+}
+
+.dataset-toggle select {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    padding-right: 2px;
+}
+
+.dataset-toggle select option {
+    color: #1a1a2e;
+    background: #ffffff;
+}
+
 /* ---------- Main Content ---------- */
 .main {
     max-width: 1440px;
