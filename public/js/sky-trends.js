@@ -41,6 +41,7 @@ function initNavigation() {
 
 function setCurrentDate() {
     const el = document.getElementById('currentDate');
+    if (!el) return;
     const opts = { day: 'numeric', month: 'short', year: 'numeric' };
     el.textContent = new Date().toLocaleDateString('en-GB', opts);
 }
