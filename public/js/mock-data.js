@@ -1682,19 +1682,19 @@ const MOCK_DATA_NEW = {
         }
     ],
     "aiBriefing": {
-        "overview": "Big week. Peaky Blinders: The Movie has landed on Netflix and Cillian Murphy is everywhere — 124M TikTok views / 2.4M Wikipedia hits. Great news for us: Oppenheimer / 28 Days Later and Dunkirk are all on Sky. Meanwhile fans are organically buzzing about Day of the Jackal and Sweetpea on TikTok / campaigning for more. Two things happening at once — we can ride the Murphy wave and champion our own originals.",
+        "overview": "Three TikTok moments this week line up cleanly with catalogue we already have. The Rookie and Euphoria S3 are both on NowTV and trending organically — fans doing the work for us. Spider-Man: A Brand New Day's trailer has #spiderman and #peterparker climbing, and Sky Cinema has the back library to join that conversation. Reactive content sitting right there.",
         "insights": [
             {
-                "title": "The Murphy Moment",
-                "text": "Three Murphy trends at once — Peaky Blinders movie / 28 Days Later sequel and Oppenheimer re-watches. The biggest single-talent opportunity we've seen this quarter."
+                "title": "The Rookie Trending",
+                "text": "The Rookie (available on NowTV) is a trending TikTok hashtag with 4K posts in the past 7 days. Fan edits include Angela Lopez Core, #jensenandjared, Kojo the dog, and the Chenford walk."
             },
             {
-                "title": "Fans Are Doing the Work",
-                "text": "Day of the Jackal and Sweetpea are trending on TikTok without any paid push — fans are campaigning for new series off their own back. Worth amplifying."
+                "title": "Euphoria S3 Takeover",
+                "text": "Euphoria S3 (available on NowTV) is trending on TikTok. Multiple trending hashtags include #euphoria, #zendaya, #euphoriaedit, #euphoriaS3, #euphoriaseason2, #euphoria3 and #euphoriamakeup."
             },
             {
-                "title": "Oscars Are Coming",
-                "text": "Ceremony on 2 March. A two-week window to spotlight nominated films on Sky Cinema and make the most of the awards conversation."
+                "title": "Spider-Man: A Brand New Day",
+                "text": "The trailer release for Spider-Man: A Brand New Day has #spiderman and #peterparker trending on TikTok. Opportunity to join the conversation with Spider-Man titles available on Sky Cinema."
             }
         ]
     },
