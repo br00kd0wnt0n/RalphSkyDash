@@ -1700,18 +1700,16 @@ const MOCK_DATA_NEW = {
     },
     "spotlight": {
         "trigger": {
-            "title": "Peaky Blinders: The Movie",
-            "platform": "Netflix",
-            "detail": "Leverage Cillian Murphy moment — cross-promote Sky Cinema catalogue (Oppenheimer / 28…"
+            "title": "#DayOfTheJackal trending",
+            "platform": "TikTok",
+            "detail": "Fan edits of Eddie Redmayne scenes driving 12M impressions on Instagram"
         },
-        "talent": "Cillian Murphy",
+        "talent": "Eddie Redmayne",
         "skyTitles": [
-            "Oppenheimer (Sky Cinema)",
-            "28 Days Later (Sky Store)",
-            "Dunkirk (Sky Cinema)",
-            "Retreat (Sky Store)"
+            "The Day of the Jackal S1 (Sky Atlantic)",
+            "The Day of the Jackal 1973 (Sky Cinema)"
         ],
-        "strategicRecommendation": "Leverage Cillian Murphy moment — cross-promote Sky Cinema catalogue (Oppenheimer / 28 Days Later / Dunkirk) while Peaky Blinders movie drives peak interest",
+        "strategicRecommendation": "Capitalise on #DayOfTheJackal fan campaign momentum — spotlight Sky Atlantic as the home of the series / tease S2 speculation",
         "relevance": "high"
     },
     "topMovers": [
