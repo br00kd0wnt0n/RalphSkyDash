@@ -1304,256 +1304,71 @@ const MOCK_DATA_NEW = {
         {
             "id": 1,
             "urgency": "high",
-            "type": "actor",
-            "typeLabel": "Actor Connection",
+            "type": "genre",
+            "typeLabel": "Organic Hashtag",
             "trigger": {
-                "title": "Peaky Blinders: The Movie",
-                "platform": "Netflix",
-                "platformColour": "#e50914",
-                "detail": "Immediate — trending now"
+                "title": "The Rookie trending on TikTok",
+                "platform": "TikTok",
+                "platformColour": "#ff0050",
+                "detail": "4K posts past 7 days — Chenford walk, Angela Lopez Core, Kojo the dog"
             },
             "skyTitles": [
                 {
-                    "title": "Oppenheimer",
-                    "where": "Sky Cinema",
-                    "type": "Film"
-                },
-                {
-                    "title": "28 Days Later",
-                    "where": "Sky Store",
-                    "type": "Film"
-                },
-                {
-                    "title": "Dunkirk",
-                    "where": "Sky Cinema",
-                    "type": "Film"
-                },
-                {
-                    "title": "Retreat",
-                    "where": "Sky Store",
-                    "type": "Film"
+                    "title": "The Rookie",
+                    "where": "NowTV",
+                    "type": "Series"
                 }
             ],
-            "talent": "Cillian Murphy",
-            "strategicRecommendation": "Leverage Cillian Murphy moment — cross-promote Sky Cinema catalogue (Oppenheimer / 28 Days Later / Dunkirk) while Peaky Blinders movie drives peak interest",
+            "talent": "The Rookie fan community",
+            "strategicRecommendation": "Lean into organic NowTV momentum — surface The Rookie to fan-edit communities and position NowTV as the UK home for the series",
             "relevanceScore": "high",
-            "timing": "Immediate — trending now"
+            "timing": "This week — organic momentum window"
         },
         {
             "id": 2,
             "urgency": "high",
-            "type": "franchise",
-            "typeLabel": "Franchise Link",
+            "type": "actor",
+            "typeLabel": "Actor Connection",
             "trigger": {
-                "title": "#DayOfTheJackal trending",
+                "title": "Euphoria S3 takeover on TikTok",
                 "platform": "TikTok",
                 "platformColour": "#ff0050",
-                "detail": "This week — high engagement window"
+                "detail": "#euphoria / #zendaya / #euphoriaedit / #euphoriaS3 all trending"
             },
             "skyTitles": [
                 {
-                    "title": "The Day of the Jackal S1",
-                    "where": "Sky Atlantic",
+                    "title": "Euphoria S3",
+                    "where": "NowTV",
                     "type": "Series"
-                },
-                {
-                    "title": "The Day of the Jackal 1973",
-                    "where": "Sky Cinema",
-                    "type": "Film"
                 }
             ],
-            "talent": "Eddie Redmayne",
-            "strategicRecommendation": "Capitalise on #DayOfTheJackal fan campaign momentum — spotlight Sky Atlantic as the home of the series / tease S2 speculation",
+            "talent": "Zendaya",
+            "strategicRecommendation": "Capitalise on Euphoria S3 multi-hashtag trend — position NowTV as the UK destination for S3 and the back catalogue",
             "relevanceScore": "high",
-            "timing": "This week — high engagement window"
+            "timing": "This week — multi-hashtag momentum"
         },
         {
             "id": 3,
-            "urgency": "high",
-            "type": "actor",
-            "typeLabel": "Actor Connection",
-            "trigger": {
-                "title": "#28DaysLater sequel trailer",
-                "platform": "TikTok",
-                "platformColour": "#ff0050",
-                "detail": "This week — trailer momentum"
-            },
-            "skyTitles": [
-                {
-                    "title": "28 Days Later",
-                    "where": "Sky Store",
-                    "type": "Film"
-                },
-                {
-                    "title": "Oppenheimer",
-                    "where": "Sky Cinema",
-                    "type": "Film"
-                },
-                {
-                    "title": "Peaky Blinders S1-6",
-                    "where": "Sky Box Sets",
-                    "type": "Series"
-                }
-            ],
-            "talent": "Cillian Murphy",
-            "strategicRecommendation": "Ride 28 Days Later sequel hype — position Sky Store as the place to rewatch the original / tie back to Murphy's Sky catalogue",
-            "relevanceScore": "high",
-            "timing": "This week — trailer momentum"
-        },
-        {
-            "id": 4,
-            "urgency": "medium",
-            "type": "genre",
-            "typeLabel": "Genre Match",
-            "trigger": {
-                "title": "Black Mirror S7",
-                "platform": "Netflix",
-                "platformColour": "#e50914",
-                "detail": "Within 3 days"
-            },
-            "skyTitles": [
-                {
-                    "title": "Sweetpea",
-                    "where": "Sky Atlantic",
-                    "type": "Series"
-                },
-                {
-                    "title": "The Midwich Cuckoos",
-                    "where": "Sky Max",
-                    "type": "Series"
-                }
-            ],
-            "talent": "Various",
-            "strategicRecommendation": "Bridge Black Mirror dark-thriller audience to Sweetpea — genre-match positioning for Sky Atlantic originals",
-            "relevanceScore": "medium",
-            "timing": "Within 3 days"
-        },
-        {
-            "id": 5,
-            "urgency": "medium",
-            "type": "actor",
-            "typeLabel": "Actor Connection",
-            "trigger": {
-                "title": "Black Bag (cinema release 14 Mar)",
-                "platform": "Cinema",
-                "platformColour": "#1a1a2e",
-                "detail": "Week of 10 March — pre-release buzz"
-            },
-            "skyTitles": [
-                {
-                    "title": "Tár",
-                    "where": "Sky Cinema",
-                    "type": "Film"
-                },
-                {
-                    "title": "The Killer",
-                    "where": "Sky Cinema",
-                    "type": "Film"
-                },
-                {
-                    "title": "Slow Horses",
-                    "where": "Sky Atlantic",
-                    "type": "Series"
-                }
-            ],
-            "talent": "Cate Blanchett, Michael Fassbender",
-            "strategicRecommendation": "Pre-release Black Bag buzz — spotlight Blanchett/Fassbender catalogue on Sky Cinema (Tár / The Killer / Slow Horses)",
-            "relevanceScore": "medium",
-            "timing": "Week of 10 March — pre-release buzz"
-        },
-        {
-            "id": 6,
-            "urgency": "medium",
-            "type": "director",
-            "typeLabel": "Director Connection",
-            "trigger": {
-                "title": "Alto Knights (cinema release 21 Mar)",
-                "platform": "Cinema",
-                "platformColour": "#1a1a2e",
-                "detail": "Week of 17 March"
-            },
-            "skyTitles": [
-                {
-                    "title": "Goodfellas",
-                    "where": "Sky Cinema",
-                    "type": "Film"
-                },
-                {
-                    "title": "The Irishman",
-                    "where": "Sky Cinema",
-                    "type": "Film"
-                },
-                {
-                    "title": "Gangs of London",
-                    "where": "Sky Atlantic",
-                    "type": "Series"
-                }
-            ],
-            "talent": "Robert De Niro",
-            "strategicRecommendation": "Pre-release Alto Knights anticipation — curate De Niro mob collection on Sky Cinema (Goodfellas / The Irishman)",
-            "relevanceScore": "medium",
-            "timing": "Week of 17 March"
-        },
-        {
-            "id": 7,
-            "urgency": "low",
-            "type": "genre",
-            "typeLabel": "Genre Match",
-            "trigger": {
-                "title": "#Oscars2026 nominations",
-                "platform": "X",
-                "platformColour": "#1a1a2e",
-                "detail": "Oscars night 2 March"
-            },
-            "skyTitles": [
-                {
-                    "title": "Oscar-nominated films collection",
-                    "where": "Sky Cinema",
-                    "type": "Film"
-                },
-                {
-                    "title": "The Zone of Interest",
-                    "where": "Sky Cinema",
-                    "type": "Film"
-                },
-                {
-                    "title": "Anatomy of a Fall",
-                    "where": "Sky Cinema",
-                    "type": "Film"
-                }
-            ],
-            "talent": "Various nominees",
-            "strategicRecommendation": "Oscars night content play — curate Sky Cinema collection of nominated films / drive tune-in around ceremony",
-            "relevanceScore": "low",
-            "timing": "Oscars night 2 March"
-        },
-        {
-            "id": 8,
             "urgency": "medium",
             "type": "franchise",
             "typeLabel": "Franchise Link",
             "trigger": {
-                "title": "Sweetpea return hints",
+                "title": "Spider-Man: A Brand New Day trailer",
                 "platform": "TikTok",
                 "platformColour": "#ff0050",
-                "detail": "This week — riding the buzz"
+                "detail": "#spiderman and #peterparker climbing on the back of the trailer drop"
             },
             "skyTitles": [
                 {
-                    "title": "Sweetpea S1",
-                    "where": "Sky Atlantic",
-                    "type": "Series"
-                },
-                {
-                    "title": "Killing Eve",
-                    "where": "Sky Box Sets",
-                    "type": "Series"
+                    "title": "Spider-Man back catalogue",
+                    "where": "Sky Cinema",
+                    "type": "Film"
                 }
             ],
-            "talent": "Ella Purnell",
-            "strategicRecommendation": "Amplify organic Sweetpea fan buzz — community engagement strategy while S2 speculation builds",
+            "talent": "Spider-Man franchise",
+            "strategicRecommendation": "Join the Spider-Man conversation — curate the Sky Cinema back library around the trailer moment ahead of theatrical release",
             "relevanceScore": "medium",
-            "timing": "This week — riding the buzz"
+            "timing": "This week — trailer momentum"
         }
     ],
     "socialBuzz": [
@@ -1700,16 +1515,15 @@ const MOCK_DATA_NEW = {
     },
     "spotlight": {
         "trigger": {
-            "title": "#DayOfTheJackal trending",
+            "title": "The Rookie trending on TikTok",
             "platform": "TikTok",
-            "detail": "Fan edits of Eddie Redmayne scenes driving 12M impressions on Instagram"
+            "detail": "4K posts in past 7 days — fan edits driving organic discovery (Chenford walk, Angela Lopez Core, Kojo the dog)"
         },
-        "talent": "Eddie Redmayne",
+        "talent": "The Rookie fan community",
         "skyTitles": [
-            "The Day of the Jackal S1 (Sky Atlantic)",
-            "The Day of the Jackal 1973 (Sky Cinema)"
+            "The Rookie (NowTV)"
         ],
-        "strategicRecommendation": "Capitalise on #DayOfTheJackal fan campaign momentum — spotlight Sky Atlantic as the home of the series / tease S2 speculation",
+        "strategicRecommendation": "Lean into organic NowTV momentum — surface The Rookie to fan-edit communities and position NowTV as the UK home for the series",
         "relevance": "high"
     },
     "topMovers": [
