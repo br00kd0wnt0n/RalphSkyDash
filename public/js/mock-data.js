@@ -1,12 +1,12 @@
 /* ============================================================
    CULTURE ENGINE — Mock Data (generated from Sky Data Tool CSV)
-   Source: Sky Data Tool CSV (2).xlsx → CSV tab
-   Generated: 2026-04-15 15:55
+   Source: Sky Data Tool CSV (3).xlsx → CSV tab
+   Generated: 2026-04-16
    ============================================================ */
 
 const MOCK_DATA_NEW = {
     "weekOf": "13–19 April 2026",
-    "lastUpdated": "2026-04-15T15:55:52.256582",
+    "lastUpdated": "2026-04-16",
     "netflixTV": [
         {
             "rank": 1,
@@ -1251,11 +1251,11 @@ const MOCK_DATA_NEW = {
     "skyPosts": [
         {
             "platform": "Instagram",
-            "content": "The Day of the Jackal — Every shot is a masterclass. Stream now on Sky.",
-            "engagement": "48.2K",
-            "likes": "42.1K",
-            "comments": "3.2K",
-            "shares": "2.9K",
+            "content": "A look behind the scenes of DadSwap.\n\n#SNLUK #SNL #SaturdayNightLive",
+            "engagement": "998",
+            "likes": "989",
+            "comments": "9",
+            "shares": "—",
             "sentiment": "positive",
             "mediaType": "Reel"
         },
@@ -1716,52 +1716,52 @@ const MOCK_DATA_NEW = {
     },
     "topMovers": [
         {
-            "title": "Peaky Blinders: The Movie",
+            "title": "Raw",
+            "platform": "Netflix TV",
+            "change": "NEW",
+            "direction": "new"
+        },
+        {
+            "title": "Trevor Noah: Joy in the Trenches",
+            "platform": "Netflix TV",
+            "change": "NEW",
+            "direction": "new"
+        },
+        {
+            "title": "Never Let Go",
             "platform": "Netflix Film",
             "change": "NEW",
             "direction": "new"
         },
         {
-            "title": "Black Mirror S7",
-            "platform": "Netflix TV",
-            "change": "NEW",
-            "direction": "new"
-        },
-        {
-            "title": "Running Point",
-            "platform": "Netflix TV",
-            "change": "+3",
-            "direction": "up"
-        },
-        {
-            "title": "Love Is Blind UK S2",
-            "platform": "Netflix TV",
-            "change": "NEW",
-            "direction": "new"
-        },
-        {
-            "title": "Prometheus",
+            "title": "Untold: Jail Blazers",
             "platform": "Netflix Film",
-            "change": "+5",
+            "change": "NEW",
+            "direction": "new"
+        },
+        {
+            "title": "Reign Over Me",
+            "platform": "Netflix Film",
+            "change": "NEW",
+            "direction": "new"
+        },
+        {
+            "title": "Temptation Island",
+            "platform": "Netflix TV",
+            "change": "+1",
             "direction": "up"
         },
         {
-            "title": "The Bondsman",
+            "title": "Gen V",
             "platform": "Amazon",
-            "change": "NEW",
-            "direction": "new"
+            "change": "+1",
+            "direction": "up"
         },
         {
-            "title": "Zero Day",
-            "platform": "Netflix TV",
-            "change": "-2",
-            "direction": "down"
-        },
-        {
-            "title": "The Recruit S2",
-            "platform": "Netflix TV",
-            "change": "-3",
-            "direction": "down"
+            "title": "London Calling",
+            "platform": "Amazon",
+            "change": "+1",
+            "direction": "up"
         }
     ]
 };
