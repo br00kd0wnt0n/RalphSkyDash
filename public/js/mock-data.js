@@ -1,6 +1,6 @@
 /* ============================================================
    CULTURE ENGINE — Mock Data (generated from Sky Data Tool CSV)
-   Source: Sky Data Tool CSV (3).xlsx → CSV tab
+   Source: Sky Data Tool CSV (4).xlsx → CSV tab
    Generated: 2026-04-16
    ============================================================ */
 
@@ -1251,53 +1251,53 @@ const MOCK_DATA_NEW = {
     "skyPosts": [
         {
             "platform": "Instagram",
-            "content": "A look behind the scenes of DadSwap.\n\n#SNLUK #SNL #SaturdayNightLive",
-            "engagement": "998",
-            "likes": "989",
-            "comments": "9",
+            "content": "A perfectly legal DadSwap. #SNLUK #SNL #SaturdayNightLive",
+            "engagement": "14.2K",
+            "likes": "14.1K",
+            "comments": "106",
             "shares": "—",
             "sentiment": "positive",
             "mediaType": "Reel"
         },
         {
-            "platform": "TikTok",
-            "content": "POV: You just found out Mr Bigstuff is coming back",
-            "engagement": "38.7K",
-            "likes": "31.4K",
-            "comments": "4.8K",
-            "shares": "2.5K",
+            "platform": "Instagram",
+            "content": "We've watched this fifty times and we'll watch it fifty more. 🎬 #FuzeMovie",
+            "engagement": "12.8K",
+            "likes": "12.6K",
+            "comments": "195",
+            "shares": "—",
             "sentiment": "positive",
-            "mediaType": "Video"
-        },
-        {
-            "platform": "X",
-            "content": "Sweetpea. That ending. We need to talk.",
-            "engagement": "29.1K",
-            "likes": "18.6K",
-            "comments": "7.2K",
-            "shares": "3.3K",
-            "sentiment": "positive",
-            "mediaType": "Text"
+            "mediaType": "Reel"
         },
         {
             "platform": "Instagram",
-            "content": "Name a more iconic duo. We'll wait. #WarSky",
-            "engagement": "25.4K",
-            "likes": "21.8K",
-            "comments": "2.1K",
-            "shares": "1.5K",
+            "content": "Aaron Taylor-Johnson is practically Italian now ☕ 🎬 #FuzeMovie",
+            "engagement": "10.4K",
+            "likes": "10.3K",
+            "comments": "89",
+            "shares": "—",
             "sentiment": "positive",
-            "mediaType": "Carousel"
+            "mediaType": "Reel"
         },
         {
-            "platform": "TikTok",
-            "content": "When someone says they haven't watched The Day of the Jackal yet...",
-            "engagement": "22.8K",
-            "likes": "19.2K",
-            "comments": "2.4K",
-            "shares": "1.2K",
+            "platform": "Instagram",
+            "content": "Jack Whitehall spends his stag night hosting SNL UK. #SNLUK #SNL #SaturdayNightLive",
+            "engagement": "6.5K",
+            "likes": "6.4K",
+            "comments": "52",
+            "shares": "—",
             "sentiment": "positive",
-            "mediaType": "Video"
+            "mediaType": "Reel"
+        },
+        {
+            "platform": "Instagram",
+            "content": "Wendy next door's auntie's friend's husband, Ben, shines on Mastermind. #SNLUK #SNL #SaturdayNightLive",
+            "engagement": "6.3K",
+            "likes": "6.2K",
+            "comments": "76",
+            "shares": "—",
+            "sentiment": "positive",
+            "mediaType": "Reel"
         }
     ],
     "opportunities": [
