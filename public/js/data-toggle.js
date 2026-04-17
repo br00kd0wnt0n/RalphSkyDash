@@ -1,5 +1,5 @@
 /* ============================================================
-   Dataset toggle — swap MOCK_DATA between MOCK_DATA_NEW and
+   Dataset toggle - swap MOCK_DATA between MOCK_DATA_NEW and
    MOCK_DATA_PREV and re-render every widget.
    ============================================================ */
 (function () {

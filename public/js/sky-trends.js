@@ -1,5 +1,5 @@
 /* ============================================================
-   CULTURE ENGINE — Application Logic
+   CULTURE ENGINE - Application Logic
    Renders all widgets from MOCK_DATA
    ============================================================ */
 
@@ -97,11 +97,11 @@ function renderSpotlight() {
             <div class="spotlight-trigger-icon"><i class="fas fa-fire"></i></div>
             <div class="spotlight-trigger-text">
                 <div class="spotlight-trigger-label">Trending Trigger</div>
-                <div class="spotlight-trigger-title">${s.trigger.title} — ${s.trigger.detail}</div>
+                <div class="spotlight-trigger-title">${s.trigger.title} - ${s.trigger.detail}</div>
             </div>
         </div>
         <div class="spotlight-connection">
-            <div class="spotlight-connection-label"><i class="fas fa-link"></i> Sky Connection — ${s.talent}</div>
+            <div class="spotlight-connection-label"><i class="fas fa-link"></i> Sky Connection - ${s.talent}</div>
             <div class="spotlight-sky-titles">
                 ${s.skyTitles.map(t => `<span class="sky-title-tag"><i class="fas fa-play-circle"></i> ${t}</span>`).join('')}
             </div>
@@ -216,7 +216,7 @@ function renderStreamingCharts(platformFilter, typeFilter) {
         html += renderChartList(list);
     });
 
-    grid.innerHTML = html || '<p style="padding:40px;text-align:center;color:var(--text-muted);">Nothing matching that — try broadening your search.</p>';
+    grid.innerHTML = html || '<p style="padding:40px;text-align:center;color:var(--text-muted);">Nothing matching that - try broadening your search.</p>';
 }
 
 function filterBySearch(data, search) {
@@ -232,7 +232,7 @@ function renderChartList(list) {
     let itemsHtml = '';
 
     if (items.length === 0) {
-        itemsHtml = '<div style="padding:24px;text-align:center;color:var(--text-muted);font-size:0.85rem;">Nothing here yet — data coming soon.</div>';
+        itemsHtml = '<div style="padding:24px;text-align:center;color:var(--text-muted);font-size:0.85rem;">Nothing here yet - data coming soon.</div>';
     } else {
         itemsHtml = items.map(item => {
             const movementHtml = getMovementHtml(item);
@@ -277,7 +277,7 @@ function getMovementHtml(item) {
     if (item.movement === 'up') return `<span style="color:var(--success)">&#9650;${item.change || ''}</span>`;
     if (item.movement === 'down') return `<span style="color:var(--danger)">&#9660;${item.change || ''}</span>`;
     if (item.movement === 'new') return '<span class="new">NEW</span>';
-    return '<span style="color:var(--text-muted)">—</span>';
+    return '<span style="color:var(--text-muted)">-</span>';
 }
 
 /* ─────────── Opportunities ─────────── */
@@ -310,10 +310,10 @@ function renderOpportunities(urgencyFilter, typeFilter) {
                     <div class="trigger-platform-badge" style="background:${o.trigger.platformColour}">
                         ${o.trigger.platform.charAt(0)}
                     </div>
-                    <div class="trigger-text">${o.trigger.title} — ${o.trigger.detail}</div>
+                    <div class="trigger-text">${o.trigger.title} - ${o.trigger.detail}</div>
                 </div>
                 <div class="opportunity-sky-titles">
-                    <div class="opportunity-sky-label"><i class="fas fa-play-circle"></i> Sky Titles — ${o.talent}</div>
+                    <div class="opportunity-sky-label"><i class="fas fa-play-circle"></i> Sky Titles - ${o.talent}</div>
                     <div class="opportunity-sky-list">
                         ${o.skyTitles.map(t => `<span class="sky-chip"><i class="fas fa-play"></i> ${t.title} <small>(${t.where})</small></span>`).join('')}
                     </div>
@@ -469,7 +469,7 @@ function renderTikTokUK() {
         const trendIcon = item.trend === 'up' ? `<span style="color:var(--success)">&#9650;${item.change || ''}</span>` :
                           item.trend === 'new' ? '<span style="color:var(--sky-blue);font-weight:700;font-size:0.7rem;">NEW</span>' :
                           item.trend === 'down' ? `<span style="color:var(--danger)">&#9660;${item.change || ''}</span>` :
-                          '<span style="color:var(--text-muted)">—</span>';
+                          '<span style="color:var(--text-muted)">-</span>';
         return `
             <div class="chart-item">
                 <div class="chart-position ${item.rank <= 3 ? 'top3' : ''}">${item.rank}</div>

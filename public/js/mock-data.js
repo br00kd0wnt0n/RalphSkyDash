@@ -1,5 +1,5 @@
 /* ============================================================
-   CULTURE ENGINE — Mock Data (generated from Sky Data Tool CSV)
+   CULTURE ENGINE - Mock Data (generated from Sky Data Tool CSV)
    Source: Sky Data Tool CSV (5).xlsx → CSV tab
    Generated: 2026-04-16
    ============================================================ */
@@ -216,7 +216,7 @@ const MOCK_DATA_NEW = {
             "type": "Crime",
             "change": 1,
             "distributor": "Netflix",
-            "description": "An intimate, arresting portrait of cyclist Moriah Wilson—raised by a fierce, loving family—whose singular drive becomes her superpower, carrying her to athletic brilliance and, devastatingly, toward a life cut short by murder."
+            "description": "An intimate, arresting portrait of cyclist Moriah Wilson-raised by a fierce, loving family-whose singular drive becomes her superpower, carrying her to athletic brilliance and, devastatingly, toward a life cut short by murder."
         },
         {
             "rank": 7,
@@ -345,7 +345,7 @@ const MOCK_DATA_NEW = {
             "peakPosition": 6,
             "emoji": "🕵️",
             "talent": "Patrick Dempsey, Michael Imperioli, Odeya Rush",
-            "description": "Angelo Ledda lives two totally separate lives — fearsome NYC hitman and sleepy upstate Cooperstown photocopier salesman and father. Both of them are threatened when he is diagnosed with Alzheimer's, a disease he already lost his older brother to."
+            "description": "Angelo Ledda lives two totally separate lives - fearsome NYC hitman and sleepy upstate Cooperstown photocopier salesman and father. Both of them are threatened when he is diagnosed with Alzheimer's, a disease he already lost his older brother to."
         },
         {
             "rank": 7,
@@ -358,7 +358,7 @@ const MOCK_DATA_NEW = {
             "type": "Postapocalypse",
             "talent": "Ella Purnell, Aaron Moten, Kyle MacLachlan",
             "distributor": "Amazon",
-            "description": "The story of haves and have-nots in a world in which there’s almost nothing left to have. 200 years after the apocalypse, the gentle denizens of luxury fallout shelters are forced to return to the irradiated hellscape their ancestors left behind — and are shocked to discover an incredibly complex, gleefully weird, and highly violent universe waiting for them."
+            "description": "The story of haves and have-nots in a world in which there’s almost nothing left to have. 200 years after the apocalypse, the gentle denizens of luxury fallout shelters are forced to return to the irradiated hellscape their ancestors left behind - and are shocked to discover an incredibly complex, gleefully weird, and highly violent universe waiting for them."
         },
         {
             "rank": 8,
@@ -1021,70 +1021,70 @@ const MOCK_DATA_NEW = {
             "date": "22 Apr",
             "event": "Earth Day",
             "category": "Cultural",
-            "relevance": "Cultural moment — tie-in opportunity",
+            "relevance": "Cultural moment - tie-in opportunity",
             "icon": ""
         },
         {
             "date": "16 May",
             "event": "Eurovision",
             "category": "Cultural",
-            "relevance": "Cultural moment — tie-in opportunity",
+            "relevance": "Cultural moment - tie-in opportunity",
             "icon": ""
         },
         {
             "date": "24 May",
             "event": "Premier League Final",
             "category": "Sport",
-            "relevance": "Sport moment — tie-in opportunity",
+            "relevance": "Sport moment - tie-in opportunity",
             "icon": ""
         },
         {
             "date": "30 May",
             "event": "UEFA Champions League",
             "category": "Sport",
-            "relevance": "Sport moment — tie-in opportunity",
+            "relevance": "Sport moment - tie-in opportunity",
             "icon": ""
         },
         {
             "date": "1 Jun",
             "event": "Pride Month",
             "category": "Awareness",
-            "relevance": "Awareness moment — tie-in opportunity",
+            "relevance": "Awareness moment - tie-in opportunity",
             "icon": ""
         },
         {
             "date": "1 Jun",
             "event": "Graduation",
             "category": "Cultural",
-            "relevance": "Cultural moment — tie-in opportunity",
+            "relevance": "Cultural moment - tie-in opportunity",
             "icon": ""
         },
         {
             "date": "1 Jun",
             "event": "Music Festival Season",
             "category": "Seasonal",
-            "relevance": "Seasonal moment — tie-in opportunity",
+            "relevance": "Seasonal moment - tie-in opportunity",
             "icon": ""
         },
         {
             "date": "11 Jun",
             "event": "2026 Fifa World Cup",
             "category": "Sport",
-            "relevance": "Sport moment — tie-in opportunity",
+            "relevance": "Sport moment - tie-in opportunity",
             "icon": ""
         },
         {
             "date": "21 Jun",
             "event": "Father’s Day",
             "category": "Cultural",
-            "relevance": "Cultural moment — tie-in opportunity",
+            "relevance": "Cultural moment - tie-in opportunity",
             "icon": ""
         },
         {
             "date": "29 Jun",
             "event": "Wimbledon",
             "category": "Sport",
-            "relevance": "Sport moment — tie-in opportunity",
+            "relevance": "Sport moment - tie-in opportunity",
             "icon": ""
         }
     ],
@@ -1255,7 +1255,7 @@ const MOCK_DATA_NEW = {
             "engagement": "14.2K",
             "likes": "14.1K",
             "comments": "106",
-            "shares": "—",
+            "shares": "-",
             "sentiment": "positive",
             "mediaType": "Reel"
         },
@@ -1265,7 +1265,7 @@ const MOCK_DATA_NEW = {
             "engagement": "12.8K",
             "likes": "12.6K",
             "comments": "195",
-            "shares": "—",
+            "shares": "-",
             "sentiment": "positive",
             "mediaType": "Reel"
         },
@@ -1275,7 +1275,7 @@ const MOCK_DATA_NEW = {
             "engagement": "10.4K",
             "likes": "10.3K",
             "comments": "89",
-            "shares": "—",
+            "shares": "-",
             "sentiment": "positive",
             "mediaType": "Reel"
         },
@@ -1285,7 +1285,7 @@ const MOCK_DATA_NEW = {
             "engagement": "6.5K",
             "likes": "6.4K",
             "comments": "52",
-            "shares": "—",
+            "shares": "-",
             "sentiment": "positive",
             "mediaType": "Reel"
         },
@@ -1295,7 +1295,7 @@ const MOCK_DATA_NEW = {
             "engagement": "6.3K",
             "likes": "6.2K",
             "comments": "76",
-            "shares": "—",
+            "shares": "-",
             "sentiment": "positive",
             "mediaType": "Reel"
         }
@@ -1310,7 +1310,7 @@ const MOCK_DATA_NEW = {
                 "title": "The Rookie trending on TikTok",
                 "platform": "TikTok",
                 "platformColour": "#ff0050",
-                "detail": "4K posts past 7 days — Chenford walk, Angela Lopez Core, Kojo the dog"
+                "detail": "4K posts past 7 days - Chenford walk, Angela Lopez Core, Kojo the dog"
             },
             "skyTitles": [
                 {
@@ -1320,9 +1320,9 @@ const MOCK_DATA_NEW = {
                 }
             ],
             "talent": "The Rookie fan community",
-            "strategicRecommendation": "Lean into organic Sky momentum — surface The Rookie to fan-edit communities and position Sky as the UK home for the series",
+            "strategicRecommendation": "Lean into organic Sky momentum - surface The Rookie to fan-edit communities and position Sky as the UK home for the series",
             "relevanceScore": "high",
-            "timing": "This week — organic momentum window"
+            "timing": "This week - organic momentum window"
         },
         {
             "id": 2,
@@ -1343,9 +1343,9 @@ const MOCK_DATA_NEW = {
                 }
             ],
             "talent": "Zendaya",
-            "strategicRecommendation": "Capitalise on Euphoria S3 multi-hashtag trend — position Sky as the UK destination for S3 and the back catalogue",
+            "strategicRecommendation": "Capitalise on Euphoria S3 multi-hashtag trend - position Sky as the UK destination for S3 and the back catalogue",
             "relevanceScore": "high",
-            "timing": "This week — multi-hashtag momentum"
+            "timing": "This week - multi-hashtag momentum"
         },
         {
             "id": 3,
@@ -1366,16 +1366,16 @@ const MOCK_DATA_NEW = {
                 }
             ],
             "talent": "Spider-Man franchise",
-            "strategicRecommendation": "Join the Spider-Man conversation — curate the Sky Cinema back library around the trailer moment ahead of theatrical release",
+            "strategicRecommendation": "Join the Spider-Man conversation - curate the Sky Cinema back library around the trailer moment ahead of theatrical release",
             "relevanceScore": "medium",
-            "timing": "This week — trailer momentum"
+            "timing": "This week - trailer momentum"
         }
     ],
     "socialBuzz": [
         {
             "platform": "x",
             "topic": "#PeakyBlindersMovie",
-            "description": "Fans react to the Netflix film — comparisons to the series, Cillian Murphy praise",
+            "description": "Fans react to the Netflix film - comparisons to the series, Cillian Murphy praise",
             "volume": "142K posts",
             "tags": [
                 "Film",
@@ -1386,7 +1386,7 @@ const MOCK_DATA_NEW = {
         {
             "platform": "x",
             "topic": "#Oscars2026",
-            "description": "Nominations announced — debates over snubs and surprises dominate",
+            "description": "Nominations announced - debates over snubs and surprises dominate",
             "volume": "98K posts",
             "tags": [
                 "Awards",
@@ -1426,7 +1426,7 @@ const MOCK_DATA_NEW = {
         {
             "platform": "x",
             "topic": "#BlackMirrorS7",
-            "description": "Divided opinions — some call it the best series yet, others disagree",
+            "description": "Divided opinions - some call it the best series yet, others disagree",
             "volume": "67K posts",
             "tags": [
                 "Netflix",
@@ -1497,7 +1497,7 @@ const MOCK_DATA_NEW = {
         }
     ],
     "aiBriefing": {
-        "overview": "Three TikTok moments this week line up cleanly with catalogue we already have. The Rookie and Euphoria S3 are trending organically — fans doing the work for us. Spider-Man: A Brand New Day's trailer has #spiderman and #peterparker climbing, and Sky Cinema has the back library to join that conversation. Reactive content sitting right there.",
+        "overview": "Three TikTok moments this week line up cleanly with catalogue we already have. The Rookie and Euphoria S3 are trending organically - fans doing the work for us. Spider-Man: A Brand New Day's trailer has #spiderman and #peterparker climbing, and Sky Cinema has the back library to join that conversation. Reactive content sitting right there.",
         "insights": [
             {
                 "title": "The Rookie Trending",
@@ -1517,13 +1517,13 @@ const MOCK_DATA_NEW = {
         "trigger": {
             "title": "The Rookie trending on TikTok",
             "platform": "TikTok",
-            "detail": "4K posts in past 7 days — fan edits driving organic discovery (Chenford walk, Angela Lopez Core, Kojo the dog)"
+            "detail": "4K posts in past 7 days - fan edits driving organic discovery (Chenford walk, Angela Lopez Core, Kojo the dog)"
         },
         "talent": "The Rookie fan community",
         "skyTitles": [
             "The Rookie (Sky)"
         ],
-        "strategicRecommendation": "Lean into organic Sky momentum — surface The Rookie to fan-edit communities and position Sky as the UK home for the series",
+        "strategicRecommendation": "Lean into organic Sky momentum - surface The Rookie to fan-edit communities and position Sky as the UK home for the series",
         "relevance": "high"
     },
     "topMovers": [
@@ -1578,5 +1578,5 @@ const MOCK_DATA_NEW = {
     ]
 };
 
-/* Active dataset — swapped at runtime by data-toggle.js */
+/* Active dataset - swapped at runtime by data-toggle.js */
 let MOCK_DATA = MOCK_DATA_NEW;

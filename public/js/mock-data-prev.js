@@ -1,5 +1,5 @@
 /* ============================================================
-   CULTURE ENGINE — Mock Data for Pitch Prototype
+   CULTURE ENGINE - Mock Data for Pitch Prototype
    Realistic UK streaming, social & calendar data
    ============================================================ */
 
@@ -26,7 +26,7 @@ const MOCK_DATA_PREV = {
     // ─── Netflix Film Trending UK (Past Week) ───
     netflixFilm: [
         { rank: 1, title: 'Abigail', genre: 'Horror', type: 'Vampires', movement: 'new', daysInChart: 1, peakPosition: 1, emoji: '🩸', talent: 'Alisha Weir, Melissa Barrera, Dan Stevens', distributor: 'Universal Pictures', description: 'A group of criminals kidnap a 12-year-old ballerina, only to discover she\'s no normal little girl.' },
-        { rank: 2, title: 'Cellar Door', genre: 'Horror', movement: 'down', change: 1, daysInChart: 6, peakPosition: 1, emoji: '🚪', talent: 'Jordana Brewster, Scott Speedman, Laurence Fishburne', distributor: 'Lionsgate', description: 'A couple find their dream house with one caveat — they can never open the cellar door.' },
+        { rank: 2, title: 'Cellar Door', genre: 'Horror', movement: 'down', change: 1, daysInChart: 6, peakPosition: 1, emoji: '🚪', talent: 'Jordana Brewster, Scott Speedman, Laurence Fishburne', distributor: 'Lionsgate', description: 'A couple find their dream house with one caveat - they can never open the cellar door.' },
         { rank: 3, title: 'The Addams Family 2', genre: 'Animation', type: 'For Older Kids', movement: 'down', change: 1, daysInChart: 3, peakPosition: 2, emoji: '🖤', talent: 'Oscar Isaac, Charlize Theron', distributor: 'MGM', description: 'The Addams get tangled up in more wacky adventures.' },
         { rank: 4, title: 'Tarot', genre: 'Horror', type: 'Demons', movement: 'down', change: 1, daysInChart: 6, peakPosition: 3, emoji: '🃏', talent: 'Harriet Slater, Jacob Batalon', distributor: 'Sony Pictures', description: 'When friends violate the sacred rule of Tarot readings, they unleash an unspeakable evil.' },
         { rank: 5, title: 'Rumble', genre: 'Animation', type: 'For Boys', movement: 'down', change: 1, daysInChart: 3, peakPosition: 4, emoji: '👹', talent: 'Will Arnett, Terry Crews', distributor: 'Paramount Pictures', description: 'A teenager seeks to coach a loveable underdog monster into a champion.' },
@@ -39,7 +39,7 @@ const MOCK_DATA_PREV = {
 
     // ─── Amazon Prime Video TV UK (Past Week) ───
     amazonPrimeTV: [
-        { rank: 1, title: 'Memory of a Killer', genre: 'Crime', movement: 'up', change: 7, daysInChart: 20, peakPosition: 1, emoji: '🧠', talent: 'Patrick Dempsey, Michael Imperioli', description: 'Angelo Ledda lives two separate lives — fearsome NYC hitman and sleepy upstate family man.' },
+        { rank: 1, title: 'Memory of a Killer', genre: 'Crime', movement: 'up', change: 7, daysInChart: 20, peakPosition: 1, emoji: '🧠', talent: 'Patrick Dempsey, Michael Imperioli', description: 'Angelo Ledda lives two separate lives - fearsome NYC hitman and sleepy upstate family man.' },
         { rank: 2, title: 'Beast Games', genre: 'Reality-Show', movement: 'up', change: 5, daysInChart: 49, peakPosition: 1, emoji: '🏆', talent: 'Jimmy Donaldson (MrBeast)', description: '1,000 people fight for $5,000,000, the largest cash prize in TV history.' },
         { rank: 3, title: '56 Days', genre: 'Crime', movement: 'down', change: 2, daysInChart: 7, peakPosition: 1, emoji: '🔪', talent: 'Dove Cameron, Avan Jogia', description: 'After meeting in a supermarket, Oliver and Ciara fall for each other fast, and dangerously hard.' },
         { rank: 4, title: 'Cross', genre: 'Crime', type: 'Murder', movement: 'same', daysInChart: 14, peakPosition: 1, emoji: '🕵️', talent: 'Aldis Hodge, Ryan Eggold', description: 'Alex Cross is brilliant, flawed, and full of contradictions when he hunts killers.' },
@@ -65,7 +65,7 @@ const MOCK_DATA_PREV = {
         { rank: 10, title: 'That Peter Crouch Film', genre: 'Documentary', type: 'Sport', movement: 'new', daysInChart: 4, peakPosition: 10, emoji: '⚽', talent: 'Peter Crouch, Abbey Clancy, Steven Gerrard', description: 'The true story behind football\'s most unlikely hero.' }
     ],
 
-    // ─── WikiViews Film (Past Week — Most Viewed Film Pages) ───
+    // ─── WikiViews Film (Past Week - Most Viewed Film Pages) ───
     wikiViewsFilm: [
         { rank: 1, title: 'xXx: Return of Xander Cage', genre: 'Action', type: 'Spies', views: '58,333', category: 'Film', distributor: 'Paramount Pictures' },
         { rank: 2, title: 'xXx', genre: 'Action', type: 'Spies', views: '53,571', category: 'Film', distributor: 'Stillking Films' },
@@ -79,7 +79,7 @@ const MOCK_DATA_PREV = {
         { rank: 10, title: '28 Years Later', genre: 'Horror', type: 'Zombies', views: '11,835', category: 'Film', distributor: 'Sony Pictures' }
     ],
 
-    // ─── WikiViews People (Past Week — Most Viewed People Pages) ───
+    // ─── WikiViews People (Past Week - Most Viewed People Pages) ───
     wikiViewsPeople: [
         { rank: 1, title: 'Ronnie Wood', views: '133,941', category: 'People' },
         { rank: 2, title: 'Paul Bettany', views: '131,444', category: 'People' },
@@ -93,7 +93,7 @@ const MOCK_DATA_PREV = {
         { rank: 10, title: 'Peter Cushing', views: '78,534', category: 'People' }
     ],
 
-    // ─── WikiViews TV (Past Week — Most Viewed TV Pages) ───
+    // ─── WikiViews TV (Past Week - Most Viewed TV Pages) ───
     wikiViewsTV: [
         { rank: 1, title: 'Bridgerton', views: '143,887', category: 'TV' },
         { rank: 2, title: 'Paradise', views: '51,319', category: 'TV' },
@@ -133,7 +133,7 @@ const MOCK_DATA_PREV = {
 
     // ─── TikTok Trending UK News & Entertainment ───
     tiktokNewsEnts: [
-        { rank: 1, hashtag: '# loveisland', views: '32K', topic: 'Love Island returns — massive UK cultural moment', sentiment: 'positive' },
+        { rank: 1, hashtag: '# loveisland', views: '32K', topic: 'Love Island returns - massive UK cultural moment', sentiment: 'positive' },
         { rank: 2, hashtag: '# harrystyles', views: '34K', topic: 'Harry Styles fan content continues to trend', sentiment: 'positive' },
         { rank: 3, hashtag: '# avatar', views: '23K', topic: 'Avatar: Fire and Ash anticipation builds', sentiment: 'positive' },
         { rank: 4, hashtag: '# epstein', views: '20K', topic: 'Jeffrey Epstein documentary drives conversation', sentiment: 'neutral' },
@@ -166,11 +166,11 @@ const MOCK_DATA_PREV = {
         { date: '5 Mar', event: 'World Book Day', category: 'Cultural', relevance: 'Book-to-screen adaptations on Sky', icon: '📚' },
         { date: '8 Mar', event: 'International Women\'s Day', category: 'Cultural', relevance: 'Female-led Sky originals spotlight', icon: '✊' },
         { date: '14–16 Mar', event: 'Six Nations Super Saturday', category: 'Sport', relevance: 'Rugby crossover content', icon: '🏉' },
-        { date: '17 Mar', event: 'St Patrick\'s Day', category: 'Cultural', relevance: 'Irish talent on Sky — Murphy, Gleeson', icon: '☘️' },
+        { date: '17 Mar', event: 'St Patrick\'s Day', category: 'Cultural', relevance: 'Irish talent on Sky - Murphy, Gleeson', icon: '☘️' },
         { date: '20 Mar', event: 'Spring Equinox', category: 'Seasonal', relevance: 'New season, new series push', icon: '🌸' },
-        { date: '29 Mar', event: 'Boat Race', category: 'Sport', relevance: 'British tradition — nostalgic content', icon: '🚣' },
+        { date: '29 Mar', event: 'Boat Race', category: 'Sport', relevance: 'British tradition - nostalgic content', icon: '🚣' },
         { date: '30 Mar', event: 'BST Begins', category: 'Seasonal', relevance: 'Lighter evenings viewing habits shift', icon: '🕐' },
-        { date: '14 Apr', event: 'Easter Weekend', category: 'Holiday', relevance: 'Family viewing — Sky Cinema spotlight', icon: '🐣' }
+        { date: '14 Apr', event: 'Easter Weekend', category: 'Holiday', relevance: 'Family viewing - Sky Cinema spotlight', icon: '🐣' }
     ],
 
     // ─── TikTok Marketing Calendar ───
@@ -207,9 +207,9 @@ const MOCK_DATA_PREV = {
         { rank: 6, trend: 'Actor filmography rankings', engagement: '460M impressions', category: 'Celebrity', skyAngle: 'Rank Sky actors\' best roles' }
     ],
 
-    // ─── Top Performing Sky Posts (Past Week — Simulated YouScan Data) ───
+    // ─── Top Performing Sky Posts (Past Week - Simulated YouScan Data) ───
     skyPosts: [
-        { platform: 'Instagram', content: 'The Day of the Jackal — Every shot is a masterclass. Stream now on Sky.', engagement: '48.2K', likes: '42.1K', comments: '3.2K', shares: '2.9K', sentiment: 'positive', mediaType: 'Reel' },
+        { platform: 'Instagram', content: 'The Day of the Jackal - Every shot is a masterclass. Stream now on Sky.', engagement: '48.2K', likes: '42.1K', comments: '3.2K', shares: '2.9K', sentiment: 'positive', mediaType: 'Reel' },
         { platform: 'TikTok', content: 'POV: You just found out Mr Bigstuff is coming back', engagement: '38.7K', likes: '31.4K', comments: '4.8K', shares: '2.5K', sentiment: 'positive', mediaType: 'Video' },
         { platform: 'X', content: 'Sweetpea. That ending. We need to talk.', engagement: '29.1K', likes: '18.6K', comments: '7.2K', shares: '3.3K', sentiment: 'positive', mediaType: 'Text' },
         { platform: 'Instagram', content: 'Name a more iconic duo. We\'ll wait. #WarSky', engagement: '25.4K', likes: '21.8K', comments: '2.1K', shares: '1.5K', sentiment: 'positive', mediaType: 'Carousel' },
@@ -227,7 +227,7 @@ const MOCK_DATA_PREV = {
                 title: 'Peaky Blinders: The Movie',
                 platform: 'Netflix',
                 platformColour: '#e50914',
-                detail: '#1 Film on Netflix UK — Cillian Murphy moment'
+                detail: '#1 Film on Netflix UK - Cillian Murphy moment'
             },
             skyTitles: [
                 { title: 'Oppenheimer', where: 'Sky Cinema', type: 'Film' },
@@ -236,9 +236,9 @@ const MOCK_DATA_PREV = {
                 { title: 'Retreat', where: 'Sky Store', type: 'Film' }
             ],
             talent: 'Cillian Murphy',
-            strategicRecommendation: 'Leverage Cillian Murphy moment — cross-promote Sky Cinema catalogue (Oppenheimer / 28 Days Later / Dunkirk) while Peaky Blinders movie drives peak interest',
+            strategicRecommendation: 'Leverage Cillian Murphy moment - cross-promote Sky Cinema catalogue (Oppenheimer / 28 Days Later / Dunkirk) while Peaky Blinders movie drives peak interest',
             relevanceScore: 'high',
-            timing: 'Immediate — trending now'
+            timing: 'Immediate - trending now'
         },
         {
             id: 2,
@@ -249,16 +249,16 @@ const MOCK_DATA_PREV = {
                 title: '#DayOfTheJackal trending',
                 platform: 'TikTok',
                 platformColour: '#ff0050',
-                detail: 'High engagement window — fans campaigning for Series 2'
+                detail: 'High engagement window - fans campaigning for Series 2'
             },
             skyTitles: [
                 { title: 'The Day of the Jackal S1', where: 'Sky Atlantic', type: 'Series' },
                 { title: 'The Day of the Jackal (1973)', where: 'Sky Cinema', type: 'Film' }
             ],
             talent: 'Eddie Redmayne',
-            strategicRecommendation: 'Capitalise on #DayOfTheJackal fan campaign momentum — spotlight Sky Atlantic as the home of the series / tease S2 speculation',
+            strategicRecommendation: 'Capitalise on #DayOfTheJackal fan campaign momentum - spotlight Sky Atlantic as the home of the series / tease S2 speculation',
             relevanceScore: 'high',
-            timing: 'This week — high engagement window'
+            timing: 'This week - high engagement window'
         },
         {
             id: 3,
@@ -269,7 +269,7 @@ const MOCK_DATA_PREV = {
                 title: '#28DaysLater sequel trailer',
                 platform: 'TikTok',
                 platformColour: '#ff0050',
-                detail: 'Trailer momentum — Cillian Murphy confirmed returning'
+                detail: 'Trailer momentum - Cillian Murphy confirmed returning'
             },
             skyTitles: [
                 { title: '28 Days Later', where: 'Sky Store', type: 'Film' },
@@ -277,9 +277,9 @@ const MOCK_DATA_PREV = {
                 { title: 'Peaky Blinders S1-6', where: 'Sky Box Sets', type: 'Series' }
             ],
             talent: 'Cillian Murphy',
-            strategicRecommendation: 'Ride 28 Days Later sequel hype — position Sky Store as the place to rewatch the original / tie back to Murphy\'s Sky catalogue',
+            strategicRecommendation: 'Ride 28 Days Later sequel hype - position Sky Store as the place to rewatch the original / tie back to Murphy\'s Sky catalogue',
             relevanceScore: 'high',
-            timing: 'This week — trailer momentum'
+            timing: 'This week - trailer momentum'
         },
         {
             id: 4,
@@ -297,7 +297,7 @@ const MOCK_DATA_PREV = {
                 { title: 'The Midwich Cuckoos', where: 'Sky Max', type: 'Series' }
             ],
             talent: 'Various',
-            strategicRecommendation: 'Bridge Black Mirror dark-thriller audience to Sweetpea — genre-match positioning for Sky Atlantic originals',
+            strategicRecommendation: 'Bridge Black Mirror dark-thriller audience to Sweetpea - genre-match positioning for Sky Atlantic originals',
             relevanceScore: 'medium',
             timing: 'Within 3 days'
         },
@@ -318,9 +318,9 @@ const MOCK_DATA_PREV = {
                 { title: 'Slow Horses', where: 'Sky Atlantic', type: 'Series' }
             ],
             talent: 'Cate Blanchett, Michael Fassbender',
-            strategicRecommendation: 'Pre-release Black Bag buzz — spotlight Blanchett/Fassbender catalogue on Sky Cinema (Tár / The Killer / Slow Horses)',
+            strategicRecommendation: 'Pre-release Black Bag buzz - spotlight Blanchett/Fassbender catalogue on Sky Cinema (Tár / The Killer / Slow Horses)',
             relevanceScore: 'medium',
-            timing: 'Week of 10 March — pre-release buzz'
+            timing: 'Week of 10 March - pre-release buzz'
         },
         {
             id: 6,
@@ -331,14 +331,14 @@ const MOCK_DATA_PREV = {
                 title: 'Alto Knights (cinema release 21 Mar)',
                 platform: 'Cinema',
                 platformColour: '#1a1a2e',
-                detail: 'Robert De Niro double role — mob drama generating strong interest'
+                detail: 'Robert De Niro double role - mob drama generating strong interest'
             },
             skyTitles: [
                 { title: 'Goodfellas', where: 'Sky Cinema', type: 'Film' },
                 { title: 'The Irishman', where: 'Sky Cinema', type: 'Film' }
             ],
             talent: 'Robert De Niro',
-            strategicRecommendation: 'Pre-release Alto Knights anticipation — curate De Niro mob collection on Sky Cinema (Goodfellas / The Irishman)',
+            strategicRecommendation: 'Pre-release Alto Knights anticipation - curate De Niro mob collection on Sky Cinema (Goodfellas / The Irishman)',
             relevanceScore: 'medium',
             timing: 'Week of 17 March'
         },
@@ -359,7 +359,7 @@ const MOCK_DATA_PREV = {
                 { title: 'Anatomy of a Fall', where: 'Sky Cinema', type: 'Film' }
             ],
             talent: 'Various nominees',
-            strategicRecommendation: 'Oscars night content play — curate Sky Cinema collection of nominated films / drive tune-in around ceremony',
+            strategicRecommendation: 'Oscars night content play - curate Sky Cinema collection of nominated films / drive tune-in around ceremony',
             relevanceScore: 'low',
             timing: 'Oscars night 15 March'
         },
@@ -372,26 +372,26 @@ const MOCK_DATA_PREV = {
                 title: 'Sweetpea return hints',
                 platform: 'TikTok',
                 platformColour: '#ff0050',
-                detail: 'Star teases possible return — fans riding the buzz'
+                detail: 'Star teases possible return - fans riding the buzz'
             },
             skyTitles: [
                 { title: 'Sweetpea S1', where: 'Sky Atlantic', type: 'Series' }
             ],
             talent: 'Ella Purnell',
-            strategicRecommendation: 'Amplify organic Sweetpea fan buzz — community engagement strategy while S2 speculation builds',
+            strategicRecommendation: 'Amplify organic Sweetpea fan buzz - community engagement strategy while S2 speculation builds',
             relevanceScore: 'medium',
-            timing: 'This week — riding the buzz'
+            timing: 'This week - riding the buzz'
         }
     ],
 
     // ─── Social Buzz (Entertainment Trending) ───
     socialBuzz: [
-        { platform: 'x', topic: '#PeakyBlindersMovie', description: 'Fans react to the Netflix film — comparisons to the series, Cillian Murphy praise', volume: '142K posts', tags: ['Film', 'Netflix', 'Drama'] },
-        { platform: 'x', topic: '#Oscars2026', description: 'Nominations announced — debates over snubs and surprises dominate', volume: '98K posts', tags: ['Awards', 'Film'] },
+        { platform: 'x', topic: '#PeakyBlindersMovie', description: 'Fans react to the Netflix film - comparisons to the series, Cillian Murphy praise', volume: '142K posts', tags: ['Film', 'Netflix', 'Drama'] },
+        { platform: 'x', topic: '#Oscars2026', description: 'Nominations announced - debates over snubs and surprises dominate', volume: '98K posts', tags: ['Awards', 'Film'] },
         { platform: 'tiktok', topic: 'POV: You\'re Tommy Shelby', description: 'Peaky Blinders movie has reignited the Tommy Shelby POV trend', volume: '89M views', tags: ['Entertainment', 'Trend'] },
         { platform: 'tiktok', topic: '#WhatToWatchUK', description: 'Creators sharing weekly streaming recommendations for UK viewers', volume: '54M views', tags: ['Recommendations', 'Streaming'] },
         { platform: 'instagram', topic: 'Day of the Jackal edits', description: 'Fan-made cinematic edits of Eddie Redmayne scenes going viral', volume: '12M impressions', tags: ['Fan Content', 'Sky Original'] },
-        { platform: 'x', topic: '#BlackMirrorS7', description: 'Divided opinions — some call it the best series yet, others disagree', volume: '67K posts', tags: ['Netflix', 'Sci-Fi', 'Debate'] },
+        { platform: 'x', topic: '#BlackMirrorS7', description: 'Divided opinions - some call it the best series yet, others disagree', volume: '67K posts', tags: ['Netflix', 'Sci-Fi', 'Debate'] },
         { platform: 'tiktok', topic: '#28DaysLater', description: 'Trailer reaction videos and franchise retrospectives trending', volume: '28M views', tags: ['Horror', 'Film', 'Sequel'] },
         { platform: 'instagram', topic: 'Sweetpea fan art', description: 'Growing fan community creating art and cosplay around the Sky original', volume: '4.2M impressions', tags: ['Fan Art', 'Sky Original'] },
         { platform: 'x', topic: '#LoveIsBlindUK', description: 'UK series 2 premiere sparks massive live-tweeting and meme creation', volume: '45K posts', tags: ['Reality', 'Netflix'] },
@@ -402,10 +402,10 @@ const MOCK_DATA_PREV = {
 
     // ─── AI Briefing Content ───
     aiBriefing: {
-        overview: 'Big week. Peaky Blinders: The Movie has landed on Netflix and Cillian Murphy is everywhere — 124M TikTok views, 2.4M Wikipedia hits. Great news for us: Oppenheimer, 28 Days Later and Dunkirk are all on Sky. Meanwhile, fans are organically buzzing about Day of the Jackal and Sweetpea on TikTok, campaigning for more. Two things happening at once — we can ride the Murphy wave and champion our own originals.',
+        overview: 'Big week. Peaky Blinders: The Movie has landed on Netflix and Cillian Murphy is everywhere - 124M TikTok views, 2.4M Wikipedia hits. Great news for us: Oppenheimer, 28 Days Later and Dunkirk are all on Sky. Meanwhile, fans are organically buzzing about Day of the Jackal and Sweetpea on TikTok, campaigning for more. Two things happening at once - we can ride the Murphy wave and champion our own originals.',
         insights: [
-            { title: 'The Murphy Moment', text: 'Three Murphy trends at once — Peaky Blinders movie, 28 Days Later sequel and Oppenheimer re-watches. The biggest single-talent opportunity we\'ve seen this quarter.' },
-            { title: 'Fans Are Doing the Work', text: 'Day of the Jackal and Sweetpea are trending on TikTok without any paid push — fans are campaigning for new series off their own back. Worth amplifying.' },
+            { title: 'The Murphy Moment', text: 'Three Murphy trends at once - Peaky Blinders movie, 28 Days Later sequel and Oppenheimer re-watches. The biggest single-talent opportunity we\'ve seen this quarter.' },
+            { title: 'Fans Are Doing the Work', text: 'Day of the Jackal and Sweetpea are trending on TikTok without any paid push - fans are campaigning for new series off their own back. Worth amplifying.' },
             { title: 'Oscars Are Coming', text: 'Ceremony on 15 March. A two-week window to spotlight nominated films on Sky Cinema and make the most of the awards conversation.' }
         ]
     },
@@ -415,7 +415,7 @@ const MOCK_DATA_PREV = {
         trigger: {
             title: 'Peaky Blinders: The Movie',
             platform: 'Netflix',
-            detail: '#1 Film in the UK — 4 days running, 2.4M Wikipedia views'
+            detail: '#1 Film in the UK - 4 days running, 2.4M Wikipedia views'
         },
         talent: 'Cillian Murphy',
         skyTitles: [
@@ -424,7 +424,7 @@ const MOCK_DATA_PREV = {
             'Dunkirk (Sky Cinema)',
             'Retreat (Sky Store)'
         ],
-        strategicRecommendation: 'Leverage Cillian Murphy moment — cross-promote Sky Cinema catalogue (Oppenheimer, 28 Days Later, Dunkirk) while Peaky Blinders movie drives peak interest',
+        strategicRecommendation: 'Leverage Cillian Murphy moment - cross-promote Sky Cinema catalogue (Oppenheimer, 28 Days Later, Dunkirk) while Peaky Blinders movie drives peak interest',
         relevance: 'high'
     },
 
