@@ -1315,12 +1315,12 @@ const MOCK_DATA_NEW = {
             "skyTitles": [
                 {
                     "title": "The Rookie",
-                    "where": "NowTV",
+                    "where": "Sky",
                     "type": "Series"
                 }
             ],
             "talent": "The Rookie fan community",
-            "strategicRecommendation": "Lean into organic NowTV momentum — surface The Rookie to fan-edit communities and position NowTV as the UK home for the series",
+            "strategicRecommendation": "Lean into organic Sky momentum — surface The Rookie to fan-edit communities and position Sky as the UK home for the series",
             "relevanceScore": "high",
             "timing": "This week — organic momentum window"
         },
@@ -1338,12 +1338,12 @@ const MOCK_DATA_NEW = {
             "skyTitles": [
                 {
                     "title": "Euphoria S3",
-                    "where": "NowTV",
+                    "where": "Sky",
                     "type": "Series"
                 }
             ],
             "talent": "Zendaya",
-            "strategicRecommendation": "Capitalise on Euphoria S3 multi-hashtag trend — position NowTV as the UK destination for S3 and the back catalogue",
+            "strategicRecommendation": "Capitalise on Euphoria S3 multi-hashtag trend — position Sky as the UK destination for S3 and the back catalogue",
             "relevanceScore": "high",
             "timing": "This week — multi-hashtag momentum"
         },
@@ -1521,9 +1521,9 @@ const MOCK_DATA_NEW = {
         },
         "talent": "The Rookie fan community",
         "skyTitles": [
-            "The Rookie (NowTV)"
+            "The Rookie (Sky)"
         ],
-        "strategicRecommendation": "Lean into organic NowTV momentum — surface The Rookie to fan-edit communities and position NowTV as the UK home for the series",
+        "strategicRecommendation": "Lean into organic Sky momentum — surface The Rookie to fan-edit communities and position Sky as the UK home for the series",
         "relevance": "high"
     },
     "topMovers": [
