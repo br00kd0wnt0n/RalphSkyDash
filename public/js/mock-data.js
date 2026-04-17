@@ -1,6 +1,6 @@
 /* ============================================================
    CULTURE ENGINE — Mock Data (generated from Sky Data Tool CSV)
-   Source: Sky Data Tool CSV (4).xlsx → CSV tab
+   Source: Sky Data Tool CSV (5).xlsx → CSV tab
    Generated: 2026-04-16
    ============================================================ */
 
@@ -1497,15 +1497,15 @@ const MOCK_DATA_NEW = {
         }
     ],
     "aiBriefing": {
-        "overview": "Three TikTok moments this week line up cleanly with catalogue we already have. The Rookie and Euphoria S3 are both on NowTV and trending organically — fans doing the work for us. Spider-Man: A Brand New Day's trailer has #spiderman and #peterparker climbing, and Sky Cinema has the back library to join that conversation. Reactive content sitting right there.",
+        "overview": "Three TikTok moments this week line up cleanly with catalogue we already have. The Rookie and Euphoria S3 are trending organically — fans doing the work for us. Spider-Man: A Brand New Day's trailer has #spiderman and #peterparker climbing, and Sky Cinema has the back library to join that conversation. Reactive content sitting right there.",
         "insights": [
             {
                 "title": "The Rookie Trending",
-                "text": "The Rookie (available on NowTV) is a trending TikTok hashtag with 4K posts in the past 7 days. Fan edits include Angela Lopez Core, #jensenandjared, Kojo the dog, and the Chenford walk."
+                "text": "The Rookie is a trending TikTok hashtag with 4K posts in the past 7 days. Fan edits include Angela Lopez Core, #jensenandjared, Kojo the dog, and the Chenford walk."
             },
             {
                 "title": "Euphoria S3 Takeover",
-                "text": "Euphoria S3 (available on NowTV) is trending on TikTok. Multiple trending hashtags include #euphoria, #zendaya, #euphoriaedit, #euphoriaS3, #euphoriaseason2, #euphoria3 and #euphoriamakeup."
+                "text": "Euphoria S3 is trending on TikTok. Multiple trending hashtags include #euphoria, #zendaya, #euphoriaedit, #euphoriaS3, #euphoriaseason2, #euphoria3 and #euphoriamakeup."
             },
             {
                 "title": "Spider-Man: A Brand New Day",
