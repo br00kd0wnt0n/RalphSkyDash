@@ -209,6 +209,15 @@ function renderStreamingCharts(platformFilter, typeFilter) {
         }
     }
 
+    if (platformFilter === 'all' || platformFilter === 'hbomax') {
+        if (typeFilter === 'all' || typeFilter === 'series') {
+            lists.push({ title: 'HBO Max', subtitle: 'Top Series UK', colour: '#000000', icon: 'H', data: filterBySearch(MOCK_DATA.hbomaxTV || [], search) });
+        }
+        if (typeFilter === 'all' || typeFilter === 'films') {
+            lists.push({ title: 'HBO Max', subtitle: 'Top Films UK', colour: '#000000', icon: 'H', data: filterBySearch(MOCK_DATA.hbomaxFilm || [], search) });
+        }
+    }
+
     lists.forEach(list => {
         html += renderChartList(list);
     });
@@ -244,12 +253,12 @@ function renderChartList(list) {
                     <div class="chart-poster">${posterHtml}</div>
                     <div class="chart-title-info">
                         <div class="chart-title-name">${item.title}</div>
-                        <div class="chart-title-meta">${item.genre}${item.type ? ' · ' + item.type : ''}${item.talent ? ' · ' + item.talent : ''}</div>
+                        <div class="chart-title-meta">${item.genre || ''}${item.type ? ' · ' + item.type : ''}${item.talent ? ' · ' + item.talent : ''}</div>
                     </div>
                     ${onHBO ? '<span class="chart-hbo-badge"><i class="fas fa-bolt"></i> On HBO</span>' : ''}
                     <div class="chart-days">
                         <strong>${item.daysInChart}</strong> days
-                        <br>Peak: #${item.peakPosition}
+                        ${item.peakPosition != null ? '<br>Peak: #' + item.peakPosition : ''}
                     </div>
                 </div>
             `;

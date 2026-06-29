@@ -5,763 +5,91 @@
    ============================================================ */
 
 const MOCK_DATA_NEW = {
-    "weekOf": "13–19 April 2026",
-    "lastUpdated": "2026-04-16",
+    "weekOf": "29 June – 6 July 2026",
+    "lastUpdated": "2026-06-29",
     "netflixTV": [
-        {
-            "rank": 1,
-            "title": "At Home with the Furys",
-            "genre": "Documentary",
-            "movement": "same",
-            "daysInChart": 3,
-            "peakPosition": 1,
-            "emoji": "🥊",
-            "type": "Boxing",
-            "talent": "Tyson Fury, Paris Fury, Prince John James Fury",
-            "distributor": "Netflix",
-            "description": "Undefeated heavyweight champion Tyson Fury retires from boxing to embrace the eccentricities of family life in this hilarious and heartfelt docusoap."
-        },
-        {
-            "rank": 2,
-            "title": "Raw",
-            "genre": "Sport",
-            "movement": "new",
-            "daysInChart": 0,
-            "peakPosition": 2,
-            "emoji": "💪",
-            "type": "Wrestling",
-            "talent": "Mike Mizanin, John Cena, Randy Orton",
-            "distributor": "USA Network",
-            "description": "A regularly scheduled, live, year-round program featuring some of the biggest WWE Superstars."
-        },
-        {
-            "rank": 3,
-            "title": "Trust Me: The False Prophet",
-            "genre": "Documentary",
-            "movement": "down",
-            "daysInChart": 7,
-            "peakPosition": 3,
-            "emoji": "🎬",
-            "type": "Crime",
-            "change": 1,
-            "distributor": "Netflix",
-            "description": "Chronicles the rise of Samuel Bateman, the self-proclaimed heir to Warren Jeffs’ Fundamentalist Church of Jesus Christ of Latter-Day Saints (FLDS), through the eyes of one couple who infiltrated his inner circle."
-        },
-        {
-            "rank": 4,
-            "title": "Salish & Jordan Matter",
-            "genre": "Reality-Show",
-            "movement": "down",
-            "daysInChart": 4,
-            "peakPosition": 4,
-            "emoji": "📺",
-            "type": "Family",
-            "change": 1,
-            "distributor": "Netflix",
-            "description": "Follow father and daughter Jordan and Salish through wild situations and extreme challenges in this compilation of classic family moments."
-        },
-        {
-            "rank": 5,
-            "title": "Big Mistakes",
-            "genre": "Comedy",
-            "movement": "down",
-            "daysInChart": 6,
-            "peakPosition": 5,
-            "emoji": "🎭",
-            "type": "Crime Comedy",
-            "change": 1,
-            "talent": "Taylor Ortega, Laurie Metcalf, Dan Levy",
-            "distributor": "Netflix",
-            "description": "Two deeply incapable siblings are blackmailed into the world of organized crime."
-        },
-        {
-            "rank": 6,
-            "title": "The Cleaning Lady",
-            "genre": "Crime",
-            "movement": "same",
-            "daysInChart": 15,
-            "peakPosition": 6,
-            "emoji": "🕵️",
-            "type": "Crime Drama",
-            "talent": "Elodie Yung, Adan Canto, Martha Millan",
-            "distributor": "Netflix",
-            "description": "A whip-smart doctor comes to the U.S. for a medical treatment to save her ailing son. But when the system fails and pushes her into hiding, she refuses to be beaten down and marginalized. Instead, she becomes a cleaning lady for the mob and starts playing the game by her own rules."
-        },
-        {
-            "rank": 7,
-            "title": "Temptation Island",
-            "genre": "Reality-Show",
-            "movement": "up",
-            "daysInChart": 22,
-            "peakPosition": 7,
-            "emoji": "📺",
-            "change": 1,
-            "talent": "Mark L. Walberg, Shanté Glover, Brion G. Whitley",
-            "distributor": "Netflix",
-            "description": "In this spicy update to the hit reality series, four couples test their relationships by shacking up with eligible singles on a tropical island."
-        },
-        {
-            "rank": 8,
-            "title": "Trevor Noah: Joy in the Trenches",
-            "genre": "Record",
-            "movement": "new",
-            "daysInChart": 0,
-            "peakPosition": 8,
-            "emoji": "🎤",
-            "type": "Stand-up",
-            "talent": "Trevor Noah",
-            "distributor": "Netflix",
-            "description": "From unexpected social media beef to a therapist's truth bomb, Trevor Noah turns chaos into comedy in this hilariously sharp, playful stand-up set."
-        },
-        {
-            "rank": 9,
-            "title": "Love on the Spectrum",
-            "genre": "Documentary",
-            "movement": "down",
-            "daysInChart": 60,
-            "peakPosition": 9,
-            "emoji": "💕",
-            "type": "Relationship",
-            "change": 2,
-            "distributor": "Netflix",
-            "description": "In this romantic docuseries, people on the autism spectrum look for love and navigate the changing world of dating and relationships."
-        },
-        {
-            "rank": 10,
-            "title": "XO, Kitty",
-            "genre": "Comedy",
-            "movement": "same",
-            "daysInChart": 28,
-            "peakPosition": 10,
-            "emoji": "💕",
-            "type": "Relationship",
-            "talent": "Anna Cathcart, Choi Min-yeong, Gia Kim",
-            "distributor": "Netflix",
-            "description": "Teen matchmaker Kitty Song Covey thinks she knows everything there is to know about love. But when she moves halfway across the world to reunite with her long-distance boyfriend, she’ll soon realize that relationships are a lot more complicated when it’s your own heart on the line."
-        }
+        {"rank": 1, "title": "I Will Find You", "platform": "Netflix", "movement": "same", "daysInChart": 10},
+        {"rank": 2, "title": "WWE Night of Champions", "platform": "Netflix", "movement": "same", "daysInChart": 4},
+        {"rank": 3, "title": "Salish & Jordan Matter", "platform": "Netflix", "movement": "same", "daysInChart": 35},
+        {"rank": 4, "title": "WWE SmackDown", "platform": "Netflix", "movement": "same", "daysInChart": 3},
+        {"rank": 5, "title": "Avatar the Last Airbender", "platform": "Netflix", "movement": "same", "daysInChart": 25},
+        {"rank": 6, "title": "The Rest Is Football", "platform": "Netflix", "movement": "same", "daysInChart": 1},
+        {"rank": 7, "title": "America's Sweethearts: Dallas Cowboys Cheerleaders", "platform": "Netflix", "movement": "same", "daysInChart": 60},
+        {"rank": 8, "title": "Agent Kim Reactivated", "platform": "Netflix", "movement": "same", "daysInChart": 2},
+        {"rank": 9, "title": "The Witness", "platform": "Netflix", "movement": "same", "daysInChart": 24},
+        {"rank": 10, "title": "Legends", "platform": "Netflix", "movement": "same", "daysInChart": 51}
     ],
     "netflixFilm": [
-        {
-            "rank": 1,
-            "title": "Thrash",
-            "genre": "Horror",
-            "movement": "same",
-            "daysInChart": 5,
-            "peakPosition": 1,
-            "emoji": "🦈",
-            "type": "Shark",
-            "talent": "Phoebe Dynevor, Whitney Peak, Djimon Hounsou",
-            "distributor": "Netflix",
-            "description": "When a Category 5 hurricane decimates a coastal town, the storm surge brings devastation, chaos and something far more frightening: hungry sharks."
-        },
-        {
-            "rank": 2,
-            "title": "Meg 2: The Trench",
-            "genre": "Horror",
-            "movement": "same",
-            "daysInChart": 6,
-            "peakPosition": 2,
-            "emoji": "🦈",
-            "type": "Shark",
-            "talent": "Jason Statham, Shuya Sophia Cai, Cliff Curtis",
-            "distributor": "Warner Bros. Pictures"
-        },
-        {
-            "rank": 3,
-            "title": "Never Let Go",
-            "genre": "Horror",
-            "movement": "new",
-            "daysInChart": 0,
-            "peakPosition": 3,
-            "emoji": "🩸",
-            "talent": "Halle Berry, Anthony B. Jenkins, William Catlett",
-            "distributor": "Lionsgate",
-            "description": "As an evil takes over the world beyond their front doorstep, the only protection for a mother and her twin sons is their house and their family’s protective bond."
-        },
-        {
-            "rank": 4,
-            "title": "Barbie",
-            "genre": "Comedy",
-            "movement": "down",
-            "daysInChart": 6,
-            "peakPosition": 4,
-            "emoji": "👗",
-            "type": "Fashion",
-            "change": 1,
-            "talent": "Margot Robbie, Ryan Gosling, Will Ferrell",
-            "distributor": "Universal Production Partners",
-            "description": "Live-action feature film based on the popular line of Barbie dolls."
-        },
-        {
-            "rank": 5,
-            "title": "Sniper 2",
-            "genre": "Action",
-            "movement": "down",
-            "daysInChart": 3,
-            "peakPosition": 5,
-            "emoji": "💪",
-            "type": "Action Heroes",
-            "change": 1,
-            "talent": "Tom Berenger, Bokeem Woodbine, Erika Marozsán",
-            "description": "Sergeant Thomas Beckett is back - and this time he has teamed up with death row inmate B.J. Cole on a suicide mission to the Balkans. Their target: a rogue general accused of running ethnic cleansing missions. But when Becket discovers that the government is using him as a pawn in a bigger mission, the body count grows and bullets really start to fly."
-        },
-        {
-            "rank": 6,
-            "title": "The Truth and Tragedy of Moriah Wilson",
-            "genre": "Documentary",
-            "movement": "down",
-            "daysInChart": 12,
-            "peakPosition": 6,
-            "emoji": "🎬",
-            "type": "Crime",
-            "change": 1,
-            "distributor": "Netflix",
-            "description": "An intimate, arresting portrait of cyclist Moriah Wilson-raised by a fierce, loving family-whose singular drive becomes her superpower, carrying her to athletic brilliance and, devastatingly, toward a life cut short by murder."
-        },
-        {
-            "rank": 7,
-            "title": "Untold: Jail Blazers",
-            "genre": "Documentary",
-            "movement": "new",
-            "daysInChart": 0,
-            "peakPosition": 7,
-            "emoji": "🏀",
-            "type": "Basketball",
-            "talent": "Rasheed Wallace, Damon Stoudamire, Bonzi Wells",
-            "distributor": "Netflix",
-            "description": "Volatile players. Criminal charges. National headlines. Portland's championship-caliber NBA team implodes spectacularly in this unflinching documentary."
-        },
-        {
-            "rank": 8,
-            "title": "2 Hearts",
-            "genre": "Romance",
-            "movement": "down",
-            "daysInChart": 6,
-            "peakPosition": 8,
-            "emoji": "😢",
-            "type": "Cry movie",
-            "change": 2,
-            "talent": "Jacob Elordi, Adan Canto, Tiera Skovbye",
-            "description": "When illness strikes two people who are polar opposites, life and death bring them together in surprising ways."
-        },
-        {
-            "rank": 9,
-            "title": "Reign Over Me",
-            "genre": "Drama",
-            "movement": "new",
-            "daysInChart": 0,
-            "peakPosition": 9,
-            "emoji": "🎭",
-            "type": "2026-09-11",
-            "talent": "Adam Sandler, Don Cheadle, Jada Pinkett Smith",
-            "description": "A man who lost his family in the September 11 attack on New York City runs into his old college roommate. Rekindling the friendship is the one thing that appears able to help the man recover from his grief."
-        },
-        {
-            "rank": 10,
-            "title": "Untold: Chess Mates",
-            "genre": "Documentary",
-            "movement": "down",
-            "daysInChart": 8,
-            "peakPosition": 10,
-            "emoji": "🎬",
-            "type": "Sport",
-            "change": 3,
-            "talent": "Magnus Carlsen, Hans Niemann",
-            "distributor": "Netflix",
-            "description": "Magnus Carlsen, widely regarded as the greatest chess player of all time, is challenged by Hans Niemann, a rising star who capitalizes on the meteoric growth of online chess. Niemann’s ascension culminated in an epic, controversy-shrouded victory over Carlsen at the 2022 Sinquefield Cup, which eventually led to allegations and revelations of cheating. Determined to clear his name, Niemann fights his way back to the top of the chess world, setting the stage for a high-stakes rematch with Carlsen in 2024."
-        }
+        {"rank": 1, "title": "Little Brother", "platform": "Netflix", "movement": "same", "daysInChart": 2, "genre": "Comedy", "talent": "John Cena, Eric André, Michelle Monaghan, Christopher Meloni, Sherry Cola, Ego Nwodim, Caleb Hearon, Ben Ahlers", "distributor": "Netflix", "description": "A famous real estate agent's carefully curated world is upended when his eccentric “little brother” unexpectedly reappears."},
+        {"rank": 2, "title": "Voicemails for Isabelle", "platform": "Netflix", "movement": "same", "daysInChart": 9, "genre": "Romance", "talent": "Zoey Deutch, Nick Robinson, Nick Offerman, Lukas Gage, Harry Shum Jr., Ciara Bravo, Megan Danso, Toby Sandeman, Spencer Lord, Gil Bellows, Tanis Dolman, Raine Mateo", "distributor": "Netflix", "description": "A young woman's hilariously confessional voicemails to her late sister are unknowingly redirected to a stranger, who begins to fall in love from afar."},
+        {"rank": 3, "title": "Maternal Instinct", "platform": "Netflix", "movement": "same", "daysInChart": 16, "genre": "Documentary", "distributor": "Netflix", "description": "Police pull over a woman who claims she just gave birth. But the baby — and the blood — aren't hers. Twisted lies unravel in this true-crime documentary."},
+        {"rank": 4, "title": "Despicable Me 4", "platform": "Netflix", "movement": "same", "daysInChart": 31, "genre": "Animation", "talent": "Steve Carell, Kristen Wiig, Joey King, Will Ferrell, Sofía Vergara, Miranda Cosgrove, Dana Gaier, Nev Scharrel, Jason Segel, Madison Polan, Pierre Coffin, Will Arnett, Steve Coogan, Frank Welker, Stephen Colbert, Chloe Fineman, Brad Ableson, John DiMaggio, Tara Strong", "distributor": "Universal Pictures", "description": "Gru and Lucy and their girls — Margo, Edith and Agnes — welcome a new member to the Gru family, Gru Jr., who is intent on tormenting his dad. Meanwhile, Gru faces a new nemesis in Maxime Le Mal and his femme fatale girlfriend Valentina, forcing the family to go on the run."},
+        {"rank": 5, "title": "Life as We Know It", "platform": "Netflix", "movement": "same", "daysInChart": 6, "genre": "Romance", "talent": "Katherine Heigl, Josh Duhamel, Christina Hendricks, Josh Lucas, Jean Smart, Melissa McCarthy, Faizon Love, Majandra Delfino, Alexis Clagett, Hayes MacArthur, Johanna Jowett", "description": "Holly and Eric were set up on a blind date by their friends, Peter and Allison who are married. A few years later after Peter and Allison were killed in an accident, they learn that Peter and Allison have named them as the guardians to their daughter, Sophie. So they move into their house and try their best to honor their friends' wishes. But raising a child puts a crimp on their style and they don't exactly get along."},
+        {"rank": 6, "title": "Rampage", "platform": "Netflix", "movement": "same", "daysInChart": 13, "genre": "Adventure", "talent": "Dwayne Johnson, Naomie Harris, Malin Åkerman, Jeffrey Dean Morgan, Jake Lacy, Joe Manganiello, Marley Shelton, P.J. Byrne, Demetrius Grosse, Jack Quaid, Breanne Hill, Matt Gerald, Will Yun Lee, Urijah Faber, Bruce Blackshear", "distributor": "Universal Production Partners", "description": "Primatologist Davis Okoye shares an unshakable bond with George, the extraordinarily intelligent, silverback gorilla who has been in his care since birth. But a rogue genetic experiment gone awry mutates this gentle ape into a raging creature of enormous size. To make matters worse, it’s soon discovered there are other similarly altered animals. As these newly created alpha predators tear across North America, destroying everything in their path, Okoye teams with a discredited genetic engineer to secure an antidote, fighting his way through an ever-changing battlefield, not only to halt a global catastrophe but to save the fearsome creature that was once his friend."},
+        {"rank": 7, "title": "Ready Player One", "platform": "Netflix", "movement": "same", "daysInChart": 2, "genre": "Science Fiction", "talent": "Tye Sheridan, Olivia Cooke, Ben Mendelsohn, Lena Waithe, T.J. Miller, Simon Pegg, Mark Rylance, Philip Zhao, Win Morisaki, Hannah John-Kamen, Mark J. Paterson, Ralph Ineson, Susan Lynch, Clare Higgins, Julia Nickson, Perdita Weeks, Letitia Wright", "distributor": "Warner Bros. Pictures", "description": "When the creator of a popular video game system dies, a virtual contest is created to compete for his fortune."},
+        {"rank": 8, "title": "Wonka", "platform": "Netflix", "movement": "same", "daysInChart": 12, "genre": "Fantasy", "talent": "Timothée Chalamet, Sally Hawkins, Calah Lane, Keegan-Michael Key, Hugh Grant, Paterson Joseph, Olivia Colman, Tom Davis, Simon Farnaby, Jim Carter, Rowan Atkinson, Matt Lucas, Mathew Baynton, Natasha Rothwell, Rakhee Thakrar, Rich Fulcher, Colin O'Brien, Kobna Holdbrook-Smith", "distributor": "Warner Bros. Pictures", "description": "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible."},
+        {"rank": 9, "title": "Night at the Museum", "platform": "Netflix", "movement": "same", "daysInChart": 1, "genre": "Adventure", "talent": "Ben Stiller, Jake Cherry, Carla Gugino, Robin Williams, Dick Van Dyke, Mickey Rooney, Bill Cobbs, Ricky Gervais, Kim Raver, Patrick Gallagher, Rami Malek, Pierfrancesco Favino, Steve Coogan, Mizuo Peck, Owen Wilson, Christopher Marquette, Aaron Himelstein, Michael Welch, Amber Tamblyn", "distributor": "20th Century", "description": "Chaos reigns at the natural history museum when night watchman Larry Daley accidentally stirs up an ancient curse, awakening Attila the Hun, an army of gladiators, a Tyrannosaurus rex and other exhibits. Larry tries desperately to keep the museum under control, but he's fighting a losing battle until President Teddy Roosevelt comes to the rescue."},
+        {"rank": 10, "title": "Shrek", "platform": "Netflix", "movement": "same", "daysInChart": 53, "genre": "Animation", "talent": "Mike Myers, Eddie Murphy, Cameron Diaz, John Lithgow, Vincent Cassel, Peter Dennis, Clive Pearse, Jim Cummings, Bobby Block, Chris Miller, Cody Cameron, Kathleen Freeman, Conrad Vernon", "distributor": "DreamWorks", "description": "It ain't easy bein' green -- especially if you're a likable (albeit smelly) ogre named Shrek. On a mission to retrieve a gorgeous princess from the clutches of a fire-breathing dragon, Shrek teams up with an unlikely compatriot -- a wisecracking donkey."}
     ],
     "amazonPrimeTV": [
-        {
-            "rank": 1,
-            "title": "The Boys",
-            "genre": "Superhero",
-            "movement": "same",
-            "daysInChart": 6,
-            "peakPosition": 1,
-            "emoji": "📓",
-            "type": "Independent Comics",
-            "talent": "Karl Urban, Jack Quaid, Antony Starr",
-            "distributor": "Amazon",
-            "description": "A group of vigilantes known informally as “The Boys” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty."
-        },
-        {
-            "rank": 2,
-            "title": "LOL: Last One Laughing UK",
-            "genre": "Reality-Show",
-            "movement": "same",
-            "daysInChart": 26,
-            "peakPosition": 2,
-            "emoji": "📺",
-            "type": "Competition",
-            "talent": "Jimmy Carr, Roisin Conaty, Richard Ayoade",
-            "description": "Famous for his dark humour, one liners and THAT laugh, Jimmy Carr challenges 10 of Britain’s funniest comics to spend the day together without so much as cracking a smile. The 10 comics use every ounce of their comedic talents to try and break their opponents without cracking up themselves."
-        },
-        {
-            "rank": 3,
-            "title": "INVINCIBLE",
-            "genre": "Superhero",
-            "movement": "same",
-            "daysInChart": 27,
-            "peakPosition": 3,
-            "emoji": "📓",
-            "type": "Independent Comics",
-            "talent": "Steven Yeun, Sandra Oh, J.K. Simmons",
-            "distributor": "Amazon",
-            "description": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage."
-        },
-        {
-            "rank": 4,
-            "title": "Young Sherlock",
-            "genre": "Adventure",
-            "movement": "same",
-            "daysInChart": 41,
-            "peakPosition": 4,
-            "emoji": "🗺️",
-            "type": "Case of the week",
-            "talent": "Hero Fiennes Tiffin, Joseph Fiennes, Natascha McElhone",
-            "distributor": "Amazon",
-            "description": "Sherlock Holmes is a disgraced young man - raw and unfiltered - when he finds himself wrapped up in a murder case that threatens his liberty. His first ever case unravels a globe-trotting conspiracy that changes his life forever."
-        },
-        {
-            "rank": 5,
-            "title": "Scarpetta",
-            "genre": "Crime",
-            "movement": "same",
-            "daysInChart": 34,
-            "peakPosition": 5,
-            "emoji": "🔪",
-            "type": "Murder",
-            "talent": "Nicole Kidman, Jamie Lee Curtis, Ariana DeBose",
-            "distributor": "Amazon",
-            "description": "Chief Medical Examiner Kay Scarpetta returns to Virginia and resumes her former position with complex relationships, both personal and professional – including her sister Dorothy, with plenty of grudges and secrets to uncover."
-        },
-        {
-            "rank": 6,
-            "title": "Memory of a Killer",
-            "genre": "Crime",
-            "movement": "same",
-            "daysInChart": 68,
-            "peakPosition": 6,
-            "emoji": "🕵️",
-            "talent": "Patrick Dempsey, Michael Imperioli, Odeya Rush",
-            "description": "Angelo Ledda lives two totally separate lives - fearsome NYC hitman and sleepy upstate Cooperstown photocopier salesman and father. Both of them are threatened when he is diagnosed with Alzheimer's, a disease he already lost his older brother to."
-        },
-        {
-            "rank": 7,
-            "title": "Fallout",
-            "genre": "Science Fiction",
-            "movement": "same",
-            "daysInChart": 118,
-            "peakPosition": 7,
-            "emoji": "☢️",
-            "type": "Postapocalypse",
-            "talent": "Ella Purnell, Aaron Moten, Kyle MacLachlan",
-            "distributor": "Amazon",
-            "description": "The story of haves and have-nots in a world in which there’s almost nothing left to have. 200 years after the apocalypse, the gentle denizens of luxury fallout shelters are forced to return to the irradiated hellscape their ancestors left behind - and are shocked to discover an incredibly complex, gleefully weird, and highly violent universe waiting for them."
-        },
-        {
-            "rank": 8,
-            "title": "Cross",
-            "genre": "Crime",
-            "movement": "same",
-            "daysInChart": 62,
-            "peakPosition": 8,
-            "emoji": "🔪",
-            "type": "Murder",
-            "talent": "Aldis Hodge, Ryan Eggold, Isaiah Mustafa",
-            "distributor": "Amazon",
-            "description": "Alex Cross is brilliant, flawed, and full of contradictions. A doting father and family man, Cross is single-minded to the point of obsession when he hunts killers. He is desperate for love, but his wife’s murder has left him too damaged to receive it."
-        },
-        {
-            "rank": 9,
-            "title": "Gen V",
-            "genre": "Superhero",
-            "movement": "up",
-            "daysInChart": 96,
-            "peakPosition": 9,
-            "emoji": "📓",
-            "type": "Independent Comics",
-            "change": 1,
-            "talent": "Jaz Sinclair, Chance Perdomo, Lizze Broadway",
-            "distributor": "Amazon",
-            "description": "At America's only college for superheroes, gifted students put their moral boundaries to the test, competing for the university's top ranking, and a chance to join The Seven, Vought International's elite superhero team. When the school's dark secrets come to light, they must decide what kind of heroes they want to become."
-        },
-        {
-            "rank": 10,
-            "title": "Bait",
-            "genre": "Comedy",
-            "movement": "down",
-            "daysInChart": 20,
-            "peakPosition": 10,
-            "emoji": "🎭",
-            "type": "Dramedy",
-            "change": 1,
-            "talent": "Riz Ahmed, Guz Khan, Sheeba Chaddha",
-            "distributor": "Amazon",
-            "description": "Shah Latif is a struggling actor on the cusp of landing the role of a lifetime, only to find himself thrust into a full blown existential crisis and trippy conspiracy thriller all at the same time."
-        }
+        {"rank": 1, "title": "Clarkson's Farm", "platform": "Amazon", "movement": "same", "daysInChart": 26},
+        {"rank": 2, "title": "Off Campus", "platform": "Amazon", "movement": "same", "daysInChart": 46},
+        {"rank": 3, "title": "What Would You Rather: Decide to Survive?", "platform": "Amazon", "movement": "same", "daysInChart": 2},
+        {"rank": 4, "title": "Every Year After", "platform": "Amazon", "movement": "same", "daysInChart": 18},
+        {"rank": 5, "title": "Spider-Noir", "platform": "Amazon", "movement": "same", "daysInChart": 32},
+        {"rank": 6, "title": "The Boys", "platform": "Amazon", "movement": "same", "daysInChart": 81},
+        {"rank": 7, "title": "The Legend of Vox Machina", "platform": "Amazon", "movement": "same", "daysInChart": 25},
+        {"rank": 8, "title": "TikTok: The Mother & Daughter Killers", "platform": "Amazon", "movement": "same", "daysInChart": 5},
+        {"rank": 9, "title": "Citadel", "platform": "Amazon", "movement": "up", "daysInChart": 53, "change": 1},
+        {"rank": 10, "title": "Young Sherlock", "platform": "Amazon", "movement": "down", "daysInChart": 94, "change": 1}
     ],
     "amazonPrimeFilm": [
-        {
-            "rank": 1,
-            "title": "Crime 101",
-            "genre": "Crime",
-            "movement": "same",
-            "daysInChart": 13,
-            "peakPosition": 1,
-            "emoji": "💰",
-            "type": "Heist",
-            "talent": "Chris Hemsworth, Mark Ruffalo, Halle Berry",
-            "distributor": "MGM",
-            "description": "When an elusive thief whose high-stakes heists unfold along the iconic 101 freeway in Los Angeles eyes the score of a lifetime, with hopes of this being his final job, his path collides with a disillusioned insurance broker who is facing her own crossroads. Determined to crack the case, a relentless detective closes in on the operation, raising the stakes even higher."
-        },
-        {
-            "rank": 2,
-            "title": "London Calling",
-            "genre": "Action",
-            "movement": "up",
-            "daysInChart": 2,
-            "peakPosition": 2,
-            "emoji": "💥",
-            "change": 1,
-            "talent": "Josh Duhamel, Aidan Gillen, Jeremy Ray Taylor",
-            "description": "After fleeing the UK from a job gone wrong, a down on his luck hitman is forced to babysit the son of his new crime boss and show him how to become a man."
-        },
-        {
-            "rank": 3,
-            "title": "Godzilla x Kong: The New Empire",
-            "genre": "Science Fiction",
-            "movement": "down",
-            "daysInChart": 9,
-            "peakPosition": 3,
-            "emoji": "👽",
-            "type": "monster",
-            "change": 1,
-            "talent": "Rebecca Hall, Brian Tyree Henry, Dan Stevens",
-            "distributor": "Warner Bros. Pictures",
-            "description": "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own."
-        },
-        {
-            "rank": 4,
-            "title": "Mercy",
-            "genre": "Science Fiction",
-            "movement": "same",
-            "daysInChart": 23,
-            "peakPosition": 4,
-            "emoji": "👽",
-            "type": "Cyberpunk",
-            "talent": "Chris Pratt, Rebecca Ferguson, Kali Reis",
-            "distributor": "MGM",
-            "description": "In the near future, a detective stands on trial accused of murdering his wife. He has ninety minutes to prove his innocence to the advanced AI Judge he once championed, before it determines his fate."
-        },
-        {
-            "rank": 5,
-            "title": "O'Romeo",
-            "genre": "Crime",
-            "movement": "same",
-            "daysInChart": 2,
-            "peakPosition": 5,
-            "emoji": "🕵️",
-            "talent": "Shahid Kapoor, Triptii Dimri, Avinash Tiwary",
-            "description": "What fate awaits a stonehearted gangster and bloodthirsty womaniser when true love claims him, helpless and unguarded? A gang war that shakes the entire underworld and crime syndicate to their very roots. A forbidden love; the tale of an unrequited passion."
-        },
-        {
-            "rank": 6,
-            "title": "Mortal Kombat",
-            "genre": "Action",
-            "movement": "up",
-            "daysInChart": 6,
-            "peakPosition": 6,
-            "emoji": "💥",
-            "type": "Kung-fu",
-            "change": 1,
-            "talent": "Lewis Tan, Jessica McNamee, Josh Lawson",
-            "distributor": "Warner Bros. Pictures",
-            "description": "Washed-up MMA fighter Cole Young, unaware of his heritage, and hunted by Emperor Shang Tsung's best warrior, Sub-Zero, seeks out and trains with Earth's greatest champions as he prepares to stand against the enemies of Outworld in a high stakes battle for the universe."
-        },
-        {
-            "rank": 7,
-            "title": "Hostile Takeover",
-            "genre": "Action",
-            "movement": "up",
-            "daysInChart": 4,
-            "peakPosition": 7,
-            "emoji": "💥",
-            "change": 2,
-            "talent": "Michael Jai White, Aimee Stolte, Dawn Olivieri",
-            "description": "Follows Pete, a professional hitman, as he faces a group of assassins after the boss of a crime syndicate suspects disloyalty due to his attendance at Workaholics Anonymous meetings."
-        },
-        {
-            "rank": 8,
-            "title": "Grown Ups",
-            "genre": "Comedy",
-            "movement": "same",
-            "daysInChart": 9,
-            "peakPosition": 8,
-            "emoji": "🏠",
-            "type": "Situation",
-            "talent": "Adam Sandler, Salma Hayek Pinault, Maria Bello",
-            "description": "After their high school basketball coach passes away, five good friends and former teammates reunite for a Fourth of July holiday weekend."
-        },
-        {
-            "rank": 9,
-            "title": "How to Lose a Popularity Contest",
-            "genre": "Romance",
-            "movement": "down",
-            "daysInChart": 3,
-            "peakPosition": 9,
-            "emoji": "❤️",
-            "change": 3,
-            "talent": "Chase Hudson, Sara Waisglass, Lillian Doucet-Roche",
-            "description": "A rebellious student and a perfectionist overachiever form an unlikely alliance in their race for student body president, discovering unexpected feelings along the way."
-        },
-        {
-            "rank": 10,
-            "title": "Rory McIlroy: The Masters Wait",
-            "genre": "Documentary",
-            "movement": "same",
-            "daysInChart": 13,
-            "peakPosition": 10,
-            "emoji": "🎬",
-            "talent": "Rory McIlroy",
-            "distributor": "Amazon",
-            "description": "Through years of heartbreak and resilience, Rory McIlroy's pursuit of the Green Jacket at the Masters becomes a reckoning with legacy and the final step toward completing golf's rarest achievement, the career Grand Slam."
-        }
+        {"rank": 1, "title": "The Sheep Detectives", "platform": "Amazon", "movement": "same", "daysInChart": 4},
+        {"rank": 2, "title": "Now You See Me: Now You Don't", "platform": "Amazon", "movement": "same", "daysInChart": 7},
+        {"rank": 3, "title": "Your Fault: London", "platform": "Amazon", "movement": "same", "daysInChart": 11},
+        {"rank": 4, "title": "Tom Clancy's Jack Ryan: Ghost War", "platform": "Amazon", "movement": "same", "daysInChart": 39},
+        {"rank": 5, "title": "Over Your Dead Body", "platform": "Amazon", "movement": "up", "daysInChart": 17, "change": 1},
+        {"rank": 6, "title": "My Fault: London", "platform": "Amazon", "movement": "up", "daysInChart": 28, "change": 1},
+        {"rank": 7, "title": "Uncharted", "platform": "Amazon", "movement": "down", "daysInChart": 13, "change": 2},
+        {"rank": 8, "title": "Premonition", "platform": "Amazon", "movement": "same", "daysInChart": 6},
+        {"rank": 9, "title": "The Watchers", "platform": "Amazon", "movement": "same", "daysInChart": 9},
+        {"rank": 10, "title": "Beauty from Pain", "platform": "Amazon", "movement": "new", "daysInChart": 0}
     ],
     "wikiViewsFilm": [
-        {
-            "rank": 1,
-            "title": "xXx",
-            "views": "27,282",
-            "category": "Film",
-            "genre": "Action",
-            "type": "Spies",
-            "distributor": "Stillking Films"
-        },
-        {
-            "rank": 2,
-            "title": "Avatar: Fire and Ash",
-            "views": "16,558",
-            "category": "Film",
-            "genre": "Science Fiction",
-            "type": "Space opera",
-            "distributor": "20th Century"
-        },
-        {
-            "rank": 3,
-            "title": "Interstellar",
-            "views": "15,242",
-            "category": "Film",
-            "genre": "Science Fiction",
-            "type": "Space",
-            "distributor": "Warner Bros. Pictures"
-        },
-        {
-            "rank": 4,
-            "title": "Sinners",
-            "views": "14,044",
-            "category": "Film",
-            "genre": "Horror",
-            "type": "Vampires",
-            "distributor": "Warner Bros. Pictures"
-        },
-        {
-            "rank": 5,
-            "title": "Avengers: Doomsday",
-            "views": "13,906",
-            "category": "Film",
-            "genre": "Superhero",
-            "type": "Marvel",
-            "distributor": "Marvel Studios"
-        },
-        {
-            "rank": 6,
-            "title": "The Super Mario Bros. Movie",
-            "views": "11,560",
-            "category": "Film",
-            "genre": "Animation",
-            "type": "For Boys",
-            "distributor": "Universal Pictures"
-        },
-        {
-            "rank": 7,
-            "title": "Ready or Not",
-            "views": "11,452",
-            "category": "Film",
-            "genre": "Horror",
-            "type": "Slasher",
-            "distributor": "20th Century"
-        },
-        {
-            "rank": 8,
-            "title": "The Martian",
-            "views": "10,857",
-            "category": "Film",
-            "genre": "Science Fiction",
-            "type": "Space",
-            "distributor": "20th Century"
-        },
-        {
-            "rank": 9,
-            "title": "The Devil Wears Prada",
-            "views": "10,504",
-            "category": "Film",
-            "genre": "Romance",
-            "type": "Fashion",
-            "distributor": "20th Century"
-        },
-        {
-            "rank": 10,
-            "title": "The Deep End of the Ocean",
-            "views": "10,461",
-            "category": "Film",
-            "genre": "Drama"
-        }
+        {"rank": 1, "title": "Avatar: Fire and Ash", "views": 55762, "category": "Film", "genre": "Science Fiction"},
+        {"rank": 2, "title": "xXx", "views": 34091, "category": "Film", "genre": "Action"},
+        {"rank": 3, "title": "Superman", "views": 24802, "category": "Film", "genre": "Superhero"},
+        {"rank": 4, "title": "Toy Story 4", "views": 21375, "category": "Film", "genre": "Animation"},
+        {"rank": 5, "title": "Toy Story", "views": 17470, "category": "Film", "genre": "Animation"},
+        {"rank": 6, "title": "Leave the World Behind", "views": 16760, "category": "Film", "genre": "Thriller"},
+        {"rank": 7, "title": "Avatar", "views": 16316, "category": "Film", "genre": "Science Fiction"},
+        {"rank": 8, "title": "Toy Story 3", "views": 15455, "category": "Film", "genre": "Animation"},
+        {"rank": 9, "title": "Avatar: The Way of Water", "views": 15002, "category": "Film", "genre": "Science Fiction"},
+        {"rank": 10, "title": "Avengers: Doomsday", "views": 13468, "category": "Film", "genre": "Superhero"}
     ],
     "wikiViewsPeople": [
-        {
-            "rank": 1,
-            "title": "Paul Bettany",
-            "views": "131,444",
-            "category": "People"
-        },
-        {
-            "rank": 2,
-            "title": "Linda Fiorentino",
-            "views": "86,184",
-            "category": "People"
-        },
-        {
-            "rank": 3,
-            "title": "Traci Lords",
-            "views": "82,258",
-            "category": "People"
-        },
-        {
-            "rank": 4,
-            "title": "Bill Pullman",
-            "views": "80,472",
-            "category": "People"
-        },
-        {
-            "rank": 5,
-            "title": "Dwight Yoakam",
-            "views": "79,407",
-            "category": "People"
-        },
-        {
-            "rank": 6,
-            "title": "Peter Cushing",
-            "views": "78,534",
-            "category": "People"
-        },
-        {
-            "rank": 7,
-            "title": "Ruby Rose",
-            "views": "76,461",
-            "category": "People"
-        },
-        {
-            "rank": 8,
-            "title": "Dick Clark",
-            "views": "64,017",
-            "category": "People"
-        },
-        {
-            "rank": 9,
-            "title": "Sean Young",
-            "views": "62,399",
-            "category": "People"
-        },
-        {
-            "rank": 10,
-            "title": "Federico Castelluccio",
-            "views": "58,338",
-            "category": "People"
-        }
+        {"rank": 1, "title": "Mel Brooks", "views": 110041, "category": "People"},
+        {"rank": 2, "title": "Charles Gray", "views": 102798, "category": "People"},
+        {"rank": 3, "title": "Linda Fiorentino", "views": 86184, "category": "People"},
+        {"rank": 4, "title": "Dwight Yoakam", "views": 79407, "category": "People"},
+        {"rank": 5, "title": "Peter Cushing", "views": 78534, "category": "People"},
+        {"rank": 6, "title": "Armie Hammer", "views": 71675, "category": "People"},
+        {"rank": 7, "title": "Dick Clark", "views": 64017, "category": "People"},
+        {"rank": 8, "title": "Jessica Alba", "views": 63781, "category": "People"},
+        {"rank": 9, "title": "Sean Young", "views": 62399, "category": "People"},
+        {"rank": 10, "title": "Casey Kasem", "views": 60957, "category": "People"}
     ],
     "wikiViewsTV": [
-        {
-            "rank": 1,
-            "title": "Euphoria",
-            "views": "224,032",
-            "category": "TV",
-            "genre": "Action",
-            "type": "Teens"
-        },
-        {
-            "rank": 2,
-            "title": "The Pitt",
-            "views": "56,986",
-            "category": "TV",
-            "genre": "Science Fiction",
-            "type": "Doctors"
-        },
-        {
-            "rank": 3,
-            "title": "The Boys",
-            "views": "56,832",
-            "category": "TV",
-            "genre": "Science Fiction",
-            "type": "Independent Comics"
-        },
-        {
-            "rank": 4,
-            "title": "Malcolm in the Middle",
-            "views": "53,656",
-            "category": "TV",
-            "genre": "Horror",
-            "type": "Situation"
-        },
-        {
-            "rank": 5,
-            "title": "Paradise",
-            "views": "27,258",
-            "category": "TV",
-            "genre": "Superhero",
-            "type": "Crime Drama"
-        },
-        {
-            "rank": 6,
-            "title": "Smiling Friends",
-            "views": "26,213",
-            "category": "TV",
-            "genre": "Animation",
-            "type": "Adult Animation"
-        },
-        {
-            "rank": 7,
-            "title": "INVINCIBLE",
-            "views": "24,748",
-            "category": "TV",
-            "genre": "Horror",
-            "type": "Independent Comics"
-        },
-        {
-            "rank": 8,
-            "title": "For All Mankind",
-            "views": "19,706",
-            "category": "TV",
-            "genre": "Science Fiction",
-            "type": "Space"
-        },
-        {
-            "rank": 9,
-            "title": "Shrinking",
-            "views": "17,675",
-            "category": "TV",
-            "genre": "Romance",
-            "type": "Dramedy"
-        },
-        {
-            "rank": 10,
-            "title": "The Handmaid's Tale",
-            "views": "16,370",
-            "category": "TV",
-            "genre": "Drama",
-            "type": "Forbidden Love"
-        }
+        {"rank": 1, "title": "From", "views": 49447, "category": "TV", "genre": "Horror"},
+        {"rank": 2, "title": "The Bear", "views": 48272, "category": "TV", "genre": "Drama"},
+        {"rank": 3, "title": "House of the Dragon", "views": 46608, "category": "TV", "genre": "Fantasy"},
+        {"rank": 4, "title": "Ted Lasso", "views": 12931, "category": "TV", "genre": "Comedy"},
+        {"rank": 5, "title": "Sugar", "views": 12098, "category": "TV", "genre": "Crime"},
+        {"rank": 6, "title": "My Adventures with Superman", "views": 12090, "category": "TV", "genre": "Animation"},
+        {"rank": 7, "title": "The Last Ship", "views": 11917, "category": "TV", "genre": "Science Fiction"},
+        {"rank": 8, "title": "Euphoria", "views": 11405, "category": "TV", "genre": "Drama"},
+        {"rank": 9, "title": "Game of Thrones", "views": 11344, "category": "TV", "genre": "Fantasy"},
+        {"rank": 10, "title": "The Pitt", "views": 11230, "category": "TV", "genre": "Drama"}
     ],
     "skyTitles": [
         "Oppenheimer",
@@ -786,235 +114,41 @@ const MOCK_DATA_NEW = {
         "Killing Eve"
     ],
     "tiktokUK": [
-        {
-            "rank": 1,
-            "hashtag": "# coachella",
-            "views": "22K",
-            "category": "News & Entertainment",
-            "trend": "new"
-        },
-        {
-            "rank": 2,
-            "hashtag": "# justinbieber",
-            "views": "10K",
-            "category": "",
-            "trend": "up",
-            "change": 2
-        },
-        {
-            "rank": 3,
-            "hashtag": "# bieberchella",
-            "views": "7K",
-            "category": "",
-            "trend": "up",
-            "change": 3
-        },
-        {
-            "rank": 4,
-            "hashtag": "# mancity",
-            "views": "5K",
-            "category": "Sports & Outdoor",
-            "trend": "new"
-        },
-        {
-            "rank": 5,
-            "hashtag": "# coachella2026",
-            "views": "3K",
-            "category": "News & Entertainment",
-            "trend": "up",
-            "change": 5
-        },
-        {
-            "rank": 6,
-            "hashtag": "# anthonyjoshua",
-            "views": 948.0,
-            "category": "Sports & Outdoor",
-            "trend": "up",
-            "change": 26
-        },
-        {
-            "rank": 7,
-            "hashtag": "# yungblud",
-            "views": "3K",
-            "category": "News & Entertainment",
-            "trend": "up",
-            "change": 23
-        },
-        {
-            "rank": 8,
-            "hashtag": "# sundayreset",
-            "views": "1K",
-            "category": "Home Improvement",
-            "trend": "new"
-        },
-        {
-            "rank": 9,
-            "hashtag": "# masters",
-            "views": "2K",
-            "category": "Sports & Outdoor",
-            "trend": "new"
-        },
-        {
-            "rank": 10,
-            "hashtag": "# sunderland",
-            "views": "2K",
-            "category": "Sports & Outdoor",
-            "trend": "new"
-        }
+        {"rank": 1, "hashtag": "#heatwave", "views": "597.9M", "category": "News & Entertainment"},
+        {"rank": 2, "hashtag": "#ukheatwave", "views": "124M", "category": "News & Entertainment"},
+        {"rank": 3, "hashtag": "#heatwaveuk", "views": "47M", "category": "News & Entertainment"},
+        {"rank": 4, "hashtag": "#toohot", "views": "18M", "category": "News & Entertainment"},
+        {"rank": 5, "hashtag": "#hot", "views": "100.9M", "category": "News & Entertainment"},
+        {"rank": 6, "hashtag": "#melting", "views": "12.6M", "category": "News & Entertainment"},
+        {"rank": 7, "hashtag": "#heat", "views": "32.8M", "category": "News & Entertainment"},
+        {"rank": 8, "hashtag": "#ukweather", "views": "70.6M", "category": "News & Entertainment"},
+        {"rank": 9, "hashtag": "#weather", "views": "103.2M", "category": "News & Entertainment"},
+        {"rank": 10, "hashtag": "#ukheat", "views": "16.2M", "category": "News & Entertainment"}
     ],
     "tiktokNewsEnts": [
-        {
-            "rank": 1,
-            "hashtag": "# spiderman",
-            "views": "10K",
-            "topic": "Trending in TikTok News & Entertainment",
-            "sentiment": "neutral"
-        },
-        {
-            "rank": 2,
-            "hashtag": "# katseye",
-            "views": "11K",
-            "topic": "Trending in TikTok News & Entertainment",
-            "sentiment": "neutral"
-        },
-        {
-            "rank": 3,
-            "hashtag": "# bts",
-            "views": "11K",
-            "topic": "Trending in TikTok News & Entertainment",
-            "sentiment": "neutral"
-        },
-        {
-            "rank": 4,
-            "hashtag": "# housemusic",
-            "views": "11K",
-            "topic": "Trending in TikTok News & Entertainment",
-            "sentiment": "neutral"
-        },
-        {
-            "rank": 5,
-            "hashtag": "# euphoria",
-            "views": "2K",
-            "topic": "Trending in TikTok News & Entertainment",
-            "sentiment": "neutral"
-        },
-        {
-            "rank": 6,
-            "hashtag": "# michaeljackson",
-            "views": "3K",
-            "topic": "Trending in TikTok News & Entertainment",
-            "sentiment": "neutral"
-        },
-        {
-            "rank": 7,
-            "hashtag": "# cinema",
-            "views": "3K",
-            "topic": "Trending in TikTok News & Entertainment",
-            "sentiment": "neutral"
-        },
-        {
-            "rank": 8,
-            "hashtag": "# therookie",
-            "views": "4K",
-            "topic": "Trending in TikTok News & Entertainment",
-            "sentiment": "neutral"
-        },
-        {
-            "rank": 9,
-            "hashtag": "# btsarmy",
-            "views": "4K",
-            "topic": "Trending in TikTok News & Entertainment",
-            "sentiment": "neutral"
-        },
-        {
-            "rank": 10,
-            "hashtag": "# trump",
-            "views": "5K",
-            "topic": "Trending in TikTok News & Entertainment",
-            "sentiment": "neutral"
-        }
+        {"rank": 1, "hashtag": "#heatwave", "views": "597.9M", "topic": "Trending in TikTok News & Entertainment", "sentiment": "neutral"},
+        {"rank": 2, "hashtag": "#ukheatwave", "views": "124M", "topic": "Trending in TikTok News & Entertainment", "sentiment": "neutral"},
+        {"rank": 3, "hashtag": "#heatwaveuk", "views": "47M", "topic": "Trending in TikTok News & Entertainment", "sentiment": "neutral"},
+        {"rank": 4, "hashtag": "#toohot", "views": "18M", "topic": "Trending in TikTok News & Entertainment", "sentiment": "neutral"},
+        {"rank": 5, "hashtag": "#hot", "views": "100.9M", "topic": "Trending in TikTok News & Entertainment", "sentiment": "neutral"},
+        {"rank": 6, "hashtag": "#melting", "views": "12.6M", "topic": "Trending in TikTok News & Entertainment", "sentiment": "neutral"},
+        {"rank": 7, "hashtag": "#heat", "views": "32.8M", "topic": "Trending in TikTok News & Entertainment", "sentiment": "neutral"},
+        {"rank": 8, "hashtag": "#ukweather", "views": "70.6M", "topic": "Trending in TikTok News & Entertainment", "sentiment": "neutral"},
+        {"rank": 9, "hashtag": "#weather", "views": "103.2M", "topic": "Trending in TikTok News & Entertainment", "sentiment": "neutral"},
+        {"rank": 10, "hashtag": "#ukheat", "views": "16.2M", "topic": "Trending in TikTok News & Entertainment", "sentiment": "neutral"}
     ],
     "upcomingReleases": [
-        {
-            "date": "17 Apr",
-            "title": "Lee Cronin's the Mummy",
-            "genre": "Horror",
-            "talent": "Jack Reynor, Natalie Grace, Laia Costa",
-            "distributor": "",
-            "skyRelevance": "medium"
-        },
-        {
-            "date": "24 Apr",
-            "title": "Michael",
-            "genre": "Biography",
-            "talent": "Jaafar Jackson, Juliano Valdi, Colman Domingo",
-            "distributor": "",
-            "skyRelevance": "medium"
-        },
-        {
-            "date": "1 May",
-            "title": "The Devil Wears Prada 2",
-            "genre": "Comedy",
-            "talent": "Meryl Streep, Anne Hathaway, Emily Blunt",
-            "distributor": "",
-            "skyRelevance": "medium"
-        },
-        {
-            "date": "7 May",
-            "title": "Iron Maiden: Burning Ambition",
-            "genre": "Documentary",
-            "talent": "Steve Harris, Bruce Dickinson, Nicko McBrain",
-            "distributor": "",
-            "skyRelevance": "medium"
-        },
-        {
-            "date": "8 May",
-            "title": "The Sheep Detectives",
-            "genre": "Action",
-            "talent": "Bryan Cranston, Nicholas Galitzine, Hugh Jackman",
-            "distributor": "",
-            "skyRelevance": "medium"
-        },
-        {
-            "date": "15 May",
-            "title": "Mortal Kombat II",
-            "genre": "Action",
-            "talent": "Karl Urban, Ludi Lin, Jessica McNamee",
-            "distributor": "",
-            "skyRelevance": "medium"
-        },
-        {
-            "date": "22 May",
-            "title": "Star Wars: The Mandalorian and Grogu",
-            "genre": "Action",
-            "talent": "Martin Scorsese, Pedro Pascal, Sigourney Weaver",
-            "distributor": "",
-            "skyRelevance": "medium"
-        },
-        {
-            "date": "28 May",
-            "title": "National Theatre Live: The Playboy of the Western World",
-            "genre": "Drama",
-            "talent": "Susan Akintomide, Marty Breen, Declan Conlon",
-            "distributor": "",
-            "skyRelevance": "medium"
-        },
-        {
-            "date": "29 May",
-            "title": "Backrooms",
-            "genre": "Horror",
-            "talent": "Chiwetel Ejiofor, Renate Reinsve, Mark Duplass",
-            "distributor": "",
-            "skyRelevance": "medium"
-        },
-        {
-            "date": "5 Jun",
-            "title": "Masters of the Universe",
-            "genre": "Action",
-            "talent": "Morena Baccarin, Nicholas Galitzine, Idris Elba",
-            "distributor": "",
-            "skyRelevance": "medium"
-        }
+        {"date": "1 Jul", "title": "Minions & Monsters (2026)", "genre": "Animation", "type": "Adventure", "talent": "Zoey Deutch, Allison Janney, Bobby Moynihan, Jesse Eisenberg", "skyRelevance": "medium"},
+        {"date": "3 Jul", "title": "The Invite (2026)", "genre": "Comedy", "type": "Drama", "talent": "Seth Rogen, Olivia Wilde, Penélope Cruz, Edward Norton", "skyRelevance": "medium"},
+        {"date": "3 Jul", "title": "Nirvanna the Band the Show the Movie (2025)", "genre": "Adventure", "type": "Comedy", "talent": "Matt Johnson, Jay McCarrol, Ben Petrie, Ethan Eng, Ben Petrie", "skyRelevance": "medium"},
+        {"date": "3 Jul", "title": "Birds of War (2026)", "genre": "Documentary", "skyRelevance": "medium"},
+        {"date": "10 Jul", "title": "Moana (2026)", "genre": "Action", "type": "Adventure", "talent": "Catherine Laga'aia, Dwayne Johnson, John Tui, Frankie Adams", "skyRelevance": "medium"},
+        {"date": "10 Jul", "title": "Evil Dead Burn (2026)", "genre": "Fantasy", "talent": "Mystery, Hunter Doohan, Luciane Buchanan, Souheila Yacoub, Erroll Shand", "skyRelevance": "medium"},
+        {"date": "17 Jul", "title": "The Odyssey (2026)", "genre": "Adventure", "type": "Drama", "talent": "Matt Damon, Tom Holland, Anne Hathaway, Robert Pattinson", "skyRelevance": "medium"},
+        {"date": "17 Jul", "title": "Diamond Made Man Part 2 (2026)", "genre": "Sci-Fi", "talent": "Sreehari", "skyRelevance": "medium"},
+        {"date": "24 Jul", "title": "Brunello: The Gracious Visionary (2025)", "genre": "Documentary", "type": "Biography", "talent": "Marta Aguilar, Ramin Arani, Lorenzo Bachiorri, Cardinale Gualtiero Bassetti", "skyRelevance": "medium"},
+        {"date": "28 Jul", "title": "WHAM! 10 Days in China (2026)", "genre": "Documentary", "talent": "George Michael, Andrew Ridgeley", "skyRelevance": "medium"},
+        {"date": "31 Jul", "title": "Spider-Man: Brand New Day (2026)", "genre": "Action", "type": "Adventure", "talent": "Tom Holland, Zendaya, Sadie Sink, Jacob Batalon", "skyRelevance": "medium"}
     ],
     "redditCalendar": [
         {
@@ -1089,164 +223,31 @@ const MOCK_DATA_NEW = {
         }
     ],
     "tiktokCalendar": [
-        {
-            "date": "1 May",
-            "event": "Wedding season kicks off",
-            "category": "Seasonal",
-            "tiktokTrend": "",
-            "potentialReach": ""
-        },
-        {
-            "date": "1 Jun",
-            "event": "Festival season",
-            "category": "Seasonal",
-            "tiktokTrend": "",
-            "potentialReach": ""
-        },
-        {
-            "date": "21 Jun",
-            "event": "Father’s Day",
-            "category": "Cultural",
-            "tiktokTrend": "",
-            "potentialReach": ""
-        },
-        {
-            "date": "11 Jun",
-            "event": "2026 Fifa World Cup",
-            "category": "Sport",
-            "tiktokTrend": "",
-            "potentialReach": ""
-        },
-        {
-            "date": "29 Jun",
-            "event": "Wimbledon",
-            "category": "Sport",
-            "tiktokTrend": "",
-            "potentialReach": ""
-        },
-        {
-            "date": "4 Jul",
-            "event": "Tour de France",
-            "category": "Sport",
-            "tiktokTrend": "",
-            "potentialReach": ""
-        },
-        {
-            "date": "15 Aug",
-            "event": "Back to school",
-            "category": "Seasonal",
-            "tiktokTrend": "",
-            "potentialReach": ""
-        },
-        {
-            "date": "27 Sep",
-            "event": "World Tourism Day",
-            "category": "Cultural",
-            "tiktokTrend": "",
-            "potentialReach": ""
-        }
+        {"date": "1 Jun", "event": "Festival season", "category": "Seasonal", "tiktokTrend": "", "potentialReach": ""},
+        {"date": "21 Jun", "event": "Father’s Day", "category": "Cultural", "tiktokTrend": "", "potentialReach": ""},
+        {"date": "11 Jun", "event": "2026 Fifa World Cup", "category": "Sport", "tiktokTrend": "", "potentialReach": ""},
+        {"date": "29 Jun", "event": "Wimbledon", "category": "Sport", "tiktokTrend": "", "potentialReach": ""},
+        {"date": "4 Jul", "event": "Tour de France", "category": "Sport", "tiktokTrend": "", "potentialReach": ""},
+        {"date": "19 Jul", "event": "World Cup Final", "category": "Sport", "tiktokTrend": "", "potentialReach": ""},
+        {"date": "15 Aug", "event": "Back to school", "category": "Seasonal", "tiktokTrend": "", "potentialReach": ""},
+        {"date": "17 Sep", "event": "London Fashion Week", "category": "Cultural", "tiktokTrend": "", "potentialReach": ""},
+        {"date": "27 Sep", "event": "World Tourism Day", "category": "Cultural", "tiktokTrend": "", "potentialReach": ""},
+        {"date": "31 Oct", "event": "Halloween", "category": "Seasonal", "tiktokTrend": "", "potentialReach": ""}
     ],
     "ramdamTikTok": [
-        {
-            "rank": 1,
-            "trend": "This, not that",
-            "engagement": "14 Apr",
-            "category": "TikTok trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 2,
-            "trend": "Loving life again",
-            "engagement": "7 Apr",
-            "category": "TikTok trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 3,
-            "trend": "Self-aware",
-            "engagement": "7 Apr",
-            "category": "TikTok trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 4,
-            "trend": "Me when i realize",
-            "engagement": "30 Mar",
-            "category": "TikTok trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 5,
-            "trend": "Life Mission",
-            "engagement": "24 Mar",
-            "category": "TikTok trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 6,
-            "trend": "Why you so obsessed with me",
-            "engagement": "17 Mar",
-            "category": "TikTok trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 7,
-            "trend": "Boom Clap",
-            "engagement": "10 Mar",
-            "category": "TikTok trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 8,
-            "trend": "My nervous system",
-            "engagement": "10 Mar",
-            "category": "TikTok trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        }
+        {"rank": 1, "trend": "The “We have other options” trend", "engagement": "29 Jun", "category": "TikTok trend", "skyAngle": "Opportunity for Sky content"},
+        {"rank": 2, "trend": "The “That’s triggering me” trend", "engagement": "22 Jun", "category": "TikTok trend", "skyAngle": "Opportunity for Sky content"},
+        {"rank": 3, "trend": "The “No no no” trend", "engagement": "15 Jun", "category": "TikTok trend", "skyAngle": "Opportunity for Sky content"},
+        {"rank": 4, "trend": "The “Melissaaaaaa, i’m drunk and outside” trend", "engagement": "8 Jun", "category": "TikTok trend", "skyAngle": "Opportunity for Sky content"},
+        {"rank": 5, "trend": "The “Rich in life” trend", "engagement": "1 Jun", "category": "TikTok trend", "skyAngle": "Opportunity for Sky content"}
     ],
     "ramdamInstagram": [
-        {
-            "rank": 1,
-            "trend": "Haha she’s trying to",
-            "engagement": "14 Apr",
-            "category": "Instagram trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 2,
-            "trend": "When you’re having a bad day",
-            "engagement": "14 Apr",
-            "category": "Instagram trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 3,
-            "trend": "I should talk to someone",
-            "engagement": "7 Apr",
-            "category": "Instagram trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 4,
-            "trend": "Best of both worlds",
-            "engagement": "7 Apr",
-            "category": "Instagram trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 5,
-            "trend": "Spring reset",
-            "engagement": "30 Mar",
-            "category": "Instagram trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        },
-        {
-            "rank": 6,
-            "trend": "Bridgerton dance",
-            "engagement": "30 Mar",
-            "category": "Instagram trend",
-            "skyAngle": "Opportunity for Sky originals content"
-        }
+        {"rank": 1, "trend": "I would do anything for you", "engagement": "", "category": "Instagram trend", "skyAngle": "Opportunity for Sky content"},
+        {"rank": 2, "trend": "Carousel mini vlog", "engagement": "", "category": "Instagram trend", "skyAngle": "Opportunity for Sky content"},
+        {"rank": 3, "trend": "Girl grip", "engagement": "", "category": "Instagram trend", "skyAngle": "Opportunity for Sky content"},
+        {"rank": 4, "trend": "Plan A Plan B", "engagement": "", "category": "Instagram trend", "skyAngle": "Opportunity for Sky content"},
+        {"rank": 5, "trend": "Can we reschedule", "engagement": "", "category": "Instagram trend", "skyAngle": "Opportunity for Sky content"},
+        {"rank": 6, "trend": "Wait let me wipe the camera", "engagement": "", "category": "Instagram trend", "skyAngle": "Opportunity for Sky content"}
     ],
     "skyPosts": [
         {
