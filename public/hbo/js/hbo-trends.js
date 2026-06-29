@@ -47,9 +47,35 @@ function setCurrentDate() {
 
 /* ─────────── Dashboard ─────────── */
 function renderDashboard() {
+    renderStats();
     renderAIBriefing();
     renderSpotlight();
     renderDashboardCharts();
+}
+
+function renderStats() {
+    const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+
+    // Titles Tracked: unique titles across every monitored chart this week
+    const chartKeys = ['netflixTV', 'netflixFilm', 'amazonPrimeTV', 'amazonPrimeFilm',
+        'hbomaxTV', 'hbomaxFilm', 'wikiViewsFilm', 'wikiViewsTV', 'wikiViewsPeople'];
+    const titles = new Set();
+    chartKeys.forEach(k => (MOCK_DATA[k] || []).forEach(i => i.title && titles.add(i.title.toLowerCase())));
+    set('stat-titles', titles.size);
+
+    // Platforms Monitored: distinct sources with data this week
+    const sources = [
+        MOCK_DATA.netflixTV || MOCK_DATA.netflixFilm,
+        MOCK_DATA.amazonPrimeTV || MOCK_DATA.amazonPrimeFilm,
+        MOCK_DATA.hbomaxTV || MOCK_DATA.hbomaxFilm,
+        MOCK_DATA.wikiViewsTV || MOCK_DATA.wikiViewsFilm || MOCK_DATA.wikiViewsPeople,
+        MOCK_DATA.tiktokUK || MOCK_DATA.tiktokNewsEnts
+    ];
+    set('stat-platforms', sources.filter(s => s && s.length).length);
+
+    // HBO Opportunities + AI Insights: real counts
+    set('stat-opportunities', (MOCK_DATA.opportunities || []).length);
+    set('stat-insights', (MOCK_DATA.aiBriefing?.insights || []).length);
 }
 
 function renderAIBriefing() {
