@@ -48,7 +48,6 @@ function setCurrentDate() {
 /* ─────────── Dashboard ─────────── */
 function renderDashboard() {
     renderAIBriefing();
-    renderTopMovers();
     renderSpotlight();
     renderDashboardCharts();
 }
@@ -212,10 +211,10 @@ function renderStreamingCharts(platformFilter, typeFilter) {
 
     if (platformFilter === 'all' || platformFilter === 'hbomax') {
         if (typeFilter === 'all' || typeFilter === 'series') {
-            lists.push({ title: 'HBO Max', subtitle: 'Top Series UK', colour: '#000000', icon: 'H', data: filterBySearch(MOCK_DATA.hbomaxTV || [], search) });
+            lists.push({ title: 'HBO Max UK', subtitle: 'Top Series', colour: '#000000', icon: 'H', data: filterBySearch(MOCK_DATA.hbomaxTV || [], search) });
         }
         if (typeFilter === 'all' || typeFilter === 'films') {
-            lists.push({ title: 'HBO Max', subtitle: 'Top Films UK', colour: '#000000', icon: 'H', data: filterBySearch(MOCK_DATA.hbomaxFilm || [], search) });
+            lists.push({ title: 'HBO Max UK', subtitle: 'Top Films', colour: '#000000', icon: 'H', data: filterBySearch(MOCK_DATA.hbomaxFilm || [], search) });
         }
     }
 
@@ -348,6 +347,7 @@ function getTypeIcon(type) {
 /* ─────────── Social Buzz ─────────── */
 function renderSocial(platformFilter) {
     const grid = document.getElementById('socialGrid');
+    if (!grid) return;
     let items = MOCK_DATA.socialBuzz;
 
     if (platformFilter !== 'all') {
@@ -430,7 +430,6 @@ function renderSocialSection() {
     renderTikTokNews();
     renderRamdamTikTok();
     renderRamdamInstagram();
-    renderSocial('all');
 }
 
 function renderWikiViews() {

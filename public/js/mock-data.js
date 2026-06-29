@@ -5,8 +5,8 @@
    ============================================================ */
 
 const MOCK_DATA_NEW = {
-    "weekOf": "29 June – 6 July 2026",
-    "lastUpdated": "2026-06-29",
+    "weekOf": "22–28 June 2026",
+    "lastUpdated": "2026-06-28",
     "netflixTV": [
         {"rank": 1, "title": "I Will Find You", "platform": "Netflix", "movement": "same", "daysInChart": 10},
         {"rank": 2, "title": "WWE Night of Champions", "platform": "Netflix", "movement": "same", "daysInChart": 4},

@@ -6,7 +6,7 @@
 const MOCK_DATA_PREV = {
 
     // ─── Date context ───
-    weekOf: '17–23 February 2026',
+    weekOf: '15–21 June 2026',
     lastUpdated: new Date().toISOString(),
 
     // ─── Netflix TV Trending UK (Past Week) ───

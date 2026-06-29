@@ -48,8 +48,8 @@
                 <div class="dataset-toggle" title="Switch dataset">
                     <i class="fas fa-database"></i>
                     <select id="datasetToggle">
-                        <option value="new" selected>This week (13–19 Apr)</option>
-                        <option value="prev">Previous (17–23 Feb)</option>
+                        <option value="new" selected>This week (22–28 Jun)</option>
+                        <option value="prev">Previous (15–21 Jun)</option>
                     </select>
                 </div>
                 <button class="btn-refresh" id="refreshBtn" title="Refresh data">
@@ -124,33 +124,17 @@
                 </div>
             </div>
 
-            <!-- Two Column: Top Movers + HBO Spotlight -->
-            <div class="grid-2">
-                <!-- Top Movers -->
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-header-left">
-                            <i class="fas fa-arrow-trend-up"></i>
-                            <h2>Top Movers This Week</h2>
-                        </div>
+            <!-- HBO Opportunity Spotlight -->
+            <div class="card card-spotlight">
+                <div class="card-header card-header-hbo">
+                    <div class="card-header-left">
+                        <i class="fas fa-star"></i>
+                        <h2>HBO Opportunity Spotlight</h2>
                     </div>
-                    <div class="card-body" id="topMovers">
-                        <!-- Populated by JS -->
-                    </div>
+                    <span class="card-header-badge badge-urgent">Act Now</span>
                 </div>
-
-                <!-- HBO Opportunity Spotlight -->
-                <div class="card card-spotlight">
-                    <div class="card-header card-header-hbo">
-                        <div class="card-header-left">
-                            <i class="fas fa-star"></i>
-                            <h2>HBO Opportunity Spotlight</h2>
-                        </div>
-                        <span class="card-header-badge badge-urgent">Act Now</span>
-                    </div>
-                    <div class="card-body" id="spotlightCard">
-                        <!-- Populated by JS -->
-                    </div>
+                <div class="card-body" id="spotlightCard">
+                    <!-- Populated by JS -->
                 </div>
             </div>
 
@@ -195,7 +179,7 @@
                     <span class="platform-dot dot-amazon"></span> Prime Video
                 </button>
                 <button class="tab" data-platform="hbomax">
-                    <span class="platform-dot dot-hbo"></span> HBO Max
+                    <span class="platform-dot dot-hbo"></span> HBO Max UK
                 </button>
             </div>
 
@@ -345,24 +329,6 @@
                 </div>
             </div>
 
-            <!-- General Social Buzz -->
-            <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;color:var(--text-primary);">Entertainment Social Buzz</h2>
-            <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">From across X, TikTok and Instagram. Currently showing demo data.</p>
-            <div class="social-tabs">
-                <button class="social-tab active" data-social="all">
-                    <i class="fas fa-globe"></i> All
-                </button>
-                <button class="social-tab" data-social="x">
-                    <i class="fab fa-x-twitter"></i> X
-                </button>
-                <button class="social-tab" data-social="tiktok">
-                    <i class="fab fa-tiktok"></i> TikTok
-                </button>
-                <button class="social-tab" data-social="instagram">
-                    <i class="fab fa-instagram"></i> Instagram
-                </button>
-            </div>
-            <div class="social-grid" id="socialGrid"><!-- JS --></div>
         </section>
 
         <!-- ==================== CALENDAR & RELEASES SECTION ==================== -->
