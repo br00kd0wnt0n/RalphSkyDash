@@ -1,0 +1,1471 @@
+/* ============================================================
+   CULTURE ENGINE - HBO Edition
+   HBO x Ralph | Black & White, Premium
+   ============================================================ */
+
+/* ---------- CSS Custom Properties (HBO Branding) ---------- */
+:root {
+    /* HBO Primary */
+    --hbo-black: #000000;
+    --hbo-black-dark: #0a0a0a;
+    --hbo-charcoal: #1a1a1a;
+    --hbo-charcoal-light: #f0f0f0;
+    --hbo-charcoal-hover: #333333;
+
+    /* Accent (white on dark / black on light) */
+    --hbo-white: #ffffff;
+    --hbo-white-light: #f8f8f8;
+    --hbo-white-dark: #e0e0e0;
+
+    /* Gradients */
+    --hbo-gradient: linear-gradient(135deg, #000000, #1a1a1a, #333333, #555555);
+    --hbo-gradient-subtle: linear-gradient(135deg, #000000, #333333);
+
+    /* Neutrals */
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f0f0f0;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --text-muted: #777777;
+    --border-light: #e0e0e0;
+    --border-medium: #cccccc;
+
+    /* Semantic */
+    --success: #10b981;
+    --success-light: #ecfdf5;
+    --warning: #f59e0b;
+    --warning-light: #fffbeb;
+    --danger: #ef4444;
+    --danger-light: #fef2f2;
+
+    /* Platform Colours */
+    --netflix: #e50914;
+    --disney: #113ccf;
+    --amazon: #00a8e1;
+    --apple: #1d1d1f;
+    --hbo-platform: #000000;
+
+    /* Sizing */
+    --nav-height: 64px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.16);
+    --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.20);
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 350ms ease;
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ---------- Navigation ---------- */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    background: var(--hbo-black);
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nav-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.hbo-logo-lockup {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav-brand-divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-logo {
+    height: 36px;
+    width: auto;
+    border-radius: 6px;
+}
+
+.nav-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.nav-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.nav-subtitle {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link i {
+    font-size: 0.8rem;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.nav-date {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.78rem;
+    font-weight: 400;
+}
+
+.btn-refresh {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.7);
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.btn-refresh:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+}
+
+.btn-refresh.spinning i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.dataset-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-sm);
+    padding: 0 10px;
+    height: 34px;
+}
+
+.dataset-toggle > i {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.78rem;
+}
+
+.dataset-toggle select {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    padding-right: 2px;
+}
+
+.dataset-toggle select option {
+    color: #000000;
+    background: #ffffff;
+}
+
+/* ---------- Main Content ---------- */
+.main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: calc(var(--nav-height) + 24px) 24px 80px;
+}
+
+.section {
+    display: none;
+}
+
+.section-active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Stats Row ---------- */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-normal);
+}
+
+.stat-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.stat-icon-primary {
+    background: var(--hbo-charcoal-light);
+    color: var(--hbo-black);
+}
+
+.stat-icon-dark {
+    background: var(--hbo-black);
+    color: #ffffff;
+}
+
+.stat-icon-mid {
+    background: #e8e8e8;
+    color: #333333;
+}
+
+.stat-icon-gradient {
+    background: var(--hbo-gradient);
+    color: #ffffff;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.stat-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+/* ---------- Cards ---------- */
+.card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.card-header {
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.card-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-header-left i {
+    color: var(--hbo-charcoal);
+    font-size: 1rem;
+}
+
+.card-header-left h2 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.card-header-gradient {
+    background: var(--hbo-gradient-subtle);
+    border-bottom: none;
+}
+
+.card-header-gradient .card-header-left i,
+.card-header-gradient .card-header-left h2 {
+    color: #ffffff;
+}
+
+.card-header-hbo {
+    background: var(--hbo-black);
+    border-bottom: none;
+}
+
+.card-header-hbo .card-header-left i,
+.card-header-hbo .card-header-left h2 {
+    color: #ffffff;
+}
+
+.card-header-badge {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.badge-urgent {
+    background: #ffffff;
+    color: #000000;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.chart-body {
+    padding: 20px;
+    height: 300px;
+    position: relative;
+}
+
+/* ---------- Grids ---------- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.grid-2 .card {
+    margin-bottom: 0;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.grid-3 .card {
+    margin-bottom: 0;
+}
+
+/* ---------- AI Briefing ---------- */
+.briefing-overview {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--hbo-black);
+}
+
+.briefing-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.briefing-insights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.insight-chip {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    border-left: 3px solid var(--hbo-black);
+    transition: all var(--transition-fast);
+}
+
+.insight-chip:hover {
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+}
+
+.insight-chip:nth-child(2) {
+    border-left-color: #555555;
+}
+
+.insight-chip:nth-child(3) {
+    border-left-color: var(--success);
+}
+
+.insight-chip h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.insight-chip p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ---------- Top Movers ---------- */
+.mover-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.mover-item:last-child {
+    border-bottom: none;
+}
+
+.mover-rank {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.mover-rank-up {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.mover-rank-down {
+    background: var(--danger-light);
+    color: var(--danger);
+}
+
+.mover-rank-new {
+    background: var(--hbo-charcoal-light);
+    color: var(--hbo-black);
+}
+
+.mover-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.mover-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mover-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2px;
+}
+
+.mover-change {
+    font-size: 0.78rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.mover-change.up {
+    color: var(--success);
+}
+
+.mover-change.down {
+    color: var(--danger);
+}
+
+.mover-change.new-entry {
+    color: var(--hbo-charcoal);
+}
+
+/* ---------- Spotlight Card ---------- */
+.spotlight-trigger {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 14px;
+    background: var(--danger-light);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.spotlight-trigger-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    background: var(--netflix);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.spotlight-trigger-text {
+    flex: 1;
+}
+
+.spotlight-trigger-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--danger);
+    margin-bottom: 2px;
+}
+
+.spotlight-trigger-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.spotlight-connection {
+    padding: 16px;
+    background: var(--hbo-charcoal-light);
+    border-radius: var(--radius-md);
+    margin-bottom: 16px;
+    border: 1px solid var(--border-light);
+}
+
+.spotlight-connection-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--hbo-charcoal);
+    margin-bottom: 8px;
+}
+
+.spotlight-hbo-titles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hbo-title-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--hbo-black);
+}
+
+.hbo-title-tag i {
+    color: var(--hbo-charcoal);
+    font-size: 0.7rem;
+}
+
+.spotlight-suggestion {
+    padding: 14px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--hbo-charcoal);
+}
+
+.spotlight-suggestion-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--hbo-charcoal);
+    margin-bottom: 6px;
+}
+
+.spotlight-suggestion-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* ---------- STREAMING CHARTS ---------- */
+.tabs-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 16px;
+    padding: 6px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    overflow-x: auto;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    font-family: inherit;
+}
+
+.tab:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.tab.active {
+    background: var(--hbo-black);
+    color: #ffffff;
+}
+
+.platform-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-netflix { background: var(--netflix); }
+.dot-disney { background: var(--disney); }
+.dot-wiki { background: #888888; }
+.dot-amazon { background: var(--amazon); }
+.dot-apple { background: var(--apple); }
+.dot-hbo { background: var(--hbo-platform); }
+
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    gap: 4px;
+    padding: 3px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+}
+
+.filter-btn {
+    padding: 7px 14px;
+    border: none;
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all var(--transition-fast);
+    font-family: inherit;
+}
+
+.filter-btn:hover {
+    color: var(--text-primary);
+}
+
+.filter-btn.active {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.filter-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    margin-left: auto;
+}
+
+.filter-search i {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.filter-search input {
+    border: none;
+    outline: none;
+    font-size: 0.85rem;
+    font-family: inherit;
+    color: var(--text-primary);
+    background: transparent;
+    width: 180px;
+}
+
+.filter-search input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Charts Grid (streaming lists) */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.chart-list-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+}
+
+.chart-list-header {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.chart-list-platform {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chart-list-platform-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.chart-list-platform-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.chart-list-category {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    padding: 4px 10px;
+    background: var(--bg-tertiary);
+    border-radius: 20px;
+}
+
+/* Chart list items (ranked titles) */
+.chart-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border-light);
+    transition: background var(--transition-fast);
+}
+
+.chart-item:last-child {
+    border-bottom: none;
+}
+
+.chart-item:hover {
+    background: var(--bg-tertiary);
+}
+
+.chart-position {
+    width: 28px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.chart-position.top3 {
+    color: var(--hbo-black);
+}
+
+.chart-movement {
+    width: 20px;
+    font-size: 0.7rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.chart-movement.up { color: var(--success); }
+.chart-movement.down { color: var(--danger); }
+.chart-movement.same { color: var(--text-muted); }
+.chart-movement.new { color: var(--hbo-charcoal); font-weight: 700; font-size: 0.65rem; }
+
+.chart-poster {
+    width: 40px;
+    height: 56px;
+    border-radius: 4px;
+    background: var(--bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+.chart-title-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.chart-title-name {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chart-title-meta {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.chart-days {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.chart-days strong {
+    color: var(--text-secondary);
+}
+
+.chart-hbo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    background: var(--hbo-black);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+}
+
+/* ---------- HBO OPPORTUNITIES ---------- */
+.opportunities-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 24px;
+}
+
+.opportunities-header-text h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.opportunities-header-text p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.opportunities-filters {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.select-filter {
+    padding: 8px 14px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+    font-size: 0.82rem;
+    font-family: inherit;
+    color: var(--text-secondary);
+    cursor: pointer;
+    outline: none;
+}
+
+.select-filter:focus {
+    border-color: var(--hbo-black);
+}
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.opportunity-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.opportunity-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.opportunity-card-header {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.opportunity-type {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.opportunity-type-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+
+.opportunity-type-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+.opportunity-urgency {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.urgency-high {
+    background: var(--danger-light);
+    color: var(--danger);
+}
+
+.urgency-medium {
+    background: var(--warning-light);
+    color: var(--warning);
+}
+
+.urgency-low {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.opportunity-card-body {
+    padding: 20px;
+}
+
+.opportunity-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding: 12px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+}
+
+.trigger-platform-badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.trigger-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.opportunity-hbo-titles {
+    margin-bottom: 14px;
+}
+
+.opportunity-hbo-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--hbo-charcoal);
+    margin-bottom: 8px;
+}
+
+.opportunity-hbo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.hbo-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 10px;
+    background: var(--hbo-charcoal-light);
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--hbo-black);
+}
+
+.hbo-chip i {
+    font-size: 0.65rem;
+    color: var(--hbo-charcoal);
+}
+
+.opportunity-post {
+    padding: 14px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--hbo-charcoal);
+}
+
+.opportunity-post-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--hbo-charcoal);
+    margin-bottom: 6px;
+}
+
+.opportunity-post-text {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.opportunity-card-footer {
+    padding: 12px 20px;
+    background: var(--bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+.relevance-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.relevance-bar-track {
+    width: 60px;
+    height: 4px;
+    background: var(--border-light);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.relevance-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: var(--hbo-gradient-subtle);
+}
+
+/* ---------- SOCIAL BUZZ ---------- */
+.social-header {
+    margin-bottom: 20px;
+}
+
+.social-header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.social-header p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.social-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 24px;
+}
+
+.social-tab {
+    padding: 8px 18px;
+    border: 1px solid var(--border-light);
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: inherit;
+}
+
+.social-tab:hover {
+    border-color: var(--hbo-black);
+    color: var(--hbo-black);
+}
+
+.social-tab.active {
+    background: var(--hbo-black);
+    border-color: var(--hbo-black);
+    color: #ffffff;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.social-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    padding: 20px;
+    transition: all var(--transition-normal);
+}
+
+.social-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.social-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.social-platform-icon {
+    font-size: 1rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.social-platform-x { background: #1a1a1a; }
+.social-platform-tiktok { background: #ff0050; }
+.social-platform-instagram { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+.social-volume {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--success);
+    background: var(--success-light);
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+.social-topic {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.social-description {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.social-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.social-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--hbo-charcoal);
+    padding: 2px 8px;
+    background: var(--hbo-charcoal-light);
+    border-radius: 20px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    border-top: 1px solid var(--border-light);
+    background: var(--bg-secondary);
+    padding: 16px 0;
+    margin-top: 40px;
+}
+
+.footer-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    height: 24px;
+    border-radius: 4px;
+}
+
+.footer-left span,
+.footer-right span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    .opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    .briefing-insights {
+        grid-template-columns: 1fr;
+    }
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+    .opportunities-header {
+        flex-direction: column;
+    }
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .filter-search {
+        margin-left: 0;
+    }
+}
+
+/* ---------- Utility Classes ---------- */
+.text-netflix { color: var(--netflix); }
+.text-disney { color: var(--disney); }
+.text-amazon { color: var(--amazon); }
+.text-apple { color: var(--apple); }
+.text-hbo { color: var(--hbo-platform); }
+.bg-netflix { background: var(--netflix); }
+.bg-disney { background: var(--disney); }
+.bg-amazon { background: var(--amazon); }
+.bg-apple { background: var(--apple); }
+.bg-hbo { background: var(--hbo-platform); }

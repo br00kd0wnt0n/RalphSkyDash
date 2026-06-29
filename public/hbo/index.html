@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture Engine - HBO x Ralph</title>
+    <link rel="stylesheet" href="css/hbo-trends.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <div class="nav-brand">
+                <div class="hbo-logo-lockup">
+                    <svg width="72" height="36" viewBox="0 0 72 36" xmlns="http://www.w3.org/2000/svg" aria-label="HBO Max">
+                        <text x="0" y="22" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="24" fill="#ffffff" letter-spacing="-1">HBO</text>
+                        <text x="1" y="34" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="12" fill="rgba(255,255,255,0.7)" letter-spacing="1">max</text>
+                    </svg>
+                </div>
+                <div class="nav-brand-divider"></div>
+                <div class="nav-brand-text">
+                    <span class="nav-title">Culture Engine</span>
+                    <span class="nav-subtitle">HBO x Ralph</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-section="dashboard">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+                <a href="#" class="nav-link" data-section="charts">
+                    <i class="fas fa-chart-line"></i> Streaming Charts
+                </a>
+                <a href="#" class="nav-link" data-section="opportunities">
+                    <i class="fas fa-lightbulb"></i> HBO Opportunities
+                </a>
+                <a href="#" class="nav-link" data-section="social">
+                    <i class="fas fa-hashtag"></i> Social &amp; Culture
+                </a>
+                <a href="#" class="nav-link" data-section="calendar">
+                    <i class="fas fa-calendar-alt"></i> Calendar
+                </a>
+                <a href="#" class="nav-link" data-section="hboperformance">
+                    <i class="fas fa-trophy"></i> HBO Performance
+                </a>
+            </div>
+            <div class="nav-actions">
+                <div class="dataset-toggle" title="Switch dataset">
+                    <i class="fas fa-database"></i>
+                    <select id="datasetToggle">
+                        <option value="new" selected>This week (13–19 Apr)</option>
+                        <option value="prev">Previous (17–23 Feb)</option>
+                    </select>
+                </div>
+                <button class="btn-refresh" id="refreshBtn" title="Refresh data">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- ==================== DASHBOARD SECTION ==================== -->
+        <section id="section-dashboard" class="section section-active">
+
+            <!-- Hero Stats -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-icon stat-icon-primary">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" id="stat-titles">247</span>
+                        <span class="stat-label">Titles Tracked</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon stat-icon-dark">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" id="stat-platforms">5</span>
+                        <span class="stat-label">Platforms Monitored</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon stat-icon-mid">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" id="stat-opportunities">12</span>
+                        <span class="stat-label">HBO Opportunities</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon stat-icon-gradient">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" id="stat-insights">38</span>
+                        <span class="stat-label">AI Insights</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Weekly Briefing -->
+            <div class="card card-briefing">
+                <div class="card-header card-header-gradient">
+                    <div class="card-header-left">
+                        <i class="fas fa-brain"></i>
+                        <h2>What's Happening This Week</h2>
+                    </div>
+                    <span class="card-header-badge">AI Generated</span>
+                </div>
+                <div class="card-body" id="aiBriefing">
+                    <div class="briefing-overview" id="briefingOverview">
+                        <p class="briefing-text">Loading AI analysis...</p>
+                    </div>
+                    <div class="briefing-insights" id="briefingInsights">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two Column: Top Movers + HBO Spotlight -->
+            <div class="grid-2">
+                <!-- Top Movers -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fas fa-arrow-trend-up"></i>
+                            <h2>Top Movers This Week</h2>
+                        </div>
+                    </div>
+                    <div class="card-body" id="topMovers">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- HBO Opportunity Spotlight -->
+                <div class="card card-spotlight">
+                    <div class="card-header card-header-hbo">
+                        <div class="card-header-left">
+                            <i class="fas fa-star"></i>
+                            <h2>HBO Opportunity Spotlight</h2>
+                        </div>
+                        <span class="card-header-badge badge-urgent">Act Now</span>
+                    </div>
+                    <div class="card-body" id="spotlightCard">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Charts Row -->
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fas fa-chart-pie"></i>
+                            <h2>Platform Distribution</h2>
+                        </div>
+                    </div>
+                    <div class="card-body chart-body">
+                        <canvas id="platformPieChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fas fa-chart-bar"></i>
+                            <h2>Genre Breakdown</h2>
+                        </div>
+                    </div>
+                    <div class="card-body chart-body">
+                        <canvas id="genreBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== STREAMING CHARTS SECTION ==================== -->
+        <section id="section-charts" class="section">
+            <!-- Platform Tabs -->
+            <div class="tabs-bar">
+                <button class="tab active" data-platform="all">
+                    <i class="fas fa-globe"></i> All Platforms
+                </button>
+                <button class="tab" data-platform="netflix">
+                    <span class="platform-dot dot-netflix"></span> Netflix
+                </button>
+                <button class="tab" data-platform="amazon">
+                    <span class="platform-dot dot-amazon"></span> Prime Video
+                </button>
+            </div>
+
+            <!-- Filter Row -->
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-type="all">All</button>
+                    <button class="filter-btn" data-type="films">Films</button>
+                    <button class="filter-btn" data-type="series">Series</button>
+                </div>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-period="week">This Week</button>
+                    <button class="filter-btn" data-period="today">Today</button>
+                    <button class="filter-btn" data-period="lastweek">Last Week</button>
+                </div>
+                <div class="filter-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search titles..." id="chartSearch">
+                </div>
+            </div>
+
+            <!-- Charts Grid -->
+            <div class="charts-grid" id="chartsGrid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- ==================== HBO OPPORTUNITIES SECTION ==================== -->
+        <section id="section-opportunities" class="section">
+            <!-- Opportunities Header -->
+            <div class="opportunities-header">
+                <div class="opportunities-header-text">
+                    <h1>HBO Content Opportunities</h1>
+                    <p>What's trending right now and how HBO can get involved. Updated weekly.</p>
+                </div>
+                <div class="opportunities-filters">
+                    <select id="urgencyFilter" class="select-filter">
+                        <option value="all">All Urgency</option>
+                        <option value="high">High Priority</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <select id="typeFilter" class="select-filter">
+                        <option value="all">All Types</option>
+                        <option value="actor">Actor Connection</option>
+                        <option value="genre">Genre Match</option>
+                        <option value="franchise">Franchise Link</option>
+                        <option value="director">Director Connection</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Opportunities Cards -->
+            <div class="opportunities-grid" id="opportunitiesGrid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- ==================== SOCIAL & CULTURE SECTION ==================== -->
+        <section id="section-social" class="section">
+            <div class="social-header">
+                <h1>Social &amp; Culture</h1>
+                <p>What fans are watching, sharing and obsessing over right now.</p>
+            </div>
+
+            <!-- WikiViews -->
+            <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><i class="fab fa-wikipedia-w" style="margin-right:6px;"></i> WikiViews - Most Viewed Pages</h2>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">Wikipedia page views as a proxy for cultural attention. What people are actively researching right now.</p>
+            <div class="grid-3" style="margin-bottom:24px;">
+                <div class="card">
+                    <div class="card-header" style="background:#1a1a1a;border-bottom:none;">
+                        <div class="card-header-left">
+                            <i class="fas fa-film" style="color:#fff"></i>
+                            <h2 style="color:#fff">Film</h2>
+                        </div>
+                        <span class="card-header-badge">Past Week</span>
+                    </div>
+                    <div class="card-body" id="wikiFilmWidget"><!-- JS --></div>
+                </div>
+                <div class="card">
+                    <div class="card-header" style="background:#1a1a1a;border-bottom:none;">
+                        <div class="card-header-left">
+                            <i class="fas fa-tv" style="color:#fff"></i>
+                            <h2 style="color:#fff">TV</h2>
+                        </div>
+                        <span class="card-header-badge">Past Week</span>
+                    </div>
+                    <div class="card-body" id="wikiTVWidget"><!-- JS --></div>
+                </div>
+                <div class="card">
+                    <div class="card-header" style="background:#1a1a1a;border-bottom:none;">
+                        <div class="card-header-left">
+                            <i class="fas fa-user-group" style="color:#fff"></i>
+                            <h2 style="color:#fff">People</h2>
+                        </div>
+                        <span class="card-header-badge">Past Week</span>
+                    </div>
+                    <div class="card-body" id="wikiPeopleWidget"><!-- JS --></div>
+                </div>
+            </div>
+
+            <!-- TikTok UK Hashtags -->
+            <div class="card" style="margin-bottom:24px;">
+                <div class="card-header" style="background:#ff0050;border-bottom:none;">
+                    <div class="card-header-left">
+                        <i class="fab fa-tiktok" style="color:#fff"></i>
+                        <h2 style="color:#fff">TikTok Trending Hashtags UK</h2>
+                    </div>
+                    <span class="card-header-badge">Past Week</span>
+                </div>
+                <div class="card-body" id="tiktokUKWidget"><!-- JS --></div>
+            </div>
+
+            <!-- TikTok UK News & Ents -->
+            <div class="card" style="margin-bottom:24px;">
+                <div class="card-header" style="background:#25f4ee;border-bottom:none;">
+                    <div class="card-header-left">
+                        <i class="fab fa-tiktok" style="color:#1a1a2e"></i>
+                        <h2 style="color:#1a1a2e">TikTok UK - News &amp; Entertainment</h2>
+                    </div>
+                    <span class="card-header-badge" style="background:rgba(0,0,0,0.15);color:#1a1a2e">Past Week</span>
+                </div>
+                <div class="card-body" id="tiktokNewsWidget"><!-- JS --></div>
+            </div>
+
+            <!-- Ramdam Trends Row -->
+            <div class="grid-2" style="margin-bottom:24px;">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fab fa-tiktok"></i>
+                            <h2>Ramdam TikTok Trends</h2>
+                        </div>
+                        <span class="card-header-badge" style="background:var(--bg-tertiary);color:var(--text-muted)">Past Month</span>
+                    </div>
+                    <div class="card-body" id="ramdamTikTokWidget"><!-- JS --></div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fab fa-instagram"></i>
+                            <h2>Ramdam Instagram Trends</h2>
+                        </div>
+                        <span class="card-header-badge" style="background:var(--bg-tertiary);color:var(--text-muted)">Past Month</span>
+                    </div>
+                    <div class="card-body" id="ramdamInstagramWidget"><!-- JS --></div>
+                </div>
+            </div>
+
+            <!-- General Social Buzz -->
+            <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;color:var(--text-primary);">Entertainment Social Buzz</h2>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">From across X, TikTok and Instagram. Currently showing demo data.</p>
+            <div class="social-tabs">
+                <button class="social-tab active" data-social="all">
+                    <i class="fas fa-globe"></i> All
+                </button>
+                <button class="social-tab" data-social="x">
+                    <i class="fab fa-x-twitter"></i> X
+                </button>
+                <button class="social-tab" data-social="tiktok">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </button>
+                <button class="social-tab" data-social="instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </button>
+            </div>
+            <div class="social-grid" id="socialGrid"><!-- JS --></div>
+        </section>
+
+        <!-- ==================== CALENDAR & RELEASES SECTION ==================== -->
+        <section id="section-calendar" class="section">
+            <div class="social-header">
+                <h1>Calendar &amp; Upcoming Releases</h1>
+                <p>What's coming up and where the conversation's heading next.</p>
+            </div>
+
+            <!-- Upcoming UK Movie Releases -->
+            <div class="card" style="margin-bottom:24px;">
+                <div class="card-header card-header-hbo">
+                    <div class="card-header-left">
+                        <i class="fas fa-clapperboard" style="color:#fff"></i>
+                        <h2 style="color:#fff">Upcoming UK Cinema Releases</h2>
+                    </div>
+                    <span class="card-header-badge">Next Month</span>
+                </div>
+                <div class="card-body" id="upcomingReleasesWidget"><!-- JS --></div>
+            </div>
+
+            <!-- Calendar Row -->
+            <div class="grid-2">
+                <!-- Reddit Seasonal Calendar -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fab fa-reddit" style="color:#ff4500"></i>
+                            <h2>Reddit Seasonal Calendar UK</h2>
+                        </div>
+                        <span class="card-header-badge" style="background:var(--bg-tertiary);color:var(--text-muted)">Next Month</span>
+                    </div>
+                    <div class="card-body" id="redditCalendarWidget"><!-- JS --></div>
+                </div>
+
+                <!-- TikTok Marketing Calendar -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fab fa-tiktok" style="color:#ff0050"></i>
+                            <h2>TikTok Marketing Calendar</h2>
+                        </div>
+                        <span class="card-header-badge" style="background:var(--bg-tertiary);color:var(--text-muted)">Upcoming</span>
+                    </div>
+                    <div class="card-body" id="tiktokCalendarWidget"><!-- JS --></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== HBO PERFORMANCE SECTION ==================== -->
+        <section id="section-hboperformance" class="section">
+            <div class="social-header">
+                <h1>HBO Social Performance</h1>
+                <p>Our best-performing posts this week - what's landing with fans. Data via YouScan. Currently showing demo data.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header card-header-gradient">
+                    <div class="card-header-left">
+                        <i class="fas fa-chart-line" style="color:#fff"></i>
+                        <h2 style="color:#fff">Top Performing HBO Posts</h2>
+                    </div>
+                    <span class="card-header-badge">Past Week</span>
+                </div>
+                <div class="card-body" id="hboPostsWidget"><!-- JS --></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <svg width="48" height="24" viewBox="0 0 48 24" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="16" font-family="Georgia, serif" font-weight="700" font-size="16" fill="#888">HBO</text>
+                </svg>
+                <span>Culture Engine v2.0</span>
+            </div>
+            <div class="footer-right">
+                <span>Prototype &mdash; HBO x Ralph Writers Room</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="../../js/mock-data-prev.js"></script>
+    <script src="../../js/mock-data.js"></script>
+    <script src="js/hbo-overrides.js"></script>
+    <script src="js/hbo-trends.js"></script>
+    <script src="js/data-toggle.js"></script>
+</body>
+</html>
