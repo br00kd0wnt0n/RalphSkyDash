@@ -140,6 +140,7 @@ function renderDashboardCharts() {
     if (genreCtx) {
         const genres = {};
         [...MOCK_DATA.netflixTV, ...MOCK_DATA.netflixFilm, ...MOCK_DATA.amazonPrimeTV, ...MOCK_DATA.amazonPrimeFilm].forEach(item => {
+            if (!item.genre) return;
             const g = item.genre.split('/')[0].trim();
             genres[g] = (genres[g] || 0) + 1;
         });
