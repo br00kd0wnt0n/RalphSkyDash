@@ -1191,30 +1191,30 @@
 
     /* ── HBO Max UK TV Chart (Top 10) ───────────────────────────  */
     MOCK_DATA_NEW.hbomaxTV = [
-        {"rank": 1, "title": "The Pitt",                                    "platform": "HBOMax", "movement": "same", "daysInChart": 13},
-        {"rank": 2, "title": "House of the Dragon",                         "platform": "HBOMax", "movement": "same", "daysInChart": 7},
-        {"rank": 3, "title": "Life, Larry and the Pursuit of Unhappiness",  "platform": "HBOMax", "movement": "new",  "daysInChart": 0},
-        {"rank": 4, "title": "Rick and Morty",                              "platform": "HBOMax", "movement": "down", "daysInChart": 13, "change": 1},
-        {"rank": 5, "title": "The Killings at Parrish Station",             "platform": "HBOMax", "movement": "down", "daysInChart": 2,  "change": 1},
-        {"rank": 6, "title": "Euphoria",                                    "platform": "HBOMax", "movement": "same", "daysInChart": 13},
-        {"rank": 7, "title": "Proud",                                       "platform": "HBOMax", "movement": "down", "daysInChart": 9,  "change": 2},
-        {"rank": 8, "title": "The Pitt",                                    "platform": "HBOMax", "movement": "same", "daysInChart": 10},
-        {"rank": 9, "title": "90 Day Fiancé",                               "platform": "HBOMax", "movement": "new",  "daysInChart": 1},
-        {"rank": 10,"title": "Evil Lives Here: My Child the Killer",        "platform": "HBOMax", "movement": "same", "daysInChart": 12}
+        {"rank": 1, "title": "The Pitt", "platform": "HBOMax", "movement": "same", "daysInChart": 13, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/y/w350/yfaibd8dqaafukyaxmnqokpyakd.webp"},
+        {"rank": 2, "title": "House of the Dragon", "platform": "HBOMax", "movement": "same", "daysInChart": 7, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/1/w350/1x4h40fcb4wwumibk0aut4zrbav.webp"},
+        {"rank": 3, "title": "Life, Larry and the Pursuit of Unhappiness", "platform": "HBOMax", "movement": "new", "daysInChart": 0, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/e/w350/ea8lwlhaufqrzzek25xggzcgimu.webp"},
+        {"rank": 4, "title": "Rick and Morty", "platform": "HBOMax", "movement": "down", "daysInChart": 13, "change": 1, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/q/w350/qjdfo3ahgamf2rcmhoqngjbbzw1.webp"},
+        {"rank": 5, "title": "The Killings at Parrish Station", "platform": "HBOMax", "movement": "down", "daysInChart": 2, "change": 1, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/b/w350/bhobx6iddh5esukvezpxkgjbvgh.webp"},
+        {"rank": 6, "title": "Euphoria", "platform": "HBOMax", "movement": "same", "daysInChart": 13, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/a/w350/ajrg7okotmpwg5c8opz8a93azpy.webp"},
+        {"rank": 7, "title": "Proud", "platform": "HBOMax", "movement": "down", "daysInChart": 9, "change": 2, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/6/w350/6mfcuxwifm21dcj6enarnx10fx9.webp"},
+        {"rank": 8, "title": "The Pitt", "platform": "HBOMax", "movement": "same", "daysInChart": 10, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/y/w350/yfaibd8dqaafukyaxmnqokpyakd.webp"},
+        {"rank": 9, "title": "90 Day Fiancé", "platform": "HBOMax", "movement": "new", "daysInChart": 1, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/w/w350/wjvdf4zysdxhoreqihlom4phrnp.webp"},
+        {"rank": 10, "title": "Evil Lives Here: My Child the Killer", "platform": "HBOMax", "movement": "same", "daysInChart": 12, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/1/w350/12s6wcl04ojfqtdgcjcjdj6mlth.webp"}
     ];
 
     /* ── HBO Max UK Film Chart (Top 10) ─────────────────────────  */
     MOCK_DATA_NEW.hbomaxFilm = [
-        {"rank": 1, "title": "Blade",             "platform": "HBOMax", "movement": "same", "daysInChart": 2},
-        {"rank": 2, "title": "Ready Player One",  "platform": "HBOMax", "movement": "same", "daysInChart": 13},
-        {"rank": 3, "title": "They Will Kill You","platform": "HBOMax", "movement": "same", "daysInChart": 13},
-        {"rank": 4, "title": "Blade Runner",      "platform": "HBOMax", "movement": "same", "daysInChart": 2},
-        {"rank": 5, "title": "Rampage",           "platform": "HBOMax", "movement": "same", "daysInChart": 13},
-        {"rank": 6, "title": "I Am Legend",       "platform": "HBOMax", "movement": "new",  "daysInChart": 0},
-        {"rank": 7, "title": "A Dangerous Son",   "platform": "HBOMax", "movement": "down", "daysInChart": 1,  "change": 1},
-        {"rank": 8, "title": "Wonder Woman 1984", "platform": "HBOMax", "movement": "down", "daysInChart": 13, "change": 1},
-        {"rank": 9, "title": "The Bride!",        "platform": "HBOMax", "movement": "down", "daysInChart": 13, "change": 1},
-        {"rank": 10,"title": "The Welcome Table", "platform": "HBOMax", "movement": "same", "daysInChart": 4}
+        {"rank": 1, "title": "Blade", "platform": "HBOMax", "movement": "same", "daysInChart": 2, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/k/w350/kiydkxjdcpew51vni8fkhalkon.webp"},
+        {"rank": 2, "title": "Ready Player One", "platform": "HBOMax", "movement": "same", "daysInChart": 13, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/p/w350/pu1uluq8d3irxl1fdx2lzizdhui.webp"},
+        {"rank": 3, "title": "They Will Kill You", "platform": "HBOMax", "movement": "same", "daysInChart": 13, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/6/w350/6oi4oqktwmvulr8ivqydp28ruu6.webp"},
+        {"rank": 4, "title": "Blade Runner", "platform": "HBOMax", "movement": "same", "daysInChart": 2, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/v/w350/vfze3pje5g7g7kczwra3fnbzo7v.webp"},
+        {"rank": 5, "title": "Rampage", "platform": "HBOMax", "movement": "same", "daysInChart": 13, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/m/w350/mgadip4thvserp34faafzfbtz5.webp"},
+        {"rank": 6, "title": "I Am Legend", "platform": "HBOMax", "movement": "new", "daysInChart": 0, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/c/w350/cs6sy4hnpv8dupvlsplohnwwwjq.webp"},
+        {"rank": 7, "title": "A Dangerous Son", "platform": "HBOMax", "movement": "down", "daysInChart": 1, "change": 1, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/8/w350/8pkfh7vae9rt85w9fbl5rnrjgzy.webp"},
+        {"rank": 8, "title": "Wonder Woman 1984", "platform": "HBOMax", "movement": "down", "daysInChart": 13, "change": 1, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/d/w350/di1bcafgoj0bzneavlspyxq2aab.webp"},
+        {"rank": 9, "title": "The Bride!", "platform": "HBOMax", "movement": "down", "daysInChart": 13, "change": 1, "posterUrl": "https://flixpatrol.com/runtime/cache/files/posters/f/w350/fka1qu5t6sxdmkx6xvg5ocswbpk.webp"},
+        {"rank": 10, "title": "The Welcome Table", "platform": "HBOMax", "movement": "same", "daysInChart": 4}
     ];
 
     /* ── AI Weekly Briefing ──────────────────────────────────  */
