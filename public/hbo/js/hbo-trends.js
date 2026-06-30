@@ -242,10 +242,10 @@ function renderStreamingCharts(platformFilter, typeFilter) {
 
     if (platformFilter === 'all' || platformFilter === 'hbomax') {
         if (typeFilter === 'all' || typeFilter === 'series') {
-            lists.push({ title: 'HBO Max UK', subtitle: 'Top Series', colour: '#000000', icon: 'H', data: filterBySearch(MOCK_DATA.hbomaxTV || [], search) });
+            lists.push({ title: 'HBO Max UK', subtitle: 'Top Series', colour: '#000000', icon: 'H', isHBOChart: true, data: filterBySearch(MOCK_DATA.hbomaxTV || [], search) });
         }
         if (typeFilter === 'all' || typeFilter === 'films') {
-            lists.push({ title: 'HBO Max UK', subtitle: 'Top Films', colour: '#000000', icon: 'H', data: filterBySearch(MOCK_DATA.hbomaxFilm || [], search) });
+            lists.push({ title: 'HBO Max UK', subtitle: 'Top Films', colour: '#000000', icon: 'H', isHBOChart: true, data: filterBySearch(MOCK_DATA.hbomaxFilm || [], search) });
         }
     }
 
@@ -273,7 +273,7 @@ function renderChartList(list) {
     } else {
         itemsHtml = items.map(item => {
             const movementHtml = getMovementHtml(item);
-            const onHBO = item.hboLink || isOnHBO(item.title);
+            const onHBO = !list.isHBOChart && (item.hboLink || isOnHBO(item.title));
             const posterHtml = item.posterUrl
                 ? `<img src="${item.posterUrl}" alt="${item.title}" style="width:100%;height:100%;object-fit:cover;">`
                 : (item.emoji || '');
