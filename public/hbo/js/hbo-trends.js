@@ -599,13 +599,13 @@ function renderUpcomingReleases() {
                     </div>
                     <div style="flex:1;min-width:0;">
                         <div style="font-size:0.9rem;font-weight:700;color:var(--text-primary);">${item.title}</div>
-                        <div style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;">${item.genre} &middot; ${item.talent}</div>
+                        <div style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;">${[item.genre, item.talent].filter(Boolean).join(' &middot; ')}</div>
                     </div>
                     <div style="flex-shrink:0;text-align:right;">
                         <div style="font-size:0.68rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;padding:3px 8px;border-radius:20px;background:${relevanceBg[item.hboRelevance]};color:${relevanceColours[item.hboRelevance]};">
                             ${item.hboRelevance} relevance
                         </div>
-                        <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;">${item.distributor}</div>
+                        ${item.distributor ? `<div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;">${item.distributor}</div>` : ''}
                     </div>
                 </div>
             `).join('')}
