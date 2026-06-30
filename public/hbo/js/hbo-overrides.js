@@ -2,7 +2,7 @@
    HBO Culture Engine - Data Overrides
    Source: HBO SHOWS.xlsx — 29 June 2026
    Patches shared streaming data (MOCK_DATA_NEW) with
-   HBO Max-specific chart data and editorial content.
+   HBO Max UK-specific chart data and editorial content.
    ============================================================ */
 
 (function () {
@@ -1189,7 +1189,7 @@
         "Naked and Afraid Global Showdown",
     ];
 
-    /* ── HBO Max TV Chart (Top 10) ───────────────────────────  */
+    /* ── HBO Max UK TV Chart (Top 10) ───────────────────────────  */
     MOCK_DATA_NEW.hbomaxTV = [
         {"rank": 1, "title": "The Pitt",                                    "platform": "HBOMax", "movement": "same", "daysInChart": 13},
         {"rank": 2, "title": "House of the Dragon",                         "platform": "HBOMax", "movement": "same", "daysInChart": 7},
@@ -1203,7 +1203,7 @@
         {"rank": 10,"title": "Evil Lives Here: My Child the Killer",        "platform": "HBOMax", "movement": "same", "daysInChart": 12}
     ];
 
-    /* ── HBO Max Film Chart (Top 10) ─────────────────────────  */
+    /* ── HBO Max UK Film Chart (Top 10) ─────────────────────────  */
     MOCK_DATA_NEW.hbomaxFilm = [
         {"rank": 1, "title": "Blade",             "platform": "HBOMax", "movement": "same", "daysInChart": 2},
         {"rank": 2, "title": "Ready Player One",  "platform": "HBOMax", "movement": "same", "daysInChart": 13},
@@ -1245,10 +1245,10 @@
         },
         "talent": "Harry Collett & House of the Dragon cast",
         "hboTitles": [
-            "House of the Dragon S1 & S2 (HBO Max)",
-            "Game of Thrones S1–8 (HBO Max)"
+            "House of the Dragon S1 & S2 (HBO Max UK)",
+            "Game of Thrones S1–8 (HBO Max UK)"
         ],
-        "strategicRecommendation": "Activate around the HOTD cast moment — surface the full Targaryen saga catalogue, create lore content, and position HBO Max as the home of the complete Westeros universe while social engagement is at its peak.",
+        "strategicRecommendation": "Activate around the HOTD cast moment — surface the full Targaryen saga catalogue, create lore content, and position HBO Max UK as the home of the complete Westeros universe while social engagement is at its peak.",
         "relevance": "high"
     };
 
@@ -1268,12 +1268,12 @@
             "hboTitles": [
                 {
                     "title": "House of the Dragon S1 & S2",
-                    "where": "HBO Max",
+                    "where": "HBO Max UK",
                     "type": "Series"
                 },
                 {
                     "title": "Game of Thrones S1–8",
-                    "where": "HBO Max",
+                    "where": "HBO Max UK",
                     "type": "Series"
                 }
             ],
@@ -1296,7 +1296,7 @@
             "hboTitles": [
                 {
                     "title": "Adventure Time (full series)",
-                    "where": "HBO Max",
+                    "where": "HBO Max UK",
                     "type": "Series"
                 }
             ],
@@ -1311,7 +1311,7 @@
             "type": "premiere",
             "typeLabel": "New Entry",
             "trigger": {
-                "title": "Life, Larry debuts on HBO Max",
+                "title": "Life, Larry debuts on HBO Max UK",
                 "platform": "Instagram",
                 "platformColour": "#e1306c",
                 "detail": "Life, Larry and the Pursuit of Unhappiness premiered this week as a new entry — HBO's launch posts are already drawing strong fan engagement on Instagram around Larry David character moments."
@@ -1319,17 +1319,17 @@
             "hboTitles": [
                 {
                     "title": "Life, Larry and the Pursuit of Unhappiness",
-                    "where": "HBO Max",
+                    "where": "HBO Max UK",
                     "type": "Series"
                 },
                 {
-                    "title": "Curb Your Enthusiasm (HBO Max)",
-                    "where": "HBO Max",
+                    "title": "Curb Your Enthusiasm (HBO Max UK)",
+                    "where": "HBO Max UK",
                     "type": "Series"
                 }
             ],
             "talent": "Larry David",
-            "strategicRecommendation": "New premiere window — amplify the debut with Larry David humour content and cross-promote the Curb Your Enthusiasm back catalogue to convert new viewers into franchise fans on HBO Max.",
+            "strategicRecommendation": "New premiere window — amplify the debut with Larry David humour content and cross-promote the Curb Your Enthusiasm back catalogue to convert new viewers into franchise fans on HBO Max UK.",
             "relevanceScore": "medium",
             "timing": "This week — premiere window"
         }
@@ -1339,7 +1339,7 @@
     MOCK_DATA_NEW.hboPosts = [
         {
             "platform": "TikTok",
-            "content": "Looking back on Bubbline. Excited to see what's next in Adventure Time: Bubblegum and Marceline, a new series coming to HBO Max.",
+            "content": "Looking back on Bubbline. Excited to see what's next in Adventure Time: Bubblegum and Marceline, a new series coming to HBO Max UK.",
             "engagement": "1.2M",
             "likes": "1.09M",
             "comments": "6.1K",
@@ -1350,7 +1350,7 @@
         },
         {
             "platform": "Instagram",
-            "content": "Looking back on Bubbline. Excited to see what's next in #AdventureTime: Bubblegum and Marceline, a new series coming to HBO Max.",
+            "content": "Looking back on Bubbline. Excited to see what's next in #AdventureTime: Bubblegum and Marceline, a new series coming to HBO Max UK.",
             "engagement": "563K",
             "likes": "559K",
             "comments": "4.7K",
@@ -1394,7 +1394,7 @@
         },
         {
             "platform": "Instagram",
-            "content": "I'm coming home, Daisy. #LifeLarryAmerica\n\nLife, Larry and the Pursuit of Unhappiness premieres tonight at 9pm ET on HBO Max.",
+            "content": "I'm coming home, Daisy. #LifeLarryAmerica\n\nLife, Larry and the Pursuit of Unhappiness premieres tonight at 9pm ET on HBO Max UK.",
             "engagement": "219K",
             "likes": "218K",
             "comments": "1.2K",
@@ -1416,7 +1416,7 @@
         },
         {
             "platform": "Instagram",
-            "content": "Can't knock the hustle. #JAYZin8 an 8-part Documentary Series featuring Jay-Z in conversation with Rick Rubin, premieres this fall on HBO Max.",
+            "content": "Can't knock the hustle. #JAYZin8 an 8-part Documentary Series featuring Jay-Z in conversation with Rick Rubin, premieres this fall on HBO Max UK.",
             "engagement": "132K",
             "likes": "129K",
             "comments": "3.5K",
@@ -1427,7 +1427,7 @@
         },
         {
             "platform": "TikTok",
-            "content": "I'm coming home, Daisy. #LifeLarryAmerica #LarryDavid Life, Larry and the Pursuit of Unhappiness premieres tonight at 9pm ET on HBO Max.",
+            "content": "I'm coming home, Daisy. #LifeLarryAmerica #LarryDavid Life, Larry and the Pursuit of Unhappiness premieres tonight at 9pm ET on HBO Max UK.",
             "engagement": "125K",
             "likes": "108K",
             "comments": "352",
@@ -1548,7 +1548,7 @@
         },
         {
             "platform": "Instagram",
-            "content": "Every universe needs a hero. We got Stuart.\n\nFrom the world of #TheBigBangTheory, Stuart Fails to Save the Universe premieres in just one month on HBO Max. #SFTSTU",
+            "content": "Every universe needs a hero. We got Stuart.\n\nFrom the world of #TheBigBangTheory, Stuart Fails to Save the Universe premieres in just one month on HBO Max UK. #SFTSTU",
             "engagement": "65.7K",
             "likes": "65.3K",
             "comments": "420",
@@ -1564,29 +1564,29 @@
         "HOTD political power plays — 'We have other options' maps perfectly to Rhaenyra and the Green Council scheming. Clip from HOTD S2 council scenes.",
         "Euphoria emotional beats and The Pitt high-stakes moments — character reactions that genuinely trigger audiences. Perfect clip content.",
         "Daemon Targaryen 'No no no' denial moments and The Pitt crisis scenes — HBO drama has the most intense reaction-worthy content.",
-        "Larry David / Life Larry chaos energy — this trend was made for Larry's social awkwardness. New show on HBO Max this week.",
+        "Larry David / Life Larry chaos energy — this trend was made for Larry's social awkwardness. New show on HBO Max UK this week.",
         "Succession and White Lotus characters embody 'rich in life' — luxury prestige drama is HBO's core identity. Perfect aesthetic match."
     ];
     if (MOCK_DATA_NEW.ramdamTikTok) {
         MOCK_DATA_NEW.ramdamTikTok = MOCK_DATA_NEW.ramdamTikTok.map((item, i) => ({
             ...item,
-            hboAngle: tiktokAngles[i] || "Opportunity for HBO Max content"
+            hboAngle: tiktokAngles[i] || "Opportunity for HBO Max UK content"
         }));
     }
 
     /* ── Patch ramdamInstagram: add hboAngle ────────────────  */
     const instaAngles = [
         "Bubbline love story — 'I would do anything for you' is the Bubbline relationship in a sentence. Adventure Time content going viral this week.",
-        "HBO Max cast behind-the-scenes mini vlogs — HOTD and The Pitt casts are active and content-ready for carousel formats.",
+        "HBO Max UK cast behind-the-scenes mini vlogs — HOTD and The Pitt casts are active and content-ready for carousel formats.",
         "Rhaenyra Targaryen power grip moments — 'girl grip' energy across HOTD. Strong character clip content for this trend.",
         "HOTD political scheming — Plan A (the Blacks) vs Plan B (the Greens). The show literally runs on this tension.",
-        "Life Larry humour — Larry David's whole persona is 'can we reschedule'. New premiere on HBO Max this week, perfect timing.",
+        "Life Larry humour — Larry David's whole persona is 'can we reschedule'. New premiere on HBO Max UK this week, perfect timing.",
         "The Pitt authentic ER moments — raw, unfiltered healthcare drama. 'Wait let me wipe the camera' energy meets prestige TV."
     ];
     if (MOCK_DATA_NEW.ramdamInstagram) {
         MOCK_DATA_NEW.ramdamInstagram = MOCK_DATA_NEW.ramdamInstagram.map((item, i) => ({
             ...item,
-            hboAngle: instaAngles[i] || "Opportunity for HBO Max content"
+            hboAngle: instaAngles[i] || "Opportunity for HBO Max UK content"
         }));
     }
 
@@ -1623,13 +1623,13 @@
         if (MOCK_DATA_PREV.ramdamTikTok) {
             MOCK_DATA_PREV.ramdamTikTok = MOCK_DATA_PREV.ramdamTikTok.map((item, i) => ({
                 ...item,
-                hboAngle: tiktokAngles[i] || "Opportunity for HBO Max content"
+                hboAngle: tiktokAngles[i] || "Opportunity for HBO Max UK content"
             }));
         }
         if (MOCK_DATA_PREV.ramdamInstagram) {
             MOCK_DATA_PREV.ramdamInstagram = MOCK_DATA_PREV.ramdamInstagram.map((item, i) => ({
                 ...item,
-                hboAngle: instaAngles[i] || "Opportunity for HBO Max content"
+                hboAngle: instaAngles[i] || "Opportunity for HBO Max UK content"
             }));
         }
         if (MOCK_DATA_PREV.upcomingReleases) {

@@ -201,12 +201,17 @@ function renderDashboardCharts() {
 
 /* ─────────── HBO Catalogue Matching ─────────── */
 function isOnHBO(title) {
-    if (!MOCK_DATA.hboTitles) return false;
-    const normalised = title.toLowerCase().replace(/['']/g, "'");
-    return MOCK_DATA.hboTitles.some(hboTitle => {
-        const hboNorm = hboTitle.toLowerCase().replace(/['']/g, "'");
-        return normalised.includes(hboNorm) || hboNorm.includes(normalised);
-    });
+    if (!MOCK_DATA.hboTitles || !title) return false;
+    // Exact (normalised) match only — substring matching produced false
+    // positives from short catalogue titles (e.g. "Er", "From", "Blade").
+    const norm = s => s.toLowerCase().replace(/['']/g, "'").replace(/[^a-z0-9]+/g, ' ').trim();
+    const t = norm(title);
+    if (!t) return false;
+    if (!isOnHBO._set || isOnHBO._src !== MOCK_DATA.hboTitles) {
+        isOnHBO._set = new Set(MOCK_DATA.hboTitles.map(norm));
+        isOnHBO._src = MOCK_DATA.hboTitles;
+    }
+    return isOnHBO._set.has(t);
 }
 
 /* ─────────── Streaming Charts ─────────── */
@@ -281,7 +286,7 @@ function renderChartList(list) {
                         <div class="chart-title-name">${item.title}</div>
                         <div class="chart-title-meta">${item.genre || ''}${item.type ? ' · ' + item.type : ''}${item.talent ? ' · ' + item.talent : ''}</div>
                     </div>
-                    ${onHBO ? '<span class="chart-hbo-badge"><i class="fas fa-bolt"></i> On HBO</span>' : ''}
+                    ${onHBO ? '<span class="chart-hbo-badge"><i class="fas fa-bolt"></i> On HBO Max UK</span>' : ''}
                     <div class="chart-days">
                         <strong>${item.daysInChart}</strong> days
                         ${item.peakPosition != null ? '<br>Peak: #' + item.peakPosition : ''}
@@ -479,7 +484,7 @@ function renderWikiViews() {
                         <div class="chart-title-name">${item.title}</div>
                         <div class="chart-title-meta">${metaParts.join(' · ')}</div>
                     </div>
-                    ${onHBO ? '<span class="chart-hbo-badge"><i class="fas fa-bolt"></i> On HBO</span>' : ''}
+                    ${onHBO ? '<span class="chart-hbo-badge"><i class="fas fa-bolt"></i> On HBO Max UK</span>' : ''}
                     <div class="chart-days">
                         <strong>${item.views}</strong> views
                     </div>
