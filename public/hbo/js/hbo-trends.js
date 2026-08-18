@@ -83,7 +83,11 @@ function renderAIBriefing() {
     const insights = document.getElementById('briefingInsights');
     const b = MOCK_DATA.aiBriefing;
 
-    overview.innerHTML = `<p class="briefing-text">${b.overview}</p>`;
+    const vintage = MOCK_DATA.dataVintage;
+    overview.innerHTML = `<p class="briefing-text">${b.overview}</p>` + (vintage ? `
+        <p style="margin-top:12px;font-size:0.76rem;color:var(--text-muted);border-top:1px solid var(--border-light);padding-top:10px;">
+            <i class="fas fa-circle-info" style="margin-right:5px;"></i>${vintage}
+        </p>` : '');
 
     insights.innerHTML = b.insights.map(i => `
         <div class="insight-chip">

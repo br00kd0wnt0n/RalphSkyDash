@@ -6,6 +6,9 @@
    ============================================================ */
 
 (function () {
+    /* ── Data vintage note (shown on dashboard) ──────────── */
+    MOCK_DATA_NEW.dataVintage = "Demo data. Streaming charts, TikTok and social data are a snapshot from w/c 22 June 2026. HBO Max UK catalogue is live as at 18 August 2026 (1,559 titles). In V1 all sources refresh automatically each week.";
+
     /* ── HBO Max UK catalogue ────────────────────────────────
        1559 titles from HBO Max UK's own published catalogue
        (hbomax.com/gb/en/sitemap/shows + /movies), August 2026.
@@ -2006,6 +2009,7 @@
         MOCK_DATA_PREV.opportunities = MOCK_DATA_NEW.opportunities;
         MOCK_DATA_PREV.spotlight  = MOCK_DATA_NEW.spotlight;
         MOCK_DATA_PREV.aiBriefing = MOCK_DATA_NEW.aiBriefing;
+        MOCK_DATA_PREV.dataVintage = MOCK_DATA_NEW.dataVintage;
         if (MOCK_DATA_PREV.ramdamTikTok) {
             MOCK_DATA_PREV.ramdamTikTok = MOCK_DATA_PREV.ramdamTikTok.map((item, i) => ({
                 ...item,
